@@ -8,7 +8,7 @@
 
 Node 24에서 `npm ci` 후 Pages의 `base_url`을 SITE_URL로 넘겨 공개 빌드와 링크 검사를 실행한다. `dist/`만 artifact로 올리고 github-pages 환경에 배포한다. 소스·문서·검사 결과·로컬 파일은 홈페이지 배포물에 포함하지 않는다. 이 문서와 소스는 공개 저장소에서는 볼 수 있다.
 
-빌드 작업은 contents:read, 배포 작업은 pages:write와 id-token:write만 사용한다. 별도의 PAT나 서버 SSH 키를 저장소·Actions secret에 추가하지 않았다.
+빌드 작업은 contents:read와 Pages 설정 조회용 pages:read, 배포 작업은 pages:write와 id-token:write만 사용한다. 별도의 PAT나 서버 SSH 키를 저장소·Actions secret에 추가하지 않았다.
 
 ## 프로젝트 경로
 
