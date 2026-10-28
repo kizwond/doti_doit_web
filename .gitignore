@@ -24,3 +24,7 @@ coverage/
 Thumbs.db
 .idea/
 .vscode/
+
+# Browser verification artifacts
+playwright-report/
+test-results/
