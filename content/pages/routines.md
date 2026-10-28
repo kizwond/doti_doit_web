@@ -3,7 +3,7 @@ title: "루틴"
 route: "/routines/"
 seo_title: "운동과 일상의 루틴 만들기 | 도티두잇 루틴 안내"
 description: "활동 순서와 시간, 반복을 하나의 루틴으로 구성하세요. 도티 루틴을 가져와 살펴보고 미션에 연결해 수행하는 방법을 소개합니다."
-status: draft
+status: published
 ---
 
 # 여러 활동을 하나의 수행 순서로

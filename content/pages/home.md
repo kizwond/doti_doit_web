@@ -3,7 +3,7 @@ title: "홈"
 route: "/"
 seo_title: "도티두잇 | 목표를 정하고 실천을 기록하는 앱"
 description: "걷기와 운동부터 일상의 작은 약속까지. 도티두잇의 미션, 루틴, 수행 기록과 사진·메모 피드로 나의 실천을 이어가세요."
-status: draft
+status: published
 ---
 
 # 하고 싶은 일을 오늘의 실천으로

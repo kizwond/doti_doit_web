@@ -62,21 +62,29 @@ if (!pages.some((p) => p.route === "/"))
 if (new Set(pages.map((p) => p.route)).size !== pages.length)
   throw new Error("Duplicate routes");
 let origin = "";
+let basePath = "";
 if (!preview) {
   if (!process.env.SITE_URL)
     throw new Error("공개 빌드에는 확정된 SITE_URL이 필요합니다.");
   const url = new URL(process.env.SITE_URL);
   if (
     url.protocol !== "https:" ||
-    url.pathname !== "/" ||
+    !/^(?:\/[a-zA-Z0-9_-]+)*\/?$/.test(url.pathname) ||
     url.search ||
     url.hash ||
     url.username ||
     url.password
   )
-    throw new Error("SITE_URL must be a plain HTTPS origin");
-  origin = url.origin;
+    throw new Error("SITE_URL must be an HTTPS URL with an optional site path");
+  basePath = url.pathname.replace(/\/$/, "");
+  origin = url.origin + basePath;
 }
+// Prefix only site-root links/assets. External URLs and in-page anchors stay intact.
+const sitePaths = (html) =>
+  html.replace(
+    /\b(href|src)="\/(?!\/)([^"]*)"/g,
+    (_, attribute, target) => `${attribute}="${basePath}/${target}"`,
+  );
 const guidePage = {
   title: "사용 안내",
   route: "/guides/",
@@ -100,7 +108,10 @@ for (const page of pages) {
         : article(page);
   const dest = path.join(output, page.route, "index.html");
   await fs.mkdir(path.dirname(dest), { recursive: true });
-  await fs.writeFile(dest, layout(page, content, { preview, origin }));
+  await fs.writeFile(
+    dest,
+    sitePaths(layout(page, content, { preview, origin })),
+  );
 }
 const notFound = {
   title: "페이지를 찾을 수 없어요",
@@ -110,10 +121,12 @@ const notFound = {
 };
 await fs.writeFile(
   `${output}/404.html`,
-  layout(
-    notFound,
-    '<section class="section narrow not-found"><span class="eyebrow">404</span><h1>길을 조금 벗어났네요.</h1><p>홈이나 사용 안내에서 다시 시작해보세요.</p><a class="button" href="/">홈으로 가기 <span aria-hidden="true">↗</span></a></section>',
-    { preview: true, origin: "" },
+  sitePaths(
+    layout(
+      notFound,
+      '<section class="section narrow not-found"><span class="eyebrow">404</span><h1>길을 조금 벗어났네요.</h1><p>홈이나 사용 안내에서 다시 시작해보세요.</p><a class="button" href="/">홈으로 가기 <span aria-hidden="true">↗</span></a></section>',
+      { preview: true, origin: "" },
+    ),
   ),
 );
 await fs.writeFile(
@@ -132,12 +145,14 @@ await fs.writeFile(
   JSON.stringify(
     {
       mode: preview ? "preview" : "production",
+      basePath,
       routes: pages.map((p) => p.route),
     },
     null,
     2,
   ),
 );
+await fs.writeFile(`${output}/.nojekyll`, "");
 console.log(
   `Built ${pages.length} pages (${preview ? "draft preview · noindex" : "production"}) → dist/`,
 );

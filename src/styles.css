@@ -1723,8 +1723,8 @@ details[open] > summary .chevron {
   width: 108px;
   height: 38px;
   background: linear-gradient(90deg, #205985 70%, #ff673f 70%);
-  mask: url(/assets/wordmark.png) center/contain no-repeat;
-  -webkit-mask: url(/assets/wordmark.png) center/contain no-repeat;
+  mask: url(./assets/wordmark.png) center/contain no-repeat;
+  -webkit-mask: url(./assets/wordmark.png) center/contain no-repeat;
 }
 @media (max-width: 620px) {
   .wordmark {

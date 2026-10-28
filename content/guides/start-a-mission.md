@@ -3,7 +3,7 @@ title: "첫 미션 시작하기"
 route: "/guides/start-a-mission/"
 seo_title: "도티두잇 첫 미션 시작하기 | 목표부터 기록까지"
 description: "도티두잇에서 미션을 고르고 목표와 기록 방법을 확인한 뒤 첫 실천을 남기는 순서를 안내합니다."
-status: draft
+status: published
 ---
 
 # 첫 미션을 시작하는 순서

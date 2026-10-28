@@ -3,7 +3,7 @@ title: "도티두잇 이야기"
 route: "/about/"
 seo_title: "도티두잇 이야기 | 일상 속 작은 실천을 이어가는 방법"
 description: "내가 중요하게 생각하는 일을 생활 속 실천으로 이어가기. 미션·루틴·기록에 담고 싶은 도티두잇의 생각을 소개합니다."
-status: draft
+status: published
 ---
 
 # 도티두잇에 담고 싶은 생각

@@ -1,6 +1,8 @@
 import { test, expect } from "@playwright/test";
 import fs from "node:fs/promises";
-import { spawnSync } from "node:child_process";
+import { spawnSync, spawn } from "node:child_process";
+import os from "node:os";
+import path from "node:path";
 const routes = [
   "/",
   "/about/",
@@ -125,27 +127,58 @@ test("guide links, anchors, store search and missing-page handling", async ({
   await page.getByRole("link", { name: /홈으로 가기/ }).click();
   await expect(page).toHaveURL("http://127.0.0.1:4173/");
 });
-test("production build excludes drafts without deleting the existing preview", async () => {
-  const before = await fs.readFile("dist/index.html", "utf8");
-  const result = spawnSync(process.execPath, ["scripts/build.mjs"], {
-    encoding: "utf8",
-  });
-  expect(result.status).not.toBe(0);
-  expect(result.stderr).toContain("공개용 홈 원고가 없습니다");
-  expect(await fs.readFile("dist/index.html", "utf8")).toBe(before);
+async function fixture() {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "doti-web-build-"));
+  for (const dir of ["content", "src", "scripts", "public"])
+    await fs.cp(dir, path.join(root, dir), { recursive: true });
+  await fs.symlink(
+    path.resolve("node_modules"),
+    path.join(root, "node_modules"),
+    "dir",
+  );
+  return root;
+}
+
+test("production build excludes a draft home without deleting existing output", async () => {
+  const root = await fixture();
+  try {
+    const home = path.join(root, "content/pages/home.md");
+    await fs.writeFile(
+      home,
+      (await fs.readFile(home, "utf8")).replace(
+        "status: published",
+        "status: draft",
+      ),
+    );
+    await fs.mkdir(path.join(root, "dist"));
+    await fs.writeFile(
+      path.join(root, "dist/index.html"),
+      "preserve previous output",
+    );
+    const result = spawnSync(process.execPath, ["scripts/build.mjs"], {
+      cwd: root,
+      encoding: "utf8",
+    });
+    expect(result.status).not.toBe(0);
+    expect(result.stderr).toContain("공개용 홈 원고가 없습니다");
+    expect(await fs.readFile(path.join(root, "dist/index.html"), "utf8")).toBe(
+      "preserve previous output",
+    );
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+  }
 });
 
 test("production emits canonical/sitemap and excludes remaining drafts", async () => {
-  const os = await import("node:os");
-  const path = await import("node:path");
-  const root = await fs.mkdtemp(path.join(os.tmpdir(), "doti-web-build-"));
+  const root = await fixture();
   try {
-    for (const dir of ["content", "src", "scripts", "public"])
-      await fs.cp(dir, path.join(root, dir), { recursive: true });
-    await fs.symlink(
-      path.resolve("node_modules"),
-      path.join(root, "node_modules"),
-      "dir",
+    const draftFaq = path.join(root, "content/pages/faq.md");
+    await fs.writeFile(
+      draftFaq,
+      (await fs.readFile(draftFaq, "utf8")).replace(
+        "status: published",
+        "status: draft",
+      ),
     );
     for (const dir of ["pages", "guides"])
       for (const name of await fs.readdir(path.join(root, "content", dir))) {
@@ -204,6 +237,103 @@ test("production emits canonical/sitemap and excludes remaining drafts", async (
       await fs.readFile(path.join(root, "dist/robots.txt"), "utf8"),
     ).toContain("Allow: /");
   } finally {
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});
+
+test("GitHub project path serves navigation, images, CSS and 404 recovery", async ({
+  browser,
+}) => {
+  const root = await fixture();
+  let server;
+  try {
+    const built = spawnSync(process.execPath, ["scripts/build.mjs"], {
+      cwd: root,
+      encoding: "utf8",
+      env: {
+        ...process.env,
+        SITE_URL: "https://kizwond.github.io/doti_doit_web/",
+      },
+    });
+    expect(built.status, built.stderr).toBe(0);
+    const checked = spawnSync(process.execPath, ["scripts/check.mjs"], {
+      cwd: root,
+      encoding: "utf8",
+    });
+    expect(checked.status, checked.stderr).toBe(0);
+    server = spawn(process.execPath, ["scripts/serve.mjs"], {
+      cwd: root,
+      env: { ...process.env, PORT: "4174" },
+      stdio: ["ignore", "pipe", "pipe"],
+    });
+    await new Promise((resolve, reject) => {
+      server.stdout.once("data", resolve);
+      server.once("error", reject);
+      server.once("exit", (c) => reject(new Error("server exited " + c)));
+    });
+    const page = await browser.newPage({
+      viewport: { width: 390, height: 844 },
+    });
+    try {
+      const base = "http://127.0.0.1:4174/doti_doit_web";
+      await page.goto(base + "/");
+      await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+        "href",
+        "https://kizwond.github.io/doti_doit_web/",
+      );
+      expect(
+        await page
+          .locator(".wordmark")
+          .first()
+          .evaluate((el) => getComputedStyle(el).maskImage),
+      ).toContain("/doti_doit_web/assets/wordmark.png");
+      expect(
+        (await page.request.get(base + "/assets/wordmark.png")).status(),
+      ).toBe(200);
+      await page.locator("footer").scrollIntoViewIfNeeded();
+      await expect
+        .poll(() =>
+          page
+            .locator("img")
+            .evaluateAll((imgs) =>
+              imgs.every((i) => i.complete && i.naturalWidth > 0),
+            ),
+        )
+        .toBe(true);
+      await page.getByLabel("메뉴 열기").click();
+      await page
+        .getByRole("navigation", { name: "모바일 메뉴" })
+        .getByRole("link", { name: "미션", exact: true })
+        .click();
+      await expect(page).toHaveURL(base + "/missions/");
+      await page
+        .getByRole("navigation", { name: "본문 목차" })
+        .getByRole("link", { name: "기록하는 방법" })
+        .click();
+      await expect(
+        page.locator("h2").filter({ hasText: "기록하는 방법" }),
+      ).toBeInViewport();
+      const missing = await page.goto(base + "/missing-page/");
+      expect(missing.status()).toBe(404);
+      await page.getByRole("link", { name: /홈으로 가기/ }).click();
+      await expect(page).toHaveURL(base + "/");
+      const sitemap = await (
+        await page.request.get(base + "/sitemap.xml")
+      ).text();
+      expect(sitemap).toContain(
+        "https://kizwond.github.io/doti_doit_web/guides/start-a-mission/",
+      );
+      expect(
+        (await page.request.get(base + "/docs/editorial-basis.md")).status(),
+      ).toBe(404);
+    } finally {
+      await page.close();
+    }
+  } finally {
+    if (server) {
+      server.kill();
+      await new Promise((resolve) => server.once("exit", resolve));
+    }
     await fs.rm(root, { recursive: true, force: true });
   }
 });

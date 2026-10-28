@@ -3,7 +3,7 @@ title: "기록과 피드"
 route: "/records/"
 seo_title: "수행 히스토리와 기록카드 만들기 | 도티두잇"
 description: "날짜와 수행별 결과를 돌아보고 기록카드·사진·메모로 남겨보세요. 실적을 연결한 피드와 미션 없이 작성하는 피드를 안내합니다."
-status: draft
+status: published
 ---
 
 # 내가 한 일과 그날의 느낌을 함께

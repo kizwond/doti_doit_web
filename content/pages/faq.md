@@ -3,7 +3,7 @@ title: "자주 묻는 질문"
 route: "/faq/"
 seo_title: "도티두잇 자주 묻는 질문 | 미션·자동기록·루틴·공유"
 description: "미션 없이 측정하는 방법, 걸음수 자동기록, 스마트폰 미사용 시간, 루틴과 목표의 차이, 피드 공유에 관한 질문을 정리했습니다."
-status: draft
+status: published
 ---
 
 # 자주 묻는 질문

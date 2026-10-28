@@ -3,7 +3,7 @@ title: "운동 루틴 활용하기"
 route: "/guides/exercise-routine/"
 seo_title: "운동 미션에 루틴 연결하기 | 도티두잇"
 description: "목표 운동시간과 실제 루틴 구성을 함께 확인하세요. 루틴을 골라 미션에 연결하고 수행 결과를 저장하는 방법입니다."
-status: draft
+status: published
 ---
 
 # 운동 목표와 수행 순서를 함께 준비하기

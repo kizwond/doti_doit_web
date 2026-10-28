@@ -3,7 +3,7 @@ title: "걷기 기록하기"
 route: "/guides/walking-records/"
 seo_title: "하루 걸음수 자동기록과 걷기 측정 | 도티두잇"
 description: "하루 전체 걸음수와 한 번의 걷기 수행은 다른 기록입니다. 도티두잇의 걷기 목표 설정, 자동기록 연결, 수행 기록 확인 방법을 설명합니다."
-status: draft
+status: published
 ---
 
 # 하루 걸음수와 한 번의 걷기를 구분해 기록하기

@@ -30,13 +30,18 @@ for (const [route, html] of files) {
   for (const [, raw] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const url = new URL(
       raw.replaceAll("&amp;", "&"),
-      `https://example.invalid${route}`,
+      `https://example.invalid${info.basePath || ""}${route}`,
     );
     if (url.origin !== "https://example.invalid") {
       assert.equal(url.protocol, "https:");
       continue;
     }
-    const dest = decodeURIComponent(url.pathname);
+    const prefix = info.basePath || "";
+    assert(
+      url.pathname.startsWith(prefix + "/"),
+      `${route}: escaped site base path ${raw}`,
+    );
+    const dest = decodeURIComponent(url.pathname.slice(prefix.length));
     if (files.has(dest)) {
       if (url.hash)
         assert(
@@ -51,6 +56,23 @@ for (const [route, html] of files) {
     }
     links++;
   }
+}
+const css = await fs.readFile(path.join(root, "styles.css"), "utf8");
+for (const [, raw] of css.matchAll(/url\(["']?([^"')]+)["']?\)/g)) {
+  const url = new URL(
+    raw,
+    `https://example.invalid${info.basePath || ""}/styles.css`,
+  );
+  assert(
+    url.pathname.startsWith((info.basePath || "") + "/"),
+    `CSS escaped site path: ${raw}`,
+  );
+  await fs.access(
+    path.join(
+      root,
+      decodeURIComponent(url.pathname.slice((info.basePath || "").length)),
+    ),
+  );
 }
 console.log(
   `Checked ${files.size} pages: headings, metadata, ${links} local links/assets/anchors, draft indexing.`,

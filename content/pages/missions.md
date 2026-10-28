@@ -3,7 +3,7 @@ title: "미션"
 route: "/missions/"
 seo_title: "미션 만들기와 실천 기록 | 도티두잇 사용 안내"
 description: "준비된 미션을 고르거나 나만의 목표를 만들어보세요. 성공 기준과 세부목표를 정하고 측정·직접입력·지원 항목의 자동기록으로 실천을 남기는 방법입니다."
-status: draft
+status: published
 ---
 
 # 내가 실천하고 싶은 일을 미션으로

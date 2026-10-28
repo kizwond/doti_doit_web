@@ -3,6 +3,9 @@ import fs from "node:fs/promises";
 import path from "node:path";
 const root = path.resolve("dist");
 const port = Number(process.env.PORT || 4173);
+const { basePath = "" } = JSON.parse(
+  await fs.readFile(path.join(root, "build-info.json"), "utf8"),
+);
 const mime = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -20,7 +23,22 @@ const server = http.createServer(async (req, res) => {
       return res.end();
     }
     const url = new URL(req.url, "http://localhost");
-    let file = path.resolve(root, "." + decodeURIComponent(url.pathname));
+    if (basePath && url.pathname === basePath) {
+      res.writeHead(308, { Location: basePath + "/" + url.search });
+      return res.end();
+    }
+    if (!url.pathname.startsWith(basePath + "/")) {
+      res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+      return res.end(
+        req.method === "HEAD"
+          ? undefined
+          : await fs.readFile(path.join(root, "404.html")),
+      );
+    }
+    let file = path.resolve(
+      root,
+      "." + decodeURIComponent(url.pathname.slice(basePath.length)),
+    );
     if (file !== root && !file.startsWith(root + path.sep)) {
       res.writeHead(403);
       return res.end();
