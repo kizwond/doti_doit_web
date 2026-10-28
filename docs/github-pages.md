@@ -2,6 +2,12 @@
 
 홈페이지 주소: https://kizwond.github.io/doti_doit_web/
 
+## 최초 공개 확인
+
+2026-10-28, 배포 커밋 `cdf3b92fd956614e9cbb7a5060ee24e92d5ef105`의 [Actions 실행 40635547193](https://github.com/kizwond/doti_doit_web/actions/runs/40635547193)이 success로 완료됐다. 공개 HTTPS 주소에서 11개 페이지의 HTTP 200·canonical·모바일 가로 넘침 없음·검색 차단 해제를 확인했다. 이미지·로고·CSS·사이트맵·robots 응답, 모바일 메뉴 이동, 실제 404 복귀, 사이트 배포물의 docs 제외를 확인했다. 개인정보처리방침은 기존 공식 주소로 연결했다. 공개 데스크톱 화면도 캡처해 확인했다.
+
+로컬 검사 7개 통과. 최초 프로젝트 경로 검사에서 테스트가 헤더·푸터 로고를 동시에 선택해 실패했으며 헤더 로고로 선택 범위를 수정한 후 해당 검사를 통과했다. 공개 사이트 브라우저 검증까지 완료했다.
+
 ## 설정
 
 저장소는 공개이며 Settings → Pages → Build and deployment → Source는 **GitHub Actions**다. `.github/workflows/pages.yml`이 main 푸시 또는 workflow_dispatch로 실행된다. README·docs만 변경된 푸시는 배포하지 않는다.
