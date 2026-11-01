@@ -2,6 +2,10 @@
 
 홈페이지 주소: https://kizwond.github.io/doti_doit_web/
 
+## 최신 공개 업데이트
+
+2026-11-01 `80cca28d` / [Actions 41274381047](https://github.com/kizwond/doti_doit_web/actions/runs/41274381047) success. 최신 앱 안내와 7개 언어, 총 77개 페이지를 제공한다. [다국어 인계](2026-11-01-multilingual-update.md), [공개 83개 파일 검증](qa/2026-11-01/public-verification.json)을 확인한다. 언어별 하위 경로는 `/en/`, `/ja/`, `/zh-hans/`, `/zh-hant/`, `/es/`, `/vi/`이며 한국어는 기존 루트다.
+
 ## 최초 공개 확인
 
 2026-10-28, 배포 커밋 `cdf3b92fd956614e9cbb7a5060ee24e92d5ef105`의 [Actions 실행 40635547193](https://github.com/kizwond/doti_doit_web/actions/runs/40635547193)이 success로 완료됐다. 공개 HTTPS 주소에서 11개 페이지의 HTTP 200·canonical·모바일 가로 넘침 없음·검색 차단 해제를 확인했다. 이미지·로고·CSS·사이트맵·robots 응답, 모바일 메뉴 이동, 실제 404 복귀, 사이트 배포물의 docs 제외를 확인했다. 개인정보처리방침은 기존 공식 주소로 연결했다. 공개 데스크톱 화면도 캡처해 확인했다.

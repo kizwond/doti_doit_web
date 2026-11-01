@@ -43,3 +43,9 @@
 `npm ci`(취약점 0)·`npm run build:preview`·`npm run check`·`npm test` 10개 통과. 기존 검사 7개에 77개 전 페이지의 320px 레이아웃·언어·본문 번역·이미지, JavaScript 없이 7개 언어로 같은 문서 전환, 언어별 390/1440px 화면 캡처를 추가했다. 첫 검사에서 스페인어/베트남어 홈 제목의 기존 nowrap을 발견해 언어별 자연스러운 줄바꿈과 그리드 축소를 적용한 뒤 통과했다. 간체와 번체에 동일한 제목이 있을 수 있어 제목 중복은 언어 내부에서 검사한다. Playwright 공개 프로젝트 경로 검사도 통과했다.
 
 CUA에는 연결된 브라우저가 없어 사이트를 채팅 옆에 직접 열지 못했다. 저장소의 Playwright/Chromium으로 실제 브라우저 자동 검사와 스크린샷을 수행했다. 일본어·스페인어·베트남어의 대표 화면을 육안 검토한다. 모든 번역을 원어민이 전수 감수한 것은 아니다.
+
+## 공개 배포 완료
+
+`main @ 80cca28d`를 origin에 푸시하고 [GitHub Actions 41274381047](https://github.com/kizwond/doti_doit_web/actions/runs/41274381047)의 홈페이지 배포가 success로 완료됐다. 77개 페이지와 CSS·빌드 정보·사이트맵·robots·대표 이미지·로고까지 83개 공개 응답의 HTTP 200 및 로컬 공개 빌드와 전체 바이트 일치를 확인했다. [공개 검증 결과](qa/2026-11-01/public-verification.json)와 [대표 화면](qa/2026-11-01/screenshots/)을 따른다.
+
+홈페이지 공개 주소는 그대로 유지한다. 개인용 Preview APK, 앱 번들 또는 Play Console은 홈페이지 배포물에 포함하지 않았다. 앱 누락 번역 수정은 DotiDoit Preview 367(1.0.210), 제품 `31dd4855`의 별도 배포 인계를 따른다.
