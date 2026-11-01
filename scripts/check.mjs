@@ -17,10 +17,15 @@ for (const [route, html] of files) {
     1,
     `${route}: expected one H1`,
   );
-  assert(html.includes('lang="ko"'), `${route}: Korean language declaration`);
+  const language=info.languages.find(l=>l.path && route.startsWith(l.path+"/")) || info.languages[0];
+  assert(html.includes(`lang="${language.code}"`), `${route}: language declaration`);
+  if(language.code!=="ko") assert(!/[가-힣]/.test(html.replace(/<details class="language-menu">[\s\S]*?<\/details>/g, "").replace(/<[^>]*>/g,"")),`${route}: untranslated Korean text`);
+  if(info.mode==="production") {
+    assert.equal((html.match(/rel="alternate" hreflang=/g)||[]).length,8,`${route}: seven alternates and default`);
+  }
   const title = html.match(/<title>(.*?)<\/title>/)?.[1];
-  assert(title && !titles.has(title), `${route}: unique title`);
-  titles.add(title);
+  assert(title && !titles.has(language.code+":"+title), `${route}: unique title`);
+  titles.add(language.code+":"+title);
   assert(html.includes('<meta name="description"'), `${route}: description`);
   if (info.mode === "preview")
     assert(

@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { Marked } from "marked";
 import { layout, home, article, guideIndex } from "../src/templates.mjs";
+import { languages, translateChrome, languagePicker } from "../src/languages.mjs";
 
 const preview = process.argv.includes("--preview");
 const output = path.resolve("dist");
@@ -16,6 +17,19 @@ const escape = (s) =>
 const slug = (s) =>
   s.replace(/[*_`]/g, "").trim().replace(/\s+/g, "-").toLowerCase();
 const pages = [];
+const markdownPage = (source) => {
+    const toc = [], seen = new Set();
+    const marked = new Marked({renderer: {
+      heading({depth,tokens,text}) {
+        let id=slug(text),suffix=2;
+        while(seen.has(id)) id=`${slug(text)}-${suffix++}`;
+        seen.add(id);if(depth===2)toc.push({id,title:text});
+        return `<h${depth} id="${escape(id)}">${this.parser.parseInline(tokens)}</h${depth}>\n`;
+      },
+      html({text}){return escape(text);}
+    }});
+    return {body:marked.parse(source),toc};
+};
 for (const dir of ["pages", "guides"]) {
   for (const file of (await fs.readdir(`content/${dir}`))
     .filter((f) => f.endsWith(".md"))
@@ -35,24 +49,7 @@ for (const dir of ["pages", "guides"]) {
     if (!["draft", "published"].includes(meta.status))
       throw new Error(`Invalid status: ${file}`);
     if (!preview && meta.status !== "published") continue;
-    const toc = [];
-    const seen = new Set();
-    const marked = new Marked({
-      renderer: {
-        heading({ depth, tokens, text }) {
-          let id = slug(text),
-            suffix = 2;
-          while (seen.has(id)) id = `${slug(text)}-${suffix++}`;
-          seen.add(id);
-          if (depth === 2) toc.push({ id, title: text });
-          return `<h${depth} id="${escape(id)}">${this.parser.parseInline(tokens)}</h${depth}>\n`;
-        },
-        html({ text }) {
-          return escape(text);
-        },
-      },
-    });
-    pages.push({ ...meta, body: marked.parse(match[2]), toc, kind: dir });
+    pages.push({ ...meta, ...markdownPage(match[2]), kind: dir });
   }
 }
 if (!pages.some((p) => p.route === "/"))
@@ -94,24 +91,42 @@ const guidePage = {
   kind: "index",
 };
 pages.push(guidePage);
+const allPages = [];
+for (const language of languages) {
+  const dictionary = language.code === "ko" ? null : JSON.parse(await fs.readFile(`content/i18n/${language.code}.json`, "utf8"));
+  for (const source of pages) {
+    if (!dictionary) { allPages.push({...source,language,outputRoute:source.route}); continue; }
+    const translated = dictionary[source.route];
+    if (!translated?.title || !translated?.description || (source.route!=="/" && source.kind!=="index" && !translated.markdown))
+      throw Error(`Incomplete ${language.code} page: ${source.route}`);
+    allPages.push({...source,...translated,seo_title:translated.title+" | DotiDoit",
+      ...(translated.markdown ? markdownPage(translated.markdown) : {}),
+      language,outputRoute:language.path+source.route});
+  }
+}
 await fs.rm(output, { recursive: true, force: true });
 await fs.mkdir(output, { recursive: true });
 await fs.cp("public", output, { recursive: true });
 for (const file of ["styles.css"])
   await fs.copyFile(`src/${file}`, `${output}/${file}`);
-for (const page of pages) {
-  const content =
-    page.route === "/"
-      ? home()
-      : page.kind === "index"
-        ? guideIndex(pages)
-        : article(page);
-  const dest = path.join(output, page.route, "index.html");
-  await fs.mkdir(path.dirname(dest), { recursive: true });
-  await fs.writeFile(
-    dest,
-    sitePaths(layout(page, content, { preview, origin })),
-  );
+const routes = new Set(allPages.map(p=>p.outputRoute));
+const localizeLinks = (html,language) => html.replace(/href="(\/[^"#]*)(#[^"]*)?"/g,(whole,target,hash="")=>
+  pages.some(p=>p.route===target) ? `href="${language.path+target}${hash}"` : whole);
+for (const page of allPages) {
+  const language=page.language;
+  const content=page.route==="/" ? home() : page.kind==="index" ? guideIndex(allPages.filter(p=>p.language.code===language.code)) : article(page);
+  let html=layout(page,content,{preview,origin:origin ? origin+language.path : ""});
+  html=localizeLinks(translateChrome(html,language),language);
+  html=html.replace('<details class="mobile-menu">',languagePicker(language,page.route,routes)+'<details class="mobile-menu">');
+  if(!preview) {
+    const alternatives=allPages.filter(p=>p.route===page.route).map(p=>`<link rel="alternate" hreflang="${p.language.code}" href="${escape(origin+p.outputRoute)}">`).join("");
+    html=html.replace('</head>',alternatives+`<link rel="alternate" hreflang="x-default" href="${escape(origin+page.route)}"></head>`);
+  }
+  // Store search uses the selected language; the Korean app title remains the search term.
+  html=html.replace('&amp;hl=ko',`&amp;hl=${language.code}`);
+  const dest=path.join(output,page.outputRoute,"index.html");
+  await fs.mkdir(path.dirname(dest),{recursive:true});
+  await fs.writeFile(dest,sitePaths(html));
 }
 const notFound = {
   title: "페이지를 찾을 수 없어요",
@@ -138,7 +153,7 @@ await fs.writeFile(
 if (!preview)
   await fs.writeFile(
     `${output}/sitemap.xml`,
-    `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map((p) => `<url><loc>${escape(origin + p.route)}</loc></url>`).join("")}</urlset>`,
+    `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${allPages.map((p) => `<url><loc>${escape(origin + p.outputRoute)}</loc></url>`).join("")}</urlset>`,
   );
 await fs.writeFile(
   `${output}/build-info.json`,
@@ -146,7 +161,9 @@ await fs.writeFile(
     {
       mode: preview ? "preview" : "production",
       basePath,
-      routes: pages.map((p) => p.route),
+      routes: allPages.map((p) => p.outputRoute),
+      languages: languages.map(({code,path})=>({code,path})),
+      productBasis: "DotiDoit Preview 366 / 2026-11-01",
     },
     null,
     2,
@@ -154,5 +171,5 @@ await fs.writeFile(
 );
 await fs.writeFile(`${output}/.nojekyll`, "");
 console.log(
-  `Built ${pages.length} pages (${preview ? "draft preview · noindex" : "production"}) → dist/`,
+  `Built ${allPages.length} pages (${preview ? "draft preview · noindex" : "production"}) → dist/`,
 );

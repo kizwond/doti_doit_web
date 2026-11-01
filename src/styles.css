@@ -1732,3 +1732,35 @@ details[open] > summary .chevron {
     height: 34px;
   }
 }
+
+/* Native language links remain usable without JavaScript and preserve the current page. */
+.language-menu { position: relative; flex-shrink: 0; margin-left: auto; }
+.language-menu summary { display: flex; gap: 8px; align-items: center; min-height: 44px; padding: 6px; font-size: 13px; }
+.language-menu nav { position: absolute; right: 0; top: 100%; min-width: 165px; max-height: 70vh; overflow-y: auto; padding: 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); box-shadow: 0 12px 24px #18374618; }
+.language-menu nav a { display: block; padding: 9px 12px; min-height: 44px; font-size: 14px; }
+.language-menu [aria-current] { color: var(--orange); font-weight: 700; }
+html:not([lang="ko"]) { word-break: normal; }
+html:lang(ja), html:lang(zh-Hans), html:lang(zh-Hant) { line-break: strict; }
+html:not([lang="ko"]) h1, html:not([lang="ko"]) h2, html:not([lang="ko"]) h3 { letter-spacing: -0.025em; }
+html:not([lang="ko"]) .walking-preview h2 { white-space: normal; }
+html:not([lang="ko"]) .walking-preview > div, .guide-links > a > div { min-width: 0; }
+html:not([lang="ko"]) .footer-top nav { flex-wrap: wrap; }
+@media(max-width:1200px) { .desktop-nav { display:none; } .mobile-menu { display:block; } .header-inner { gap:16px; } }
+@media(max-width:850px) { .language-menu { margin-left:0; } .header-cta { margin-left:auto; } }
+@media(max-width:620px) {
+ .header-inner { gap:8px; padding-inline:16px; }
+ .header-cta { font-size:11px; padding:8px; gap:4px; }
+ .language-menu summary { font-size:11px; gap:4px; padding:4px; }
+ html:not([lang="ko"]) .hero h1 { font-size:clamp(30px,8vw,46px); }
+ .walking-preview > img { flex-shrink:0; }
+ .hero-visual { padding-inline:0; }
+ .mission-preview { padding-inline:14px; }
+}
+@media(min-width:851px) and (max-width:1200px) {
+ .mobile-menu > summary { display:flex; flex-direction:column; justify-content:center; gap:6px; width:40px; height:44px; }
+ .mobile-menu > summary > span { display:block; width:23px; height:2px; background:var(--ink); margin-inline:auto; }
+ .mobile-menu nav { position:absolute; top:92px; left:0; right:0; background:var(--paper); border-bottom:1px solid var(--line); padding:14px 32px 25px; display:grid; gap:4px; }
+ .mobile-menu nav a { padding:10px 0; }
+}
+html:not([lang="ko"]) .hero h1 { white-space:normal; }
+.hero-copy, .hero-visual { min-width:0; }
