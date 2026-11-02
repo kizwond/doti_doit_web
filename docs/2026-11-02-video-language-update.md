@@ -25,3 +25,8 @@ SITE_URL=https://kizwond.github.io/doti_doit_web npm run build
 공개 HTTP 본문까지 확인한 결과는 `docs/qa/2026-11-02-video/`에 남긴다.
 생성된 `dist/`, 전체 길이 브라우저 캡처 `artifacts/`는 추적하지 않는다.
 공개 방침 저장소의 기존 `.worktrees/`는 사용자 작업이므로 변경하지 않는다.
+
+공개 소스 `06c89b7`의 Pages 배포가 성공했다. 84개 공개 HTML을 실제 HTTP로 읽어
+로컬 production 산출물과 전체 바이트를 대조했고 모두 같았다. 7개 언어 정책 페이지도
+동일하게 확인했다. 앱 373 APK의 공개 배포·해시 확인도 완료했다.
+이후 문서·검증 자료만 추가한 커밋은 홈페이지 재배포를 일으키지 않는다.
