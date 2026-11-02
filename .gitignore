@@ -28,3 +28,4 @@ Thumbs.db
 # Browser verification artifacts
 playwright-report/
 test-results/
+artifacts/

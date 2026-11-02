@@ -1,0 +1,24 @@
+
+> doti-doit-web@0.1.0 test
+> playwright test
+
+[WebServer] (node:79786) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 11 tests using 1 worker
+
+(node:79805) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/languages.spec.mjs:5:1 › all 84 pages keep their language, readable layout and working images at 320px (14.2s)
+  ✓   2 tests/languages.spec.mjs:24:1 › language links retain the current article and navigation works without JavaScript (3.3s)
+  ✓   3 tests/languages.spec.mjs:43:1 › localized home and language-menu screenshots (29.1s)
+  ✓   4 tests/site.spec.mjs:19:1 › every page works on small phones and has no overflow or missing assets (2.0s)
+  ✓   5 tests/site.spec.mjs:52:1 › mobile navigation and explanations work with JavaScript disabled (970ms)
+  ✓   6 tests/site.spec.mjs:80:1 › desktop and mobile overview screenshots (6.4s)
+  ✓   7 tests/site.spec.mjs:107:1 › guide links, anchors, store search and missing-page handling (1.3s)
+  ✓   8 tests/site.spec.mjs:142:1 › production build excludes a draft home without deleting existing output (513ms)
+  ✓   9 tests/site.spec.mjs:172:1 › production emits canonical/sitemap and excludes remaining drafts (1.9s)
+  ✓  10 tests/site.spec.mjs:244:1 › GitHub project path serves navigation, images, CSS and 404 recovery (2.4s)
+  ✓  11 tests/video-languages.spec.mjs:4:1 › all seven languages include the video guide and matching privacy link without mobile overflow (3.1s)
+
+  11 passed (1.2m)

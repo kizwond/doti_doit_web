@@ -77,7 +77,7 @@
 숫자로 남기고,	Capture the numbers.	数字に残し、	用数字记录，	用數字記錄，	Guarda las cifras.	Lưu lại con số,
 내 이야기로 기억해요.	Remember your story.	自分の物語として振り返る。	也记住自己的故事。	也記住自己的故事。	Recuerda tu historia.	và câu chuyện của bạn.
 얼마나 했는지도, 그날의 기분도.	What you did and how you felt.	どれだけやったかも、その日の気分も。	做了多少，那天的心情如何。	做了多少，那天的心情如何。	Lo que hiciste y cómo te sentiste.	Đã làm bao nhiêu và cảm thấy thế nào.
-필요한 기록을 골라 사진에 넣고, 글자 서식도 한 번에 꾸며요.	Add selected records to photos and style all text together.	必要な記録を写真に重ね、文字の書式も一括で。	选择记录添加到照片，一次调整所有文字样式。	選擇記錄加入照片，一次調整所有文字樣式。	Añade registros a tus fotos y aplica el estilo a todo el texto.	Chèn bản ghi vào ảnh và đổi kiểu toàn bộ chữ cùng lúc.
+필요한 기록을 사진·동영상에 넣고, 글자 서식도 한 번에 꾸며요.	Add selected records to photos and videos, and style all text together.	写真・動画に必要な記録を入れて、文字書式をまとめて整えます。	把所需记录放入照片和视频，统一调整文字样式。	把所需記錄放入照片和影片，統一調整文字樣式。	Añade registros a fotos y vídeos y cambia el estilo del texto a la vez.	Thêm bản ghi lên ảnh, video và chỉnh kiểu chữ cùng lúc.
 기록과 피드 알아보기	Explore records & feed	記録とフィードを見る	了解记录与动态	了解記錄與動態	Ver registros y feed	Tìm hiểu bản ghi và bảng tin
 어느 기분 좋은 오후	One lovely afternoon	ある気持ちのよい午後	某个美好的午后	某個美好的午後	Una tarde agradable	Một buổi chiều dễ chịu
 늘 지나치던 길인데	The same familiar path	いつもの道なのに、	还是平常走的路，	還是平常走的路，	El camino de siempre,	Vẫn là con đường quen,
@@ -92,7 +92,7 @@
 하루 걸음수는, 상시 측정 연결하기	Daily steps? Enable ongoing measurement.	1日の歩数は、常時測定を設定	全天步数？开启持续测量	全天步數？開啟持續測量	¿Pasos del día? Activa la medición continua.	Bước trong ngày? Bật đo liên tục.
 총 걸음수 또는 마지막 휴대폰 사용 종료가 성공 기준일 때 사용할 수 있어요. 해당 기능의 동의와 권한, 기기 지원이 필요합니다.	Available for total steps or last phone-use end as the success metric, with consent, permissions and device support.	合計歩数または最後のスマホ使用終了が判定基準の場合に利用できます。同意・権限・端末の対応が必要です。	成功指标为总步数或手机最后使用结束时间时可用，需要同意、权限及设备支持。	成功指標為總步數或手機最後使用結束時間時可用，需要同意、權限及裝置支援。	Disponible con pasos totales o fin del último uso del teléfono como criterio. Requiere consentimiento, permisos y un dispositivo compatible.	Dùng khi tiêu chí là tổng bước hoặc thời điểm kết thúc dùng điện thoại gần nhất; cần đồng ý, quyền và thiết bị hỗ trợ.
 미션을 하지 않은 날에도 괜찮아요.	No mission today? That's fine.	ミッションのない日も大丈夫。	今天没有任务也没关系。	今天沒有任務也沒關係。	No pasa nada si hoy no hay misión.	Không làm nhiệm vụ hôm nay cũng được.
-사진과 메모만으로 피드를 남길 수 있어요.	Create a feed post with just photos and notes.	写真とメモだけでもフィードを残せます。	只用照片和文字也能发布动态。	只用照片和文字也能建立動態。	Crea una entrada solo con fotos y notas.	Tạo bài bằng ảnh và ghi chú.
+사진·동영상과 메모만으로 피드를 남길 수 있어요.	Create posts with just photos, videos and notes.	写真・動画とメモだけでも投稿できます。	只用照片、视频和备注也能创建动态。	只用照片、影片與備註也能建立動態。	Crea publicaciones solo con fotos, vídeos y notas.	Có thể tạo bài chỉ với ảnh, video và ghi chú.
 도티두잇에 담고 싶은 생각	The idea behind DotiDoit	DotiDoitに込めたい思い	DotiDoit 想传达的理念	DotiDoit 想傳達的理念	La idea detrás de DotiDoit	Ý tưởng đằng sau DotiDoit
 잘한 날도, 다시 시작하는 날도.	On good days and fresh starts.	うまくいく日も、やり直す日も。	无论顺利的一天，还是重新开始的一天。	無論順利的一天，還是重新開始的一天。	En los buenos días y al volver a empezar.	Ngày làm tốt hay ngày bắt đầu lại.
 내가 중요하게 생각한 일을	Keep making room	自分が大切にしていることを	让自己重视的事，	讓自己重視的事，	Haz espacio para	Dành chỗ cho
@@ -114,7 +114,7 @@
 많이 묻는 질문.	a few common questions.	よくある質問。	先看看常见问题。	先看看常見問題。	algunas dudas frecuentes.	một vài câu hỏi thường gặp.
 질문과 답 모두 보기	See all answers	質問と回答を見る	查看所有问答	查看所有問答	Ver todas las respuestas	Xem mọi câu trả lời
 미션이 있어야만 사용할 수 있나요?	Do I need a mission?	ミッションが必要ですか？	必须有任务才能用吗？	必須有任務才能用嗎？	¿Necesito una misión?	Có cần tạo nhiệm vụ không?
-미션 없이 바로 측정할 수 있어요. 피드에서도 미션을 연결하지 않고 사진과 메모를 남길 수 있습니다.	Measure without a mission, or make a feed post with photos and notes without linking one.	ミッションなしでも測定でき、写真とメモだけのフィードも作れます。	可以不创建任务直接测量，也可以只用照片和文字创建动态。	可以不建立任務直接測量，也可以只用照片和文字建立動態。	Puedes medir sin misión y crear entradas con fotos y notas sin vincular ninguna.	Có thể đo ngay hoặc tạo bài ảnh, ghi chú mà không gắn nhiệm vụ.
+미션 없이 바로 측정할 수 있어요. 피드에서도 미션 없이 사진·동영상과 메모를 남길 수 있습니다.	Measure without a mission, or create posts with photos, videos and notes alone.	ミッションなしで測定し、写真・動画とメモだけの投稿も作れます。	无需任务即可测量，也能只用照片、视频和备注创建动态。	無需任務即可測量，也能只用照片、影片與備註建立動態。	Mide sin misión o crea publicaciones solo con fotos, vídeos y notas.	Đo không nhiệm vụ hoặc tạo bài chỉ có ảnh, video và ghi chú.
 모든 활동이 자동으로 기록되나요?	Is every activity recorded automatically?	すべて自動で記録されますか？	所有活动都会自动记录吗？	所有活動都會自動記錄嗎？	¿Se registra todo automáticamente?	Mọi hoạt động đều tự ghi lại sao?
 자동기록은 총 걸음수 또는 마지막 휴대폰 사용 종료가 성공 기준일 때 제공됩니다. 다른 활동은 측정하거나 직접 입력해 남길 수 있어요.	Ongoing measurement supports total steps and last phone-use end. Measure or manually enter other activities.	常時測定は合計歩数と最後のスマホ使用終了に対応します。他の活動は測定か直接入力で残せます。	持续测量支持总步数和手机最后使用结束时间。其他活动可测量或手动输入。	持續測量支援總步數和手機最後使用結束時間。其他活動可測量或手動輸入。	La medición continua admite pasos totales y fin del último uso del teléfono. Mide o introduce manualmente las demás actividades.	Đo liên tục hỗ trợ tổng bước và lần kết thúc dùng điện thoại gần nhất. Hoạt động khác có thể đo hoặc nhập tay.
 저장한 기록이 자동으로 공유되나요?	Are saved records shared automatically?	保存した記録は自動で共有されますか？	保存的记录会自动分享吗？	儲存的記錄會自動分享嗎？	¿Se comparten los registros automáticamente?	Bản ghi đã lưu có tự chia sẻ không?
@@ -164,3 +164,5 @@ Google Play에서 검색	Search Google Play	Google Playで検索	在 Google Play
 도티두잇 활동 일러스트	DotiDoit activity illustration	DotiDoitの活動イラスト	DotiDoit 活动插画	DotiDoit 活動插畫	Ilustración de actividades DotiDoit	Minh họa hoạt động DotiDoit
 본문 목차	Table of contents	目次	正文目录	正文目錄	Índice	Mục lục
 설치와 시작 안내	Installation & getting started	インストールと初期設定	安装与入门指南	安裝與入門指南	Instalación y primeros pasos	Cài đặt và bắt đầu
+동영상 피드 만들기	Create a video post	動画フィードを作る	制作视频动态	製作影片動態	Crear una publicación con vídeo	Tạo bài đăng video
+영상 구간·배치·공유 설정 알아보기	Choose a segment, layout and sharing options	動画の範囲・配置・共有設定を確認する	了解视频片段、布局和共享设置	了解影片片段、配置與分享設定	Elegir segmento, disposición y ajustes para compartir	Chọn đoạn, bố cục và cài đặt chia sẻ

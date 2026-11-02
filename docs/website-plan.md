@@ -26,6 +26,7 @@
 | `/guides/start-a-mission/` | 첫 미션 시작하기 | 처음에 어느 기능부터 사용하면 될까 | [첫 미션 안내](../content/guides/start-a-mission.md) |
 | `/guides/walking-records/` | 걷기 기록하기 | 하루 걸음수와 운동 중 측정은 어떻게 다를까 | [걷기 안내](../content/guides/walking-records.md) |
 | `/guides/exercise-routine/` | 운동 루틴 활용하기 | 운동 목표와 루틴을 어떻게 연결할까 | [운동 안내](../content/guides/exercise-routine.md) |
+| `/guides/video-feed/` | 동영상 피드 만들기 | 영상 편집·재생·공유·백업은 어떻게 할까 | [동영상 안내](../content/guides/video-feed.md) |
 
 상단 메뉴는 도티두잇 이야기·사용 안내·자주 묻는 질문·시작하기로 간결하게 둔다. 사용 안내에서 미션·루틴·기록과 세부 가이드로 이동한다. 본문 끝에는 관련 설명으로 이어지는 링크를 둔다.
 

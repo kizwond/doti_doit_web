@@ -48,7 +48,7 @@ export function home() {
    .join("")}</div></section>
  <section class="chapter chapter-mission"><div class="wrap split"><div class="chapter-copy"><p class="eyebrow"><span class="chapter-number">01</span> 미션 · 내가 하고 싶은 일</p><h2>목표의 기준은<br>내 생활에 맞게.</h2><p>누군가에게는 만 보, 나에게는 칠천 보.<br>준비된 미션에서 시작해도 좋고,<br>나만의 미션을 만들어도 좋아요.</p><p>얼마나 할지, 무엇을 남길지 정하고<br>시작하는 이유도 내 말로 적어보세요.</p>${link("/missions/", "미션 자세히 알아보기")}</div><div class="goal-note"><span class="note-kicker">나의 작은 약속</span><h3>조금 더 가볍게<br>출근하고 싶어서.</h3><div class="note-rule"></div><dl><div><dt>하고 싶은 일</dt><dd>하루 7,000보 걷기</dd></div><div><dt>나의 세부목표</dt><dd>가까운 거리는 걸어보기</dd></div></dl><span class="note-bottom">내가 정한 목표로 시작해요 <span aria-hidden="true">↗</span></span></div></div></section>
  <section class="chapter wrap split routine-section"><div class="routine-demo"><div class="routine-title"><span class="small-label">수행 순서 예시</span><h3>걷고, 달리고, 숨 고르기.</h3><span class="routine-pill">나에게 맞춰 조절하기</span></div><ol class="routine-steps"><li><span class="step-time">05:00</span><div><strong>가볍게 걷기</strong><span>천천히 몸을 깨워요</span></div><span class="step-dot"></span></li><li class="active-step"><span class="step-time">03:00</span><div><strong>편안한 속도로 달리기</strong><span>나만의 페이스로</span></div><span class="step-dot"></span></li><li><span class="step-time">02:00</span><div><strong>걸으며 숨 고르기</strong><span>잠깐 쉬어가는 시간</span></div><span class="step-dot"></span></li></ol><div class="repeat-note"><span aria-hidden="true">↻</span> 필요한 만큼 묶어서 반복해요</div></div><div class="chapter-copy"><p class="eyebrow"><span class="chapter-number">02</span> 루틴 · 실천하는 순서</p><h2>다음에 뭘 할지,<br>미리 정해두면 편하죠.</h2><p>준비부터 본운동, 휴식과 마무리까지.<br>여러 활동을 하나의 순서로 묶어보세요.</p><p>도티 루틴에서 가져오거나 직접 구성하고,<br>활동별 시간과 반복을 조절할 수 있어요.</p>${link("/routines/", "루틴 자세히 알아보기")}</div></section>
- <section class="record-section"><div class="wrap"><div class="section-heading"><div><p class="eyebrow"><span class="chapter-number">03</span> 기록 · 오늘이 쌓이는 곳</p><h2>숫자로 남기고,<br>내 이야기로 기억해요.</h2></div><div><p>얼마나 했는지도, 그날의 기분도.<br>필요한 기록을 골라 사진에 넣고, 글자 서식도 한 번에 꾸며요.</p>${link("/records/", "기록과 피드 알아보기")}</div></div><div class="record-layout"><div class="journal"><span class="journal-date">어느 기분 좋은 오후</span><p>늘 지나치던 길인데<br>오늘은 조금 다르게 보였다.</p><div class="journal-illustration">${illustration("walking", "산책길에서 남기는 하루의 기록")}<span>산책의 좋은 점:<br>마음도 같이 가벼워진다.</span></div><div class="journal-footer"><span>내 기록, 내 이야기</span><span aria-hidden="true">♡</span></div></div><div class="record-methods"><details open><summary><span>지금 시작한다면, 측정하기</span><span class="chevron" aria-hidden="true">⌄</span></summary><p>수행을 시작하고 필요한 데이터를 측정해요. 마친 뒤 결과를 확인하고 저장하면 됩니다.</p></details><details><summary><span>이미 마쳤다면, 직접 입력하기</span><span class="chevron" aria-hidden="true">⌄</span></summary><p>수행날짜와 필요한 값을 남겨요. 나누어 수행했다면 각각의 시각과 결과를 입력할 수 있어요.</p></details><details><summary><span>하루 걸음수는, 상시 측정 연결하기</span><span class="chevron" aria-hidden="true">⌄</span></summary><p>총 걸음수 또는 마지막 휴대폰 사용 종료가 성공 기준일 때 사용할 수 있어요. 해당 기능의 동의와 권한, 기기 지원이 필요합니다.</p></details><div class="record-aside">미션을 하지 않은 날에도 괜찮아요.<br>사진과 메모만으로 피드를 남길 수 있어요.</div></div></div></div></section>
+ <section class="record-section"><div class="wrap"><div class="section-heading"><div><p class="eyebrow"><span class="chapter-number">03</span> 기록 · 오늘이 쌓이는 곳</p><h2>숫자로 남기고,<br>내 이야기로 기억해요.</h2></div><div><p>얼마나 했는지도, 그날의 기분도.<br>필요한 기록을 사진·동영상에 넣고, 글자 서식도 한 번에 꾸며요.</p>${link("/records/", "기록과 피드 알아보기")}</div></div><div class="record-layout"><div class="journal"><span class="journal-date">어느 기분 좋은 오후</span><p>늘 지나치던 길인데<br>오늘은 조금 다르게 보였다.</p><div class="journal-illustration">${illustration("walking", "산책길에서 남기는 하루의 기록")}<span>산책의 좋은 점:<br>마음도 같이 가벼워진다.</span></div><div class="journal-footer"><span>내 기록, 내 이야기</span><span aria-hidden="true">♡</span></div></div><div class="record-methods"><details open><summary><span>지금 시작한다면, 측정하기</span><span class="chevron" aria-hidden="true">⌄</span></summary><p>수행을 시작하고 필요한 데이터를 측정해요. 마친 뒤 결과를 확인하고 저장하면 됩니다.</p></details><details><summary><span>이미 마쳤다면, 직접 입력하기</span><span class="chevron" aria-hidden="true">⌄</span></summary><p>수행날짜와 필요한 값을 남겨요. 나누어 수행했다면 각각의 시각과 결과를 입력할 수 있어요.</p></details><details><summary><span>하루 걸음수는, 상시 측정 연결하기</span><span class="chevron" aria-hidden="true">⌄</span></summary><p>총 걸음수 또는 마지막 휴대폰 사용 종료가 성공 기준일 때 사용할 수 있어요. 해당 기능의 동의와 권한, 기기 지원이 필요합니다.</p></details><div class="record-aside">미션을 하지 않은 날에도 괜찮아요.<br>사진·동영상과 메모만으로 피드를 남길 수 있어요.</div></div></div></div></section>
  <section class="story-section wrap"><p class="eyebrow">도티두잇에 담고 싶은 생각</p><h2>잘한 날도, 다시 시작하는 날도.<br>내가 중요하게 생각한 일을<br>이어갈 수 있도록.</h2><p>다른 사람이 보기 좋은 목표보다, 내가 해보고 싶은 일.<br>도티두잇은 그 마음이 생활 속 작은 실천으로 이어지기를 바랍니다.</p>${link("/about/", "도티두잇 이야기 읽기")}</section>
  <section class="guide-section section wrap"><div class="section-heading"><div><p class="eyebrow">처음이라면, 여기서부터</p><h2>하나씩 알아가도 괜찮아요.</h2></div>${link("/guides/", "사용 안내 모두 보기")}</div><div class="guide-links">${[
    [
@@ -69,13 +69,19 @@ export function home() {
      "목표와 수행 순서를 함께 준비하기",
      "exercise-routine",
    ],
+   [
+     "04",
+     "동영상 피드 만들기",
+     "영상 구간·배치·공유 설정 알아보기",
+     "video-feed",
+   ],
  ]
    .map(
      ([n, t, d, url]) =>
        `<a href="/guides/${url}/"><span class="guide-number">${n}</span><div><h3>${t}</h3><p>${d}</p></div>${arrow}</a>`,
    )
    .join("")}</div></section>
- <section class="faq-section section wrap"><div><p class="eyebrow">궁금한 점이 있나요?</p><h2>시작 전에<br>많이 묻는 질문.</h2>${link("/faq/", "질문과 답 모두 보기")}</div><div class="faq-list"><details><summary>미션이 있어야만 사용할 수 있나요?<span class="chevron" aria-hidden="true">⌄</span></summary><p>미션 없이 바로 측정할 수 있어요. 피드에서도 미션을 연결하지 않고 사진과 메모를 남길 수 있습니다.</p></details><details><summary>모든 활동이 자동으로 기록되나요?<span class="chevron" aria-hidden="true">⌄</span></summary><p>자동기록은 총 걸음수 또는 마지막 휴대폰 사용 종료가 성공 기준일 때 제공됩니다. 다른 활동은 측정하거나 직접 입력해 남길 수 있어요.</p></details><details><summary>저장한 기록이 자동으로 공유되나요?<span class="chevron" aria-hidden="true">⌄</span></summary><p>기록 저장과 외부 공유는 별개입니다. 다른 사람에게 보내고 싶을 때 공유할 앱과 상대를 선택하세요.</p></details></div></section>
+ <section class="faq-section section wrap"><div><p class="eyebrow">궁금한 점이 있나요?</p><h2>시작 전에<br>많이 묻는 질문.</h2>${link("/faq/", "질문과 답 모두 보기")}</div><div class="faq-list"><details><summary>미션이 있어야만 사용할 수 있나요?<span class="chevron" aria-hidden="true">⌄</span></summary><p>미션 없이 바로 측정할 수 있어요. 피드에서도 미션 없이 사진·동영상과 메모를 남길 수 있습니다.</p></details><details><summary>모든 활동이 자동으로 기록되나요?<span class="chevron" aria-hidden="true">⌄</span></summary><p>자동기록은 총 걸음수 또는 마지막 휴대폰 사용 종료가 성공 기준일 때 제공됩니다. 다른 활동은 측정하거나 직접 입력해 남길 수 있어요.</p></details><details><summary>저장한 기록이 자동으로 공유되나요?<span class="chevron" aria-hidden="true">⌄</span></summary><p>기록 저장과 외부 공유는 별개입니다. 다른 사람에게 보내고 싶을 때 공유할 앱과 상대를 선택하세요.</p></details></div></section>
  <section class="closing"><div class="wrap"><p>내일의 큰 결심보다, 오늘의 작은 시작.</p><h2>오늘 해보고 싶은 일,<br class="mobile-break"> 하나만 골라볼까요?</h2>${link("/download/", "도티두잇 시작하기", "button button-light")}</div></section>`;
 }
 export function article(page) {
@@ -102,11 +108,13 @@ export function guideIndex(pages) {
           "/guides/start-a-mission/",
           "/guides/walking-records/",
           "/guides/exercise-routine/",
+          "/guides/video-feed/",
         ].indexOf(a.route) -
         [
           "/guides/start-a-mission/",
           "/guides/walking-records/",
           "/guides/exercise-routine/",
+          "/guides/video-feed/",
         ].indexOf(b.route),
     );
   return `<section class="section wrap guide-index"><p class="eyebrow">내 생활에 맞게, 하나씩</p><h1>처음부터 잘 몰라도<br>괜찮아요.</h1><p class="intro">목표를 정하고, 실천하고, 돌아보기.<br>필요한 순간에 하나씩 찾아 읽어보세요.</p><div class="guide-links">${guides.map((p, i) => `<a href="${p.route}"><span class="guide-number">0${i + 1}</span><div><h2>${e(p.title)}</h2><p>${e(p.description)}</p></div>${arrow}</a>`).join("")}</div><div class="topic-links">${[

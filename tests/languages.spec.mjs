@@ -2,11 +2,11 @@ import {test,expect} from '@playwright/test';
 import fs from 'node:fs/promises';
 const languages=[['ko',''],['en','/en'],['ja','/ja'],['zh-Hans','/zh-hans'],['zh-Hant','/zh-hant'],['es','/es'],['vi','/vi']];
 
-test('all 77 pages keep their language, readable layout and working images at 320px', async({page})=>{
+test('all 84 pages keep their language, readable layout and working images at 320px', async({page})=>{
  test.setTimeout(150000);
  await page.setViewportSize({width:320,height:800});
  const info=JSON.parse(await fs.readFile('dist/build-info.json','utf8'));
- expect(info.routes).toHaveLength(77);
+ expect(info.routes).toHaveLength(84);
  for(const route of info.routes){
   expect((await page.goto(route)).status()).toBe(200);
   await expect(page.locator('h1')).toHaveCount(1);
