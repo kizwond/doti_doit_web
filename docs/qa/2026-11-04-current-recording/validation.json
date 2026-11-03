@@ -1,0 +1,18 @@
+{
+  "applicationVersion": "1.0.234 (391)",
+  "pages": 84,
+  "browserTests": 12,
+  "failures": 0,
+  "viewportChecks": "320px across all 84 pages; current recording checks across 7 languages and 5 updated articles",
+  "changes": [
+    "record entry opens direct form before optional measurement",
+    "optional time with current-time button",
+    "unified metric list with required criterion and time fields",
+    "visible routine selection and explicit pause before editing/switching",
+    "preserve pre/post switch activity and resume explicitly",
+    "Doti colored backgrounds and dimming 0%",
+    "digital record font default",
+    "BPM music hints"
+  ],
+  "appActionLabelsMatched": true
+}
