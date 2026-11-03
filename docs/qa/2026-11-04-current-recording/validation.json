@@ -3,7 +3,7 @@
   "pages": 84,
   "browserTests": 12,
   "failures": 0,
-  "viewportChecks": "320px across all 84 pages; current recording checks across 7 languages and 5 updated articles",
+  "viewportChecks": "320px across all84 pages; 7 languages ×6 updated articles",
   "changes": [
     "record entry opens direct form before optional measurement",
     "optional time with current-time button",
@@ -12,7 +12,10 @@
     "preserve pre/post switch activity and resume explicitly",
     "Doti colored backgrounds and dimming 0%",
     "digital record font default",
-    "BPM music hints"
+    "BPM music hints",
+    "past activity entry FAQ in all seven languages"
   ],
-  "appActionLabelsMatched": true
+  "appActionLabelsMatched": true,
+  "followUpBrowserTests": 2,
+  "followUpFailures": 0
 }

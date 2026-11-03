@@ -6,13 +6,13 @@ test('current recording, routine changes and card defaults in seven languages', 
  await page.setViewportSize({width:320,height:860});
  await fs.mkdir('test-results/current-recording',{recursive:true});
  for(const [code,prefix,record,measure,pause] of cases){
-  for(const route of ['/missions/','/routines/','/records/','/guides/start-a-mission/','/guides/exercise-routine/']){
+  for(const route of ['/missions/','/routines/','/records/','/guides/start-a-mission/','/guides/exercise-routine/','/faq/']){
    await page.goto(prefix+route);
    await expect(page.locator('html')).toHaveAttribute('lang',code);
    const main=page.locator('main');
    const text=await main.innerText();
    if(route==='/records/'){expect(text).toMatch(/0[%％]/);expect(text).not.toMatch(/50\s*[%％]/);}
-   if(route==='/guides/start-a-mission/'){await expect(main).toContainText(record);await expect(main).toContainText(measure);}
+   if(route==='/guides/start-a-mission/' || route==='/faq/'){await expect(main).toContainText(record);await expect(main).toContainText(measure);}
    if(route==='/guides/exercise-routine/'){await expect(main).toContainText('BPM');await expect(main).toContainText(pause);}
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),code+route).toBe(true);
   }
