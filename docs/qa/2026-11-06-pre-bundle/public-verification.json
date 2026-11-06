@@ -1,0 +1,639 @@
+[
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/about/",
+    "status": 200,
+    "match": true,
+    "sha256": "2d872bd8ba983fb93f06ca55ac843f61769ce222ff3bb4dd1e4b8c593c78dd51"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/download/",
+    "status": 200,
+    "match": true,
+    "sha256": "b9982741a2fb857b3049e8e7e2afc76a1ed1d29087190e9e4ec4b2dce074fe84"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/faq/",
+    "status": 200,
+    "match": true,
+    "sha256": "4f684e41e64f3ea4d2e1973e8391c71ed1d56492a028d7ea73d5b504af04b42d"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/",
+    "status": 200,
+    "match": true,
+    "sha256": "fbd293ca9d7efe94473dc9e773996d5bca0a925da30aaf9764c03ad563fb0a24"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/missions/",
+    "status": 200,
+    "match": true,
+    "sha256": "4b883a4098d368cfb04c77bd1cdb14fa5d5a3ef631e1a3d83ec38af008dbf8da"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/records/",
+    "status": 200,
+    "match": true,
+    "sha256": "2b0ba9002b0e892f2e9065e930966a801a830bfebba88a94777d64bbbd8194bc"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/routines/",
+    "status": 200,
+    "match": true,
+    "sha256": "0e36562a5460105f3521bd10bd1b722890ba8ae555a0104aa8b929604f458b26"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/guides/exercise-routine/",
+    "status": 200,
+    "match": true,
+    "sha256": "504a34139506bf7edfd7b8829e7b6261c1734f138611452cb4a671061e6f51d4"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/guides/start-a-mission/",
+    "status": 200,
+    "match": true,
+    "sha256": "f28bd31d79cce8f0a59598e5396cd562a37854fbfc4433e1a21455a7d873fc78"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/guides/video-feed/",
+    "status": 200,
+    "match": true,
+    "sha256": "313b23170d477d9b21eecf4407e223c2fcfc2223f394f0fb704b143ca86673d4"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/guides/walking-records/",
+    "status": 200,
+    "match": true,
+    "sha256": "9a8db0a88d2c4b297666409e6cb737a48f44361f74e519ace9b2c59369cc8d71"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/guides/",
+    "status": 200,
+    "match": true,
+    "sha256": "0a849a49ae5a33ba8b8fd4fabeb2b583d329795e1b24fb08e7bc819d3d8e832c"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/about/",
+    "status": 200,
+    "match": true,
+    "sha256": "13ed9234da737c1de75d774f94785a899f414d650a540188fcaaf98185061320"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/download/",
+    "status": 200,
+    "match": true,
+    "sha256": "9090f5d69be37872e06fe935b7097c5fc1a0e4cd91c81eafa27b15c7a523321e"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/faq/",
+    "status": 200,
+    "match": true,
+    "sha256": "3b430429f06adfcaeab5ecb4339dc8d7f777a982834c90fa1ef0ff70026757e6"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/",
+    "status": 200,
+    "match": true,
+    "sha256": "0d0da6683a6cda03b486c2c1563367bcb623031983bb787759bad218fefece5b"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/missions/",
+    "status": 200,
+    "match": true,
+    "sha256": "2b32cb417d97cf0800ce5815a2e6889dc23aea165faf37ad02cfe630eb363715"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/records/",
+    "status": 200,
+    "match": true,
+    "sha256": "1d764111fc4e6e6fa3bc5d7fb932f9f6df4911771d8e3d1d482d491dbbc9f2b9"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/routines/",
+    "status": 200,
+    "match": true,
+    "sha256": "5f2baa1ec8ae67ba7504a83df36ca96d7ac36c6680de2939dd962a2f6370f6f0"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/guides/exercise-routine/",
+    "status": 200,
+    "match": true,
+    "sha256": "d34b439a9e052db76d8d853323fdd55d26d336f6a3a68a00d00d6d0185291f36"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/guides/start-a-mission/",
+    "status": 200,
+    "match": true,
+    "sha256": "aeefaf37a300ad97b44ca6141153b73d743f69affcea0212075064e52905383d"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/guides/video-feed/",
+    "status": 200,
+    "match": true,
+    "sha256": "54a2c1321c0d26470a7566f6bdbfc4e002e767d931ae9ea8b9a0b9ddbddf7cf9"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/guides/walking-records/",
+    "status": 200,
+    "match": true,
+    "sha256": "925bf31b52b74e7e2e0ae17083c4d3fcc618247889bf257c23848b68ee4c8e09"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/en/guides/",
+    "status": 200,
+    "match": true,
+    "sha256": "ccbbd9b1e9ccc44b52c3080f5f54233f8266fdf60320ad1cf2e736872c2475e6"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/about/",
+    "status": 200,
+    "match": true,
+    "sha256": "38e4c329dd7f0d8d7966c74b51b5a1abcb74facea7f7fc365e73fed8dc2d1488"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/download/",
+    "status": 200,
+    "match": true,
+    "sha256": "7cdf68a7d87ddaa57699ff617de0300c3240219cabf7a7759d145beae143554f"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/faq/",
+    "status": 200,
+    "match": true,
+    "sha256": "78637aab450023e377050ee7f51336dfb537d199b2ad792238ef36afb53bb72d"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/",
+    "status": 200,
+    "match": true,
+    "sha256": "f1e2ce12cfb2c753eda497cf64a65978f2ee3142b580249aa5b2d61e9c45a22f"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/missions/",
+    "status": 200,
+    "match": true,
+    "sha256": "eca4344a702d7b7749d4134f47e10ef7c79eb4a403dceb11a2275a9894d04303"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/records/",
+    "status": 200,
+    "match": true,
+    "sha256": "46e4154c6d2dd82ee59a2def83aaee30226b9f2138e943b8d969327677021072"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/routines/",
+    "status": 200,
+    "match": true,
+    "sha256": "0feadf68ea760f0f7897ed3e664d0f47550a2facb355e0e378ce7d6c959f9425"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/guides/exercise-routine/",
+    "status": 200,
+    "match": true,
+    "sha256": "72834864a30c3cad571fd8681fea1ed6846b308f6eb35ba72c301329f9a7e771"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/guides/start-a-mission/",
+    "status": 200,
+    "match": true,
+    "sha256": "9db5c0c418c207b681363d863f9e68d708f85dc40344aaaf795ce63621f23de9"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/guides/video-feed/",
+    "status": 200,
+    "match": true,
+    "sha256": "44985aa7cb5fa4948252c5bca5f1cf9d2934ce94c4c957e71296a5d45bd3a549"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/guides/walking-records/",
+    "status": 200,
+    "match": true,
+    "sha256": "191d22a3ff811716c6b9f10a788fd0b227d96f45b1585f8042e5367ee5d5a2cf"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/ja/guides/",
+    "status": 200,
+    "match": true,
+    "sha256": "02b72baf724a1ea41e4c4be40f5af847f8dba75174032b181a44e0f9e91465f7"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/about/",
+    "status": 200,
+    "match": true,
+    "sha256": "014f85500efc9e7e20c0e74f61f56843b579adb73e652e04daa32b65a30269e7"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/download/",
+    "status": 200,
+    "match": true,
+    "sha256": "cdea0b19a2553f57274906680ebc6e6cbc9ef0a0111e15075a7907b4bfe16c79"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/faq/",
+    "status": 200,
+    "match": true,
+    "sha256": "77faeea3b5974b66dfe77e82e690e8f5b230219cfd4cb153e71fae15c4a2355d"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/",
+    "status": 200,
+    "match": true,
+    "sha256": "f36e98a3ac110aa2ca2ba3189958df85bdadf3a6baa396df92863985d3ab3530"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/missions/",
+    "status": 200,
+    "match": true,
+    "sha256": "ea61612e34af9a8355e75a8c5b9ef2f8ab78dde1ac33eb4f9f5d721d0bbcfdea"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/records/",
+    "status": 200,
+    "match": true,
+    "sha256": "665d0b64bc7c92ff12118487d980c771234aba9f0c3fd475e6e23fb39f8329de"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/routines/",
+    "status": 200,
+    "match": true,
+    "sha256": "bf09ac3bc6b9b9d57a2c968c916a95c409965a067eff72d2ae4a1188c7215f1d"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/guides/exercise-routine/",
+    "status": 200,
+    "match": true,
+    "sha256": "6a6b32c02d0f155ea6c7eaf48bace7ef39e20b6f00ef568dd72cb58fe045a931"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/guides/start-a-mission/",
+    "status": 200,
+    "match": true,
+    "sha256": "ee1373d848c339a217d73de89f816d726f056c07d9b5660fed57d6e873e8e6b8"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/guides/video-feed/",
+    "status": 200,
+    "match": true,
+    "sha256": "db1ead554bbf2d3b41e9d3d2ef8a2ca30816390417cd548859f6880cca86e298"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/guides/walking-records/",
+    "status": 200,
+    "match": true,
+    "sha256": "01e907a52f02c2736fc91e74436ede86972be47114cf096c0454fa246d8e1570"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hans/guides/",
+    "status": 200,
+    "match": true,
+    "sha256": "4a5755a859be6bd985bd1160eb211a554472a6e762766f2a80ec8b9ce8bcf941"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/about/",
+    "status": 200,
+    "match": true,
+    "sha256": "a3793153480f3b2f9f7bc98c348a8afb199423c03bab940caf76adb63a4c5b4b"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/download/",
+    "status": 200,
+    "match": true,
+    "sha256": "c29a48906c1abae1ffdd7fb0bbd641d760925fe6223d217ce28d858152125e58"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/faq/",
+    "status": 200,
+    "match": true,
+    "sha256": "68ffb838b0a2d447c5c91d334793aff11ed635d398b487271afc76fd5baf81af"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/",
+    "status": 200,
+    "match": true,
+    "sha256": "7f7a3568230be04d8939c952e1acd468e26046507f27b135bf82f37bc61054ce"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/missions/",
+    "status": 200,
+    "match": true,
+    "sha256": "afef89ecd62496182c2fb65657aa4925af313154bd819f94dec6d6f7fbf168aa"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/records/",
+    "status": 200,
+    "match": true,
+    "sha256": "08b0fb4b4af166c038528aee2dd4345b7609b2f2798a32a804f71a5c3e03718f"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/routines/",
+    "status": 200,
+    "match": true,
+    "sha256": "5a5fd9145a5da163250347c1d03c4f07e353baaed641c447012e03cf28fbba56"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/guides/exercise-routine/",
+    "status": 200,
+    "match": true,
+    "sha256": "5a6a7183be59b236a9950bbe8bd8c197c9979f4a03ccf0e5be43a91164d9f7ee"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/guides/start-a-mission/",
+    "status": 200,
+    "match": true,
+    "sha256": "ca4d9c0b8bb85a0632845d6c3ecb188a97ec2ccd34249d86463ff8ade812f63e"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/guides/video-feed/",
+    "status": 200,
+    "match": true,
+    "sha256": "05bf1caaabde53c4020a7e90808d98b522d2f347e75f260a367369a5f9af9e29"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/guides/walking-records/",
+    "status": 200,
+    "match": true,
+    "sha256": "664d30702bd8af723d300639caa18ef62c850a790c5d73e2daaf564b0509240e"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/zh-hant/guides/",
+    "status": 200,
+    "match": true,
+    "sha256": "dad340f2a46c6f3508e2c2c58e56f390355bddadd8eca8d60a9bd834ec2b4f4a"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/about/",
+    "status": 200,
+    "match": true,
+    "sha256": "cb0049625dde0a6029bc595496df70b1e5d01f579767288f49a55c40734d3dcc"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/download/",
+    "status": 200,
+    "match": true,
+    "sha256": "342db7fdbee9bab003f0a88a938dae48489e4c6c26350df9d6eeb64529d81be8"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/faq/",
+    "status": 200,
+    "match": true,
+    "sha256": "f5cad27c2f562201fff7546c4ae75dffdab1e14345df9597bcfb758c46d4d87b"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/",
+    "status": 200,
+    "match": true,
+    "sha256": "ef5bebb004648cb50c2732a41ec3aa9dbb2e3cbfa780ba49c9236f122850e412"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/missions/",
+    "status": 200,
+    "match": true,
+    "sha256": "d349516930d774636ff92d2c81deaf576e2d3bbdf9e3a1bdab50b70174b041bc"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/records/",
+    "status": 200,
+    "match": true,
+    "sha256": "efe7380551e6bbaf8fda9306677d9a2788e5df2fac43f25f9fa2612173f29a6f"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/routines/",
+    "status": 200,
+    "match": true,
+    "sha256": "fea8747bbc58518661e19a810bfdf11f65c9d961ab26687a057b33833811a5a6"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/guides/exercise-routine/",
+    "status": 200,
+    "match": true,
+    "sha256": "624f5cef52da71d273f98cd9de956eb7adbdae2bea5658a4c402e2fc8e9b4c46"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/guides/start-a-mission/",
+    "status": 200,
+    "match": true,
+    "sha256": "2b497f15f09b0fe2a2f28dfd47adfaa877f3d9677ba49c0a7ba413ea5eb2a4b0"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/guides/video-feed/",
+    "status": 200,
+    "match": true,
+    "sha256": "d2d766af0752880d979ea345e71fc74a8be49b1db6f03739a4925a4012f884bc"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/guides/walking-records/",
+    "status": 200,
+    "match": true,
+    "sha256": "fad92dd9b9bdc2347dd7c239c4b19317050b62d0822045c215f870ac57839508"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/es/guides/",
+    "status": 200,
+    "match": true,
+    "sha256": "e53db4de57bb53e3e19ef1ca21b579fcd1b3c29af01e45d346519324b9748378"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/about/",
+    "status": 200,
+    "match": true,
+    "sha256": "ba15f110168dd2695cf48ac64146f5cc315754afa1582522f2393b064a54038f"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/download/",
+    "status": 200,
+    "match": true,
+    "sha256": "a0f979c19ee04c4634097e1acca36e7cb514db3812a0569da55526d974d7fea5"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/faq/",
+    "status": 200,
+    "match": true,
+    "sha256": "1d2f5bcfced9e06051404c1090cfa65cb2954bb20faeabc8563c1ce2f7f8f842"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/",
+    "status": 200,
+    "match": true,
+    "sha256": "713c52b6017b87642157fdf67fce4c49080f9ba6541e0817b07911481d79b746"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/missions/",
+    "status": 200,
+    "match": true,
+    "sha256": "fbd18986960d9e28cbcc01e85b9f674da6e1f28d2515e2b1ff2b62f217182f7d"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/records/",
+    "status": 200,
+    "match": true,
+    "sha256": "ea344b1a75b6c6230a4c8f637d68a87e213b8590aaa9517b24a6433eaaf89848"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/routines/",
+    "status": 200,
+    "match": true,
+    "sha256": "e1f4527951f07bb4f3cf98a9128b525401db6dfbdd897df7a934581767f576e1"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/guides/exercise-routine/",
+    "status": 200,
+    "match": true,
+    "sha256": "ec9bb33731a97a1b6134d01aa94adde797a7570d664398fa913811eb5a57d7f5"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/guides/start-a-mission/",
+    "status": 200,
+    "match": true,
+    "sha256": "9efa6f0a36e2b7fa150590b5a4f8f477f5a75ebde3ddd19052ee0c88cddacc62"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/guides/video-feed/",
+    "status": 200,
+    "match": true,
+    "sha256": "3efa5191ca0829eabd08893e3002b927d494d00b91c7da9ba2790a06f08db1cd"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/guides/walking-records/",
+    "status": 200,
+    "match": true,
+    "sha256": "b0770ebd6d5edb4c26dc01a1c6a5e6659b67e4c8b14cb5f28cd6d443f1cd2072"
+  },
+  {
+    "kind": "website",
+    "url": "https://kizwond.github.io/doti_doit_web/vi/guides/",
+    "status": 200,
+    "match": true,
+    "sha256": "688aeb38f3992797fd33ef23aef0beebdf92235191468aa0e5c0b3e73fd014e6"
+  },
+  {
+    "kind": "privacy",
+    "url": "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/",
+    "status": 200,
+    "match": true,
+    "sha256": "e9a0dbe0fb9d37d1ca775c6910d58a397a07505383df1a9fbd0233958f126afa"
+  },
+  {
+    "kind": "privacy",
+    "url": "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/en/",
+    "status": 200,
+    "match": true,
+    "sha256": "7dd1e244d5131b940a9f9a2130ae859b3ea0e20b114804616703ec1dcdb12b16"
+  },
+  {
+    "kind": "privacy",
+    "url": "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/ja/",
+    "status": 200,
+    "match": true,
+    "sha256": "13b42eeb9328fc0b48ef84dd36866168f0f19ae559f0440220045ef5e5a0d222"
+  },
+  {
+    "kind": "privacy",
+    "url": "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/zh-hans/",
+    "status": 200,
+    "match": true,
+    "sha256": "caa8978ed5824cd889153c9bf5e22e3575a223255956091a6669c7a9d4164b7c"
+  },
+  {
+    "kind": "privacy",
+    "url": "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/zh-hant/",
+    "status": 200,
+    "match": true,
+    "sha256": "e21e1d193ddd2b19b7c03018606d34374002ce6a126466a7db03bb28aea40bc1"
+  },
+  {
+    "kind": "privacy",
+    "url": "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/es/",
+    "status": 200,
+    "match": true,
+    "sha256": "b491f01686e0f300583ba6cebb6b76a9f8b3a3f71378d4d1e4a0c299372c366a"
+  },
+  {
+    "kind": "privacy",
+    "url": "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/vi/",
+    "status": 200,
+    "match": true,
+    "sha256": "d3fd829fdeae5212ac2430cc36dc5ead83dcd0a8eb9bb5f0dd34b232ab96a86e"
+  }
+]

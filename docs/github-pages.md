@@ -4,6 +4,10 @@
 
 ## 최신 공개 업데이트
 
+2026-11-06 `a19141b` 공개 완료. 최신 기록/피드·디자인·측정/루틴 탭과7개 언어 언어 메뉴를 반영했다. 전체84페이지 HTTP200·배포물 일치를 확인했다. [검토와 검증](2026-11-06-pre-bundle-review.md).
+
+## 이전 공개 업데이트
+
 2026-11-01 `80cca28d` / [Actions 41274381047](https://github.com/kizwond/doti_doit_web/actions/runs/41274381047) success. 최신 앱 안내와 7개 언어, 총 77개 페이지를 제공한다. [다국어 인계](2026-11-01-multilingual-update.md), [공개 83개 파일 검증](qa/2026-11-01/public-verification.json)을 확인한다. 언어별 하위 경로는 `/en/`, `/ja/`, `/zh-hans/`, `/zh-hant/`, `/es/`, `/vi/`이며 한국어는 기존 루트다.
 
 ## 최초 공개 확인
