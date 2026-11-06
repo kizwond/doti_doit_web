@@ -1,0 +1,44 @@
+[
+  {
+    "code": "ko",
+    "sections": 14,
+    "localizedLanguageMenu": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "code": "en",
+    "sections": 14,
+    "localizedLanguageMenu": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "code": "ja",
+    "sections": 14,
+    "localizedLanguageMenu": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "code": "zh-Hans",
+    "sections": 14,
+    "localizedLanguageMenu": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "code": "zh-Hant",
+    "sections": 14,
+    "localizedLanguageMenu": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "code": "es",
+    "sections": 14,
+    "localizedLanguageMenu": true,
+    "noHorizontalOverflow": true
+  },
+  {
+    "code": "vi",
+    "sections": 14,
+    "localizedLanguageMenu": true,
+    "noHorizontalOverflow": true
+  }
+]

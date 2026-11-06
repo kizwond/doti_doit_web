@@ -31,5 +31,6 @@ export function translateChrome(html, language) {
 }
 export function languagePicker(language, route, routes) {
   const options=languages.filter(l=>routes.has(l.path+route));
-  return `<details class="language-menu"><summary aria-label="Language / 언어">${escapeHtml(language.name)} <span aria-hidden="true">⌄</span></summary><nav aria-label="Language / 언어">${options.map(l=>`<a lang="${l.code}" hreflang="${l.code}" href="${l.path+route}" ${l.code===language.code?'aria-current="true"':''}>${escapeHtml(l.name)}</a>`).join('')}</nav></details>`;
+  const aria={ko:'언어',en:'Language',ja:'言語','zh-Hans':'语言','zh-Hant':'語言',es:'Idioma',vi:'Ngôn ngữ'}[language.code];
+  return `<details class="language-menu"><summary aria-label="${aria}">${escapeHtml(language.name)} <span aria-hidden="true">⌄</span></summary><nav aria-label="${aria}">${options.map(l=>`<a lang="${l.code}" hreflang="${l.code}" href="${l.path+route}" ${l.code===language.code?'aria-current="true"':''}>${escapeHtml(l.name)}</a>`).join('')}</nav></details>`;
 }
