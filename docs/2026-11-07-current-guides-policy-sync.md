@@ -23,3 +23,9 @@ Playwright6개56.5초 통과:84페이지320px·언어 전환·이미지·현재 
 앱 저장소의 오래된 `PRIVACY_POLICY.md`·`privacy.html`은 공식7개 언어 방침으로 연결하는 포인터/자동 이동 페이지로 교체한다. 별도의 새 방침 사본을 만들지 않는다. 공식 원본은 `dotimoti-legal/policy/`다.
 
 공개 배포 결과·소스 커밋·실제 HTTP 전체 대조는 후속 검증에 기록한다.
+
+## 공개 배포 완료
+
+콘텐츠 `a40601d`의 [홈페이지 배포](https://github.com/kizwond/doti_doit_web/actions/runs/42373364017)가 success로 끝났다. 회사 안내 `0692a26`의 [배포](https://github.com/opensky-doti/opensky-doti.github.io/actions/runs/42373364644)와 방침 점검 문서 `1ddd544`의 [Pages 배포](https://github.com/kizwond/dotimoti-legal/actions/runs/42373365360)도 success다.
+
+실제 HTTPS 응답94개를 전체 바이트 대조했다: 홈페이지84페이지·공식 방침7페이지·회사 안내2페이지·유지한 광고 인증 파일1개가 모두 HTTP200·원본 일치다. [공개 검증](qa/2026-11-07-current-guides/public-verification.json) · [배포 실행](qa/2026-11-07-current-guides/deployment-actions.json). 앱 APK·AAB와 정책 시행일은 유지한다.

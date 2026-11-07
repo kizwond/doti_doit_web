@@ -1,0 +1,41 @@
+[
+  {
+    "repo": "kizwond/doti_doit_web",
+    "runs": [
+      {
+        "id": 42373364017,
+        "sha": "a40601d5",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/kizwond/doti_doit_web/actions/runs/42373364017",
+        "name": "\ud648\ud398\uc774\uc9c0 \ubc30\ud3ec"
+      }
+    ]
+  },
+  {
+    "repo": "opensky-doti/opensky-doti.github.io",
+    "runs": [
+      {
+        "id": 42373364644,
+        "sha": "0692a26c",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/opensky-doti/opensky-doti.github.io/actions/runs/42373364644",
+        "name": "Validate and deploy Doti Pages"
+      }
+    ]
+  },
+  {
+    "repo": "kizwond/dotimoti-legal",
+    "runs": [
+      {
+        "id": 42373365360,
+        "sha": "1ddd5448",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/kizwond/dotimoti-legal/actions/runs/42373365360",
+        "name": "pages build and deployment"
+      }
+    ]
+  }
+]
