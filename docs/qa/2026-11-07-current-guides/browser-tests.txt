@@ -1,0 +1,15 @@
+[WebServer] (node:42554) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:42555) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/current-recording.spec.mjs:4:1 › current recording, routine changes and card defaults in seven languages (5.0s)
+  ✓  2 tests/languages.spec.mjs:5:1 › all 84 pages keep their language, readable layout and working images at 320px (12.8s)
+  ✓  3 tests/languages.spec.mjs:24:1 › language links retain the current article and navigation works without JavaScript (3.1s)
+  ✓  4 tests/languages.spec.mjs:43:1 › localized home and language-menu screenshots (26.9s)
+  ✓  5 tests/reviewed-features.spec.mjs:11:1 › latest feed choices, designs and privacy language links match all seven app locales (3.6s)
+  ✓  6 tests/video-languages.spec.mjs:4:1 › all seven languages include the video guide and matching privacy link without mobile overflow (2.8s)
+
+  6 passed (56.5s)
