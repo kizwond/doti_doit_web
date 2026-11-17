@@ -23,3 +23,13 @@
 ## 문의 관리 검토
 
 기존 서버에 문의 모델/접수·내역·답변·상태 변경·관리자 권한 API가 있으며 공개 스키마에서 존재와 비로그인 관리자 권한 false를 확인했다. 실제 문의 내용은 열람하지 않았다. 새 모티 문의하기는 미연결 상태다. 관리 기능을 구현했다는 안내나 작동하지 않는 관리자 메뉴를 홈페이지에 넣지 않았다. [검토안](2026-11-17-support-console-plan.md)은 담당자 로그인/앱 접수/답변 확인/API 권한 검사로 구성한다.
+
+## 공개 배포 완료
+
+소스 `4c010937f5d1fd832afa3ee6da11cac761232998`, [GitHub Actions43996547527](https://github.com/kizwond/doti_doit_web/actions/runs/43996547527) success.
+
+[홈의 도티모티 소개](https://kizwond.github.io/doti_doit_web/#dotimoti) · [상세 페이지](https://kizwond.github.io/doti_doit_web/dotimoti/).
+
+공개91개 HTML과 CSS/새 PNG/사이트맵/robots/빌드정보5개를 전체 GET하여 로컬 공개 빌드의 바이트 해시와 모두 일치함을 확인했다. 공개 모바일 브라우저에서도 홈 링크→프로젝트 경로 유지→상세 소개/개발 중 안내·가로 넘침 없음을 확인했다. 검증 기록은 비공개 로컬 `~/.local/state/doti-web-moti-public-20261117.json`과 Git 제외 캡처에 있다.
+
+최종 인계는 docs만 추가 푸시하며 사이트 소스를 다시 배포하지 않는다. 앱/서버/DB/서버 권한/기존 APK 채널은 변경하지 않았다. 문의 관리자 기능은 가능성·연결 구조 검토이며 구현 완료로 표시하지 않았다.

@@ -4,6 +4,10 @@
 
 ## 최신 공개 업데이트
 
+2026-11-17 `4c01093` / [Actions43996547527](https://github.com/kizwond/doti_doit_web/actions/runs/43996547527) success. 홈의 도티모티 소개, 상단/하단 메뉴, 도티모티 상세를7개 언어로 추가했다. 공개91페이지와5개 자산/메타 파일 전체 GET·해시 대조 및 공개 모바일 이동 확인 완료. [변경·검증·배포 인계](2026-11-17-dotimoti-introduction.md).
+
+## 2026-11-07 공개 업데이트
+
 2026-11-07 `a40601d` / [Actions42373364017](https://github.com/kizwond/doti_doit_web/actions/runs/42373364017) success. Preview413의 기본데이터 그룹·카드 두 열·인라인 기록 선택·목표 결과 안내를7개 언어로 반영하고 전체84페이지를 실제 공개 응답과 대조했다. [갱신과 검증](2026-11-07-current-guides-policy-sync.md#공개-배포-완료).
 
 ## 2026-11-06 공개 업데이트
