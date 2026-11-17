@@ -1764,3 +1764,30 @@ html:not([lang="ko"]) .footer-top nav { flex-wrap: wrap; }
 }
 html:not([lang="ko"]) .hero h1 { white-space:normal; }
 .hero-copy, .hero-visual { min-width:0; }
+
+/* A second product, introduced in the same blue/orange family. */
+.moti-section { background: #eaf1f5; border-block: 1px solid #dce6ec; }
+.moti-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.moti-copy h2 { font-size: clamp(30px, 3.3vw, 46px); line-height: 1.45; }
+.moti-copy .moti-intro { color: var(--ink); font-size: 19px; margin: 25px 0 16px; }
+.moti-copy .button { margin-top: 28px; }
+.moti-status { display: flex; align-items: baseline; gap: 8px; font-size: 12px; margin-top: 18px; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); flex: 0 0 6px; }
+.moti-visual { min-width: 0; }
+.moti-symbol { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; color: #28536b; font-size: 22px; font-weight: 750; letter-spacing: -.04em; }
+.moti-symbol img { width: 55px; height: 55px; object-fit: contain; }
+.moti-note { background: #fff; border: 1px solid #d5e1e8; border-radius: 18px; padding: 32px; box-shadow: 0 12px 32px #18374607; }
+.moti-note h3 { font-size: 28px; line-height: 1.5; margin-top: 12px; }
+.moti-sample { display: flex; align-items: center; gap: 16px; margin-top: 26px; padding: 18px 0; border-block: 1px solid #e5ecf0; }
+.moti-sample img { width: 80px; height: 80px; flex: 0 0 80px; object-fit: contain; }
+.moti-sample strong { display: block; margin-block: 5px; font-size: 17px; }
+.moti-sample p { font-size: 13px; }
+.moti-flow { padding: 0; margin: 26px 0 20px; display: flex; align-items: stretch; gap: 8px; list-style: none; }
+.moti-flow li { flex: 1; min-width: 0; font-size: 12px; font-weight: 650; color: #28536b; text-align: center; border: 1px solid #dce7ee; border-radius: 8px; padding: 10px 7px; background: #f5f8fa; }
+.moti-note-footer { font-size: 12px; }
+.footer-top nav { flex-wrap: wrap; }
+@media (min-width: 851px) and (max-width: 1190px) { .desktop-nav { gap: 12px; font-size: 11px; } .header-inner { gap: 16px; } }
+@media (max-width: 850px) { .moti-layout { gap: 32px; } .moti-note { padding: 24px; } .moti-note h3 { font-size: 23px; } }
+@media (max-width: 620px) { .moti-layout { grid-template-columns: 1fr; } .moti-copy .moti-intro { font-size: 17px; } .moti-note { padding: 22px; } .moti-flow { gap: 6px; } .moti-flow li { font-size: 11px; } .moti-sample img { width: 64px; height: 64px; flex-basis: 64px; } }
+
+.moti-visual .example-label { position: static; margin-top: 12px; text-align: right; }

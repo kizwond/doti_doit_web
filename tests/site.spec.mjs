@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import fs from "node:fs/promises";
+import {expectImagesToLoad} from "./image-check.mjs";
 import { spawnSync, spawn } from "node:child_process";
 import os from "node:os";
 import path from "node:path";
@@ -9,6 +10,7 @@ const routes = [
   "/missions/",
   "/routines/",
   "/records/",
+  "/dotimoti/",
   "/faq/",
   "/download/",
   "/guides/",
@@ -32,16 +34,7 @@ test("every page works on small phones and has no overflow or missing assets", a
       ),
       route,
     ).toBe(true);
-    await page.locator("footer").scrollIntoViewIfNeeded();
-    await expect
-      .poll(() =>
-        page
-          .locator("img")
-          .evaluateAll((images) =>
-            images.every((i) => i.complete && i.naturalWidth > 0),
-          ),
-      )
-      .toBe(true);
+    await expectImagesToLoad(page);
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
       "content",
       "noindex, nofollow",
@@ -290,16 +283,7 @@ test("GitHub project path serves navigation, images, CSS and 404 recovery", asyn
       expect(
         (await page.request.get(base + "/assets/wordmark.png")).status(),
       ).toBe(200);
-      await page.locator("footer").scrollIntoViewIfNeeded();
-      await expect
-        .poll(() =>
-          page
-            .locator("img")
-            .evaluateAll((imgs) =>
-              imgs.every((i) => i.complete && i.naturalWidth > 0),
-            ),
-        )
-        .toBe(true);
+      await expectImagesToLoad(page);
       await page.getByLabel("메뉴 열기").click();
       await page
         .getByRole("navigation", { name: "모바일 메뉴" })

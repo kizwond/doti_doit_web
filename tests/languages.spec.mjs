@@ -1,12 +1,13 @@
 import {test,expect} from '@playwright/test';
 import fs from 'node:fs/promises';
+import {expectImagesToLoad} from './image-check.mjs';
 const languages=[['ko',''],['en','/en'],['ja','/ja'],['zh-Hans','/zh-hans'],['zh-Hant','/zh-hant'],['es','/es'],['vi','/vi']];
 
-test('all 84 pages keep their language, readable layout and working images at 320px', async({page})=>{
+test('all 91 pages keep their language, readable layout and working images at 320px', async({page})=>{
  test.setTimeout(150000);
  await page.setViewportSize({width:320,height:800});
  const info=JSON.parse(await fs.readFile('dist/build-info.json','utf8'));
- expect(info.routes).toHaveLength(84);
+ expect(info.routes).toHaveLength(91);
  for(const route of info.routes){
   expect((await page.goto(route)).status()).toBe(200);
   await expect(page.locator('h1')).toHaveCount(1);
@@ -16,8 +17,7 @@ test('all 84 pages keep their language, readable layout and working images at 32
   expect(await page.locator('.language-menu a').count()).toBe(7);
   const text=await page.locator('main').innerText();
   if(code!=='ko')expect(text,route).not.toMatch(/[가-힣]/);
-  await page.locator('footer').scrollIntoViewIfNeeded();
-  await expect.poll(()=>page.locator('img').evaluateAll(imgs=>imgs.every(i=>i.complete&&i.naturalWidth>0))).toBe(true);
+  await expectImagesToLoad(page);
  }
 });
 
