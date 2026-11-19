@@ -118,6 +118,7 @@ for (const page of allPages) {
   let html=layout(page,content,{preview,origin:origin ? origin+language.path : ""});
   html=localizeLinks(translateChrome(html,language),language);
   html=html.replace("https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/", "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/" + (language.code === "ko" ? "" : language.path.slice(1) + "/"));
+  html=html.replace("https://kizwond.github.io/dotimoti-legal/dotimoti/privacy/", "https://kizwond.github.io/dotimoti-legal/dotimoti/privacy/" + (language.code === "ko" ? "" : language.path.slice(1) + "/"));
   html=html.replace('<details class="mobile-menu">',languagePicker(language,page.route,routes)+'<details class="mobile-menu">');
   if(!preview) {
     const alternatives=allPages.filter(p=>p.route===page.route).map(p=>`<link rel="alternate" hreflang="${p.language.code}" href="${escape(origin+p.outputRoute)}">`).join("");
