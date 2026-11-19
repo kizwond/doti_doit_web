@@ -5,3 +5,7 @@
 Playwright3개: 기존 모티 소개/전체 기기 폭2개와 신규7언어·320px·JavaScript 없는 정책 링크1개 통과. 공개 빌드의91페이지 링크 검사 통과. 정책 본문은 별도 dotimoti-legal 저장소가 관리하고 모티 앱 런타임과 동일하다.
 
 공개 HTTPS 대조 결과는 배포 후 기록한다.
+
+## 공개 배포 완료
+
+`4a69849868d16cee4cba3b76c90651159ba702cc`, Pages 실행44444292912 success. 공개92개 HTML(91페이지+404)을 전체 HTTPS GET하여 로컬 공개 빌드와 바이트 해시가 모두 같음을 확인했다. 모티7개·두잇7개·법적 문서 진입1개도 실제 공개 응답과 생성 원본이 일치했다. 모티 공개 주소는 https://kizwond.github.io/dotimoti-legal/dotimoti/privacy/ 이다.
