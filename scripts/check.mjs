@@ -18,6 +18,7 @@ for (const [route, html] of files) {
     `${route}: expected one H1`,
   );
   const language=info.languages.find(l=>l.path && route.startsWith(l.path+"/")) || info.languages[0];
+  if(language.code === "ko") assert(!/공인\s*미션/.test(html), `${route}: obsolete official-mission wording`);
   assert(html.includes(`lang="${language.code}"`), `${route}: language declaration`);
   if(language.code!=="ko") assert(!/[가-힣]/.test(html.replace(/<details class="language-menu">[\s\S]*?<\/details>/g, "").replace(/<[^>]*>/g,"")),`${route}: untranslated Korean text`);
   if(info.mode==="production") {
