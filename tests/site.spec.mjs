@@ -97,7 +97,7 @@ test("desktop and mobile overview screenshots", async ({ page }) => {
     fullPage: true,
   });
 });
-test("guide links, anchors, store search and missing-page handling", async ({
+test("guide links, anchors, store details and missing-page handling", async ({
   page,
 }) => {
   await page.goto("/guides/");
@@ -105,16 +105,16 @@ test("guide links, anchors, store search and missing-page handling", async ({
   await expect(page).toHaveURL(/\/guides\/start-a-mission\/$/);
   await page
     .getByRole("navigation", { name: "본문 목차" })
-    .getByRole("link", { name: "목표와 기록 항목 확인하기" })
+    .getByRole("link", { name: "2. 기준은 필요할 때만" })
     .click();
   await expect(
-    page.locator("h2").filter({ hasText: "목표와 기록 항목 확인하기" }),
+    page.locator("h2").filter({ hasText: "2. 기준은 필요할 때만" }),
   ).toBeInViewport();
   await page.goto("/download/");
-  const store = page.getByRole("link", { name: /Google Play에서 검색/ });
+  const store = page.getByRole("link", { name: /Google Play에서 보기/ });
   await expect(store).toHaveAttribute(
     "href",
-    /^https:\/\/play.google.com\/store\/search/,
+    /^https:\/\/play.google.com\/store\/apps\/details\?id=com\.doti\.doit/,
   );
   expect((await page.goto("/not-a-page/")).status()).toBe(404);
   await page.getByRole("link", { name: /홈으로 가기/ }).click();
@@ -292,10 +292,10 @@ test("GitHub project path serves navigation, images, CSS and 404 recovery", asyn
       await expect(page).toHaveURL(base + "/missions/");
       await page
         .getByRole("navigation", { name: "본문 목차" })
-        .getByRole("link", { name: "기록하는 방법" })
+        .getByRole("link", { name: "세 가지 기록 방법" })
         .click();
       await expect(
-        page.locator("h2").filter({ hasText: "기록하는 방법" }),
+        page.locator("h2").filter({ hasText: "세 가지 기록 방법" }),
       ).toBeInViewport();
       const missing = await page.goto(base + "/missing-page/");
       expect(missing.status()).toBe(404);

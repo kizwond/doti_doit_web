@@ -8,7 +8,7 @@ status: published
 
 # 도티두잇 시작하기
 
-Google Play에서 ‘도티두잇’을 검색해 보세요. 설치 전 스토어에서 제공하는 앱 정보와 기기 호환성을 확인할 수 있습니다.
+[Google Play의 도티두잇 페이지](https://play.google.com/store/apps/details?id=com.doti.doit)에서 확인하세요. 설치 전 스토어에서 제공하는 앱 정보와 기기 호환성을 확인할 수 있습니다.
 
 앱 버전에 따라 화면과 제공 기능에 차이가 있을 수 있습니다. 설치한 앱의 안내를 함께 확인해주세요.
 

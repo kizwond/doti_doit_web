@@ -124,7 +124,7 @@ for (const page of allPages) {
     const alternatives=allPages.filter(p=>p.route===page.route).map(p=>`<link rel="alternate" hreflang="${p.language.code}" href="${escape(origin+p.outputRoute)}">`).join("");
     html=html.replace('</head>',alternatives+`<link rel="alternate" hreflang="x-default" href="${escape(origin+page.route)}"></head>`);
   }
-  // Store search uses the selected language; the Korean app title remains the search term.
+  // The verified app detail link keeps the selected display language.
   html=html.replace('&amp;hl=ko',`&amp;hl=${language.code}`);
   const dest=path.join(output,page.outputRoute,"index.html");
   await fs.mkdir(path.dirname(dest),{recursive:true});
