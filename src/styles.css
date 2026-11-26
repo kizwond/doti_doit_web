@@ -1801,3 +1801,7 @@ html:not([lang="ko"]) .hero h1 { white-space:normal; }
 @media (max-width: 620px) { .moti-layout { grid-template-columns: 1fr; } .moti-copy .moti-intro { font-size: 17px; } .moti-note { padding: 22px; } .moti-flow { gap: 6px; } .moti-flow li { font-size: 11px; } .moti-sample img { width: 64px; height: 64px; flex-basis: 64px; } }
 
 .moti-visual .example-label { position: static; margin-top: 12px; text-align: right; }
+
+/* MotiDoit: same source artwork and crop as the Android wordmark. */
+.wordmark {width:108px;height:25px;background:transparent url(./assets/motidoit-wordmark.png) center/106.47% 157.39% no-repeat;mask:none;-webkit-mask:none;}
+@media(max-width:620px){.wordmark{width:96px;height:22px;}}

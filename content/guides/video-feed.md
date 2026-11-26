@@ -1,7 +1,7 @@
 ---
 title: "동영상 피드 만들기"
 route: "/guides/video-feed/"
-seo_title: "동영상 피드 만들기 | DotiDoit"
+seo_title: "동영상 피드 만들기 | MotiDoit"
 description: "영상 선택, 구간 편집, 재생, 음소거, MP4 공유와 원본 백업을 안내합니다."
 status: published
 ---

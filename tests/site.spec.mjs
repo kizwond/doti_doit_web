@@ -279,8 +279,8 @@ test("GitHub project path serves navigation, images, CSS and 404 recovery", asyn
         await page
           .locator(".wordmark")
           .first()
-          .evaluate((el) => getComputedStyle(el).maskImage),
-      ).toContain("/doti_doit_web/assets/wordmark.png");
+          .evaluate((el) => getComputedStyle(el).backgroundImage),
+      ).toContain("/doti_doit_web/assets/motidoit-wordmark.png");
       expect(
         (await page.request.get(base + "/assets/wordmark.png")).status(),
       ).toBe(200);
@@ -293,10 +293,10 @@ test("GitHub project path serves navigation, images, CSS and 404 recovery", asyn
       await expect(page).toHaveURL(base + "/missions/");
       await page
         .getByRole("navigation", { name: "본문 목차" })
-        .getByRole("link", { name: "세 가지 기록 방법" })
+        .getByRole("link", { name: "3. 직접 입력하거나 측정하기" })
         .click();
       await expect(
-        page.locator("h2").filter({ hasText: "세 가지 기록 방법" }),
+        page.locator("h2").filter({ hasText: "3. 직접 입력하거나 측정하기" }),
       ).toBeInViewport();
       const missing = await page.goto(base + "/missing-page/");
       expect(missing.status()).toBe(404);

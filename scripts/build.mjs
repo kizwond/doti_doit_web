@@ -89,9 +89,9 @@ const sitePaths = (html) =>
 const guidePage = {
   title: "사용 안내",
   route: "/guides/",
-  seo_title: "도티두잇 사용 안내 | 처음 시작하는 미션과 루틴",
+  seo_title: "모티두잇 사용 안내 | 처음 시작하는 미션과 루틴",
   description:
-    "첫 미션부터 걷기 기록, 운동 루틴까지. 도티두잇을 내 생활에 맞게 사용하는 방법을 살펴보세요.",
+    "첫 미션부터 걷기 기록, 운동 루틴까지. 모티두잇을 내 생활에 맞게 사용하는 방법을 살펴보세요.",
   kind: "index",
 };
 pages.push(guidePage);
@@ -103,7 +103,7 @@ for (const language of languages) {
     const translated = dictionary[source.route];
     if (!translated?.title || !translated?.description || (source.route!=="/" && source.kind!=="index" && !translated.markdown))
       throw Error(`Incomplete ${language.code} page: ${source.route}`);
-    allPages.push({...source,...translated,seo_title:translated.title+" | DotiDoit",
+    allPages.push({...source,...translated,seo_title:translated.title+" | MotiDoit",
       ...(translated.markdown ? markdownPage(translated.markdown) : {}),
       language,outputRoute:language.path+source.route});
   }
@@ -140,8 +140,8 @@ for (const page of allPages) {
 const notFound = {
   title: "페이지를 찾을 수 없어요",
   route: "/404/",
-  seo_title: "페이지를 찾을 수 없어요 | 도티두잇",
-  description: "도티두잇 홈이나 사용 안내에서 원하는 내용을 찾아보세요.",
+  seo_title: "페이지를 찾을 수 없어요 | 모티두잇",
+  description: "모티두잇 홈이나 사용 안내에서 원하는 내용을 찾아보세요.",
 };
 await fs.writeFile(
   `${output}/404.html`,
@@ -173,7 +173,7 @@ await fs.writeFile(
       analyticsEnabled: !preview && Boolean(measurementId),
       routes: allPages.map((p) => p.outputRoute),
       languages: languages.map(({code,path})=>({code,path})),
-      productBasis: "DotiDoit Preview 366 / 2026-11-01",
+      productBasis: "MotiDoit Preview 366 / 2026-11-01",
       motiProductBasis: "DotiMoti Next Preview49 / 2026-11-17",
     },
     null,

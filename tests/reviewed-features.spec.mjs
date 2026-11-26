@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 const cases=[
- ['ko','','관리데이터',['리포트','숫자 강조','다이어리','미니멀'],'언어'],
+ ['ko','','입력 데이터',['리포트','숫자 강조','다이어리','미니멀'],'언어'],
  ['en','/en','Management data',['Report','Big numbers','Journal','Minimal'],'Language'],
  ['ja','/ja','管理データ',['レポート','数値を強調','日記','ミニマル'],'言語'],
  ['zh-Hans','/zh-hans','管理数据',['报告','突出数字','日记','极简'],'语言'],
