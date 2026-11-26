@@ -36,11 +36,15 @@
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
     window.gtag("consent", "default", { analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
-    window.gtag("js", new Date());
-    window.gtag("config", id, { send_page_view: false, allow_google_signals: false,
+    const options = { send_page_view: false, allow_google_signals: false,
       allow_ad_personalization_signals: false, cookie_domain: "none", cookie_path: cookiePath,
       cookie_prefix: cookiePrefix, cookie_expires: 30 * 86400, cookie_update: false,
-      page_location: location.origin + location.pathname, page_referrer: cleanReferrer() });
+      page_location: location.origin + location.pathname, page_referrer: cleanReferrer() };
+    // Upgraded Google tags can initialize before per-stream config is processed.
+    // Set privacy/cookie/page-view defaults globally before the Google script loads too.
+    window.gtag("set", options);
+    window.gtag("js", new Date());
+    window.gtag("config", id, options);
     window.gtag("event", "page_view", { page_location: location.origin + location.pathname,
       page_referrer: cleanReferrer(), page_title: document.title });
     const tag = document.createElement("script");
@@ -52,8 +56,14 @@
     window[`ga-disable-${id}`] = true;
     for (const cookie of document.cookie.split(";")) {
       const name = cookie.split("=")[0].trim();
-      if (name.startsWith(cookiePrefix + "_"))
-        document.cookie = `${name}=; Max-Age=0; Path=${cookiePath}; SameSite=Lax`;
+      const legacy = name === `_ga_${id.slice(2)}`;
+      if (name.startsWith(cookiePrefix + "_") || legacy) {
+        // Also remove this property's pre-upgrade session cookie, never a shared _ga cookie.
+        for (const path of new Set(legacy ? [cookiePath, "/"] : [cookiePath])) {
+          document.cookie = `${name}=; Max-Age=0; Path=${path}; SameSite=Lax`;
+          document.cookie = `${name}=; Max-Age=0; Path=${path}; Domain=${location.hostname}; SameSite=Lax`;
+        }
+      }
     }
     // Unload an already running Google tag too; the saved refusal survives this reload.
     if (loaded) location.reload();

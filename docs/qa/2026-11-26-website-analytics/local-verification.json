@@ -6,5 +6,7 @@
   "invalidIdFailsBeforeOutputDeletion": true,
   "productionPagesWithTracking": 91,
   "measurementId": "G-MLG7D07X8Q",
-  "realGoogleTrafficDuringTests": false
+  "realGoogleTrafficDuringMockedTests": false,
+  "globalPrivacyDefaultsBeforeGoogleInitialization": true,
+  "latestAnalyticsFlowsPassed": 3
 }

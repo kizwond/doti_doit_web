@@ -40,6 +40,9 @@ test('opt-in counts one page view and store click; withdrawal stops tracking and
   await expect.poll(()=>requests.length).toBe(1);
   const queue=await events(page);
   const config=queue.find(e=>e[0]==='config')[2];
+  const defaults=queue.find(e=>e[0]==='set')[1];
+  expect(defaults).toMatchObject({send_page_view:false,cookie_prefix:'doti_web',cookie_path:'/',allow_google_signals:false,allow_ad_personalization_signals:false});
+  expect(queue.findIndex(e=>e[0]==='set')).toBeLessThan(queue.findIndex(e=>e[0]==='js'));
   expect(config.allow_google_signals).toBe(false);
   expect(config.allow_ad_personalization_signals).toBe(false);
   expect(config.page_location).toBe('http://127.0.0.1:4173/download/');
@@ -47,6 +50,7 @@ test('opt-in counts one page view and store click; withdrawal stops tracking and
   expect(JSON.stringify(queue)).not.toContain('private@example.test');
   await page.evaluate(()=>{
     document.cookie='doti_web_ga=test; path=/';
+    document.cookie='_ga_TEST123456=old-property-session; path=/';
     document.cookie='unrelated=keep; path=/';
     document.addEventListener('click',e=>e.preventDefault());
   });
@@ -58,6 +62,7 @@ test('opt-in counts one page view and store click; withdrawal stops tracking and
   expect(requests).toHaveLength(1);
   const cookies=await page.context().cookies();
   expect(cookies.some(c=>c.name==='doti_web_ga')).toBe(false);
+  expect(cookies.some(c=>c.name==='_ga_TEST123456')).toBe(false);
   expect(cookies.some(c=>c.name==='unrelated'&&c.value==='keep')).toBe(true);
   expect(await events(page)).toEqual([]);
 });

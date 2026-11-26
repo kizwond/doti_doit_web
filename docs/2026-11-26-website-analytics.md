@@ -26,6 +26,7 @@
 - 하단 **방문 통계 설정**에서 변경한다. 이미 허용한 방문자가 거절하면 이 사이트의 `doti_web_` 통계 쿠키만 삭제하고, Google 태그가 메모리에 남지 않도록 페이지를 새로고침한다. 다른 사이트/서비스 쿠키는 삭제하지 않는다. 이미 수집한 집계가 동의 철회로 소급 삭제되는 것은 아니다.
 - 개인화 광고·Google signals를 사용하지 않는다. 통계 쿠키는 host-only·해당 사이트 경로로 제한하고30일 유효기간을 설정한다.
 - `page_view`는 페이지당1개를 명시적으로 보낸다. 페이지 주소의 쿼리·해시는 제외하고 유입 사이트는 origin만 남긴다. Google Play 상세 링크 클릭은 `play_store_click`과 앱 패키지명만 보낸다. **버튼 클릭 수는 실제 설치 수가 아니다.**
+- 최근 Google 태그의 자동 초기화가 스트림별 `config`보다 먼저 실행되어 중복 페이지 조회와 기본 URL이 전송되는 동작을 실제 수신 검사에서 발견했다. 공식 권고에 따라 페이지 조회 억제·개인화·쿠키·URL 설정을 **전역 `gtag('set')`에 먼저 지정**하고 스트림에도 적용했다. 실제 Google 응답에서 조회1개와 쿼리/해시가 빠진 주소, 프로젝트 경로의 전용 쿠키를 다시 확인했다. Google의 기본 세션·첫 방문 이벤트는 별도로 표시될 수 있다.
 - 동의하지 않거나 광고 차단기로 차단된 방문, 봇 등 모든 방문을 정확히 세는 서비스가 아니다. 연결 이전의 방문 이력을 복원하지 않는다. 쿠키 삭제·기기/브라우저 변경에 따라 같은 사람이 다른 방문자로 집계될 수 있다.
 
 ## 변경 파일과 검증
@@ -45,3 +46,4 @@
 - [동의 모드](https://developers.google.com/tag-platform/security/guides/consent)
 - [쿠키·개인화 설정](https://developers.google.com/analytics/devguides/collection/ga4/reference/config)
 - [Google의 개인정보 공개 요구사항](https://support.google.com/analytics/answer/7318509?hl=ko)
+- [변경된 태그 초기화와 config 처리](https://support.google.com/analytics/answer/18411054?hl=en)
