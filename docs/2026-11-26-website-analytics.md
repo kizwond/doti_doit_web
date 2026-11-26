@@ -40,6 +40,17 @@
 
 배포와 실제 수신 확인은 후속 결과에 추가한다. 앱 APK·백엔드·개인 계정의 기존 Firebase 속성은 이번 대상이 아니다.
 
+## 배포·실제 수신 확인 완료
+
+- 구현 커밋 `b8717d1`, Google 태그 초기화 순서 보정 커밋 **`1c65759`**를 main에 푸시했다. [최종 Pages 배포45733952230](https://github.com/kizwond/doti_doit_web/actions/runs/45733952230)이 success다. 이후 추가한 것은 검증·인계 자료뿐이다.
+- 공개 페이지91개를 HTTPS GET으로 확인했고, 실제 공개 `analytics.js`·`styles.css`의 전체 해시를 로컬 소스와 대조했다. 404는 통계 제외다. [공개 확인](qa/2026-11-26-website-analytics/public-verification.json).
+- **실제 공개 사이트 + 회사 설정용 Chrome**에서 허용 전 Google 요청0건, 허용 후 `page_view` **1건**과 `play_store_click` **1건**, 측정 ID 일치 및 Google HTTP204 응답을 확인했다. 전송 주소에 테스트 쿼리·해시가 포함되지 않고 쿠키가 사이트 경로 `/doti_doit_web/`에만 만들어지는 것도 확인했다. [실제 전송 확인](qa/2026-11-26-website-analytics/real-collection.json).
+- 회사 Analytics 홈에서 **최근30분 활성 사용자1명**, 국가 South Korea를 실제로 확인했다. [화면](qa/2026-11-26-website-analytics/analytics-realtime.png) · [확인 기록](qa/2026-11-26-website-analytics/analytics-dashboard-confirmation.json). 초기 통계에는 설정 검증용 접속·클릭이 일부 포함된다.
+- 새 속성의 누적 일별 보고서·‘수신 데이터 없음’ 안내는 Google 처리 후 갱신된다. 실시간 사용자 수는 먼저 표시되는 것을 확인했다. 초기 안내가 즉시 사라지는 것과 실제 태그 수신을 같은 것으로 판단하지 않는다.
+- Google 태그 초기화 보정 후 Analytics3개 검사를 다시 통과했다. [로컬 검사 요약](qa/2026-11-26-website-analytics/local-verification.json). [공개 동의 UI](qa/2026-11-26-website-analytics/public-consent.png).
+
+회사 로그인 비밀번호·인증 코드·Google 계정 쿠키·비밀키는 저장소나 검증 자료에 넣지 않았다. 검증용 브라우저에는 회사 계정의 Analytics 홈을 열어두었다. 개인 Gmail의 Firebase 속성은 변경하지 않았다.
+
 ## 참고한 공식 문서
 
 - [웹 Analytics 설정](https://support.google.com/analytics/answer/14183469?hl=ko)

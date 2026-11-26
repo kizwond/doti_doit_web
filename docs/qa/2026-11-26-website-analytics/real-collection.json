@@ -1,0 +1,31 @@
+{
+  "noGoogleRequestsBeforeConsent": true,
+  "events": [
+    {
+      "status": 204,
+      "measurementId": "G-MLG7D07X8Q",
+      "event": "page_view",
+      "page": "https://kizwond.github.io/doti_doit_web/download/",
+      "appId": null
+    },
+    {
+      "status": 204,
+      "measurementId": "G-MLG7D07X8Q",
+      "event": "play_store_click",
+      "page": "https://kizwond.github.io/doti_doit_web/download/",
+      "appId": "com.doti.doit"
+    }
+  ],
+  "cookieNames": [
+    {
+      "name": "doti_web_ga",
+      "path": "/doti_doit_web/"
+    },
+    {
+      "name": "doti_web_ga_MLG7D07X8Q",
+      "path": "/doti_doit_web/"
+    }
+  ],
+  "pageErrors": [],
+  "browser": "Company setup Chrome, actual public website"
+}

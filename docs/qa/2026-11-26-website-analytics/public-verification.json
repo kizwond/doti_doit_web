@@ -1,0 +1,476 @@
+{
+  "commit": "1c6575926a3ae7a67f507be09ac9b3536b6aee58",
+  "workflowRuns": [
+    {
+      "id": 45733952230,
+      "name": "홈페이지 배포",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/kizwond/doti_doit_web/actions/runs/45733952230"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/about/",
+      "status": 200,
+      "sha256": "ceca5795fa19582ab287a461e93de9ab6b3ee01dc5a5c19a418c96de11de635b"
+    },
+    {
+      "route": "/dotimoti/",
+      "status": 200,
+      "sha256": "457274d4a96d07be43cd855f2af1650d7d241b825962066c720c6720a79ed7be"
+    },
+    {
+      "route": "/download/",
+      "status": 200,
+      "sha256": "fbdcbf2fc4fceeb8ebd841cc2f79be139134ad4c8f7f7ea8882ed9426ef9f489"
+    },
+    {
+      "route": "/faq/",
+      "status": 200,
+      "sha256": "154984fb574e679bf2b89bba9f06332fb3ad328406c18000098051a1df197ccc"
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "234ca70f1328029134b153a9de9e69fe597c98a4fd28438a63b15f00bd3967e2"
+    },
+    {
+      "route": "/missions/",
+      "status": 200,
+      "sha256": "bc35d4693451f19f7a7f53499ebc78d7acade9cc2bad02bbae5c39ee8e094dae"
+    },
+    {
+      "route": "/records/",
+      "status": 200,
+      "sha256": "36574faa8c5b9eee4032bf3bb6067cf5cdfbb619bcc7082e6cb5c9fc0fa932b7"
+    },
+    {
+      "route": "/routines/",
+      "status": 200,
+      "sha256": "2330754e4d1b3a6df6d76494ee6f5d701c2437aea12dec4f3b394ae6db0f67d0"
+    },
+    {
+      "route": "/guides/exercise-routine/",
+      "status": 200,
+      "sha256": "03c3d636aa0984e8190919746ca792abb6687b0c1522fb391eaec911c82e3c67"
+    },
+    {
+      "route": "/guides/start-a-mission/",
+      "status": 200,
+      "sha256": "34c0f538e4c0c196d9c0cb2625a811a781d7da3e87198be77f67146258c3b56e"
+    },
+    {
+      "route": "/guides/video-feed/",
+      "status": 200,
+      "sha256": "344a0b4e0d62ad7a369a0523354be07bb00f754a2174f3b0c56f9f78c8e6245f"
+    },
+    {
+      "route": "/guides/walking-records/",
+      "status": 200,
+      "sha256": "61ee39fa493dc4724efb888b74a275bbaef86c35ad7e41b652dbd6303a002099"
+    },
+    {
+      "route": "/guides/",
+      "status": 200,
+      "sha256": "716e17372ed36aa42538c04516d9f3eabbb60f6540e9a17e1af134d26df1e111"
+    },
+    {
+      "route": "/en/about/",
+      "status": 200,
+      "sha256": "203a18998e1699e553f562a87da09f2d10cbf410fe00c568dc5b3b0dfdb32720"
+    },
+    {
+      "route": "/en/dotimoti/",
+      "status": 200,
+      "sha256": "0390fd5c67b92646d89394be11cc6671e536e136f0ad91da92049f8ab0c1947c"
+    },
+    {
+      "route": "/en/download/",
+      "status": 200,
+      "sha256": "a09b52da89aaf53d0a34b00f2ef6d12f35e958d3c799e6b28a05af996d394322"
+    },
+    {
+      "route": "/en/faq/",
+      "status": 200,
+      "sha256": "775458fe36675ae8548ec0df79ca1cdbecb55acf45c8d6c920be009cde0aa3ac"
+    },
+    {
+      "route": "/en/",
+      "status": 200,
+      "sha256": "f867634ae39cc994c74343ff490f772bb4e483bc0c360309f2f2e488ba68e3c2"
+    },
+    {
+      "route": "/en/missions/",
+      "status": 200,
+      "sha256": "3f68fce6a26be9dfd927a8b33cea1f28580ef6999d6be7cecb3c41af188aba25"
+    },
+    {
+      "route": "/en/records/",
+      "status": 200,
+      "sha256": "9ae80b8bb682145288d77a53a8e71ab46846f1a3ecb936a82bcd730cff65ca78"
+    },
+    {
+      "route": "/en/routines/",
+      "status": 200,
+      "sha256": "74e818f47d2abb15f9f706b5ca34c9ae0e4947f34864204473b9e2fbe4bca7d2"
+    },
+    {
+      "route": "/en/guides/exercise-routine/",
+      "status": 200,
+      "sha256": "15abeccbcc96842974b6e8132fccd4914fa39d0861b068d4f87940c838d76d75"
+    },
+    {
+      "route": "/en/guides/start-a-mission/",
+      "status": 200,
+      "sha256": "0fd2f8796fffa3c36d5d9bc553c8303e54ea53da85d4ddf11ca0e030b7d19c26"
+    },
+    {
+      "route": "/en/guides/video-feed/",
+      "status": 200,
+      "sha256": "7e1d9d6b75eae0d8bb11994365576892e501c9333c7014a2007881bf48ce93bb"
+    },
+    {
+      "route": "/en/guides/walking-records/",
+      "status": 200,
+      "sha256": "4f317fc78200b011ecfc052bc018ad7df52b4ba96a9c6f0b2cd829c00062a031"
+    },
+    {
+      "route": "/en/guides/",
+      "status": 200,
+      "sha256": "d388e08d3aab7bc5fbdf49c54f13eb451903cde96a9e3718621249e7cf57d1c4"
+    },
+    {
+      "route": "/ja/about/",
+      "status": 200,
+      "sha256": "823f46b89b5150264e46c260ac5299475ba40e2f27cc52372c784cc3073c24dd"
+    },
+    {
+      "route": "/ja/dotimoti/",
+      "status": 200,
+      "sha256": "eda423ba7dc863aa97333e709429a10dbef4d16d3079b96228816782fd8a5f38"
+    },
+    {
+      "route": "/ja/download/",
+      "status": 200,
+      "sha256": "6b3ef06fced4a80d3b6d757b0a14da95fb7c53b07ed2b4be153e9bb462d49247"
+    },
+    {
+      "route": "/ja/faq/",
+      "status": 200,
+      "sha256": "906980965cf508522a9dbdf6d8ee42f771817e6cb4b8154b92bb653a974fed9f"
+    },
+    {
+      "route": "/ja/",
+      "status": 200,
+      "sha256": "b1cd09b807e62a41d8fb982efaf8cf3c8c54a404d46ecb36c59595b155af542e"
+    },
+    {
+      "route": "/ja/missions/",
+      "status": 200,
+      "sha256": "49262f201ba82409eec5a5ba4ae8cadda3bc5728b2dc5f607f8f87bfa1b1caa9"
+    },
+    {
+      "route": "/ja/records/",
+      "status": 200,
+      "sha256": "fac7e1ebf3d2aab0318c40accdfe017f4685db465c049b0fc2f0d0fa749fc9ab"
+    },
+    {
+      "route": "/ja/routines/",
+      "status": 200,
+      "sha256": "0fea5cb9052867d07d0dc02989525dacdd34fb213d9dd46c3e19721912289584"
+    },
+    {
+      "route": "/ja/guides/exercise-routine/",
+      "status": 200,
+      "sha256": "d3eee1df04cc76a17fffa7b4ff79e9ee0590b5702c737acf9a45aac61b499774"
+    },
+    {
+      "route": "/ja/guides/start-a-mission/",
+      "status": 200,
+      "sha256": "4bfa3b83a13fcb7e3d28095b66e8a6e6e164b925bcde4ca4bac7b30d669cfdb1"
+    },
+    {
+      "route": "/ja/guides/video-feed/",
+      "status": 200,
+      "sha256": "cf61abc88630e33cb8b70b7a56f443aa51f080092b20ed8138f01eff2a507883"
+    },
+    {
+      "route": "/ja/guides/walking-records/",
+      "status": 200,
+      "sha256": "4e4e43b5c70740caaf43344b64e6e89689dcbbc02d4ff97f062a82649db98c3c"
+    },
+    {
+      "route": "/ja/guides/",
+      "status": 200,
+      "sha256": "308c82667dae3a4fbab57ebf4d1026c037dfcfaddc82412c68c8e73754b3203f"
+    },
+    {
+      "route": "/zh-hans/about/",
+      "status": 200,
+      "sha256": "ee85b7b437f8c17efcc06216badaf6c0bcf91d232a39b20d132712d4b10314de"
+    },
+    {
+      "route": "/zh-hans/dotimoti/",
+      "status": 200,
+      "sha256": "ad548c53b23ccc3c61f8f667019f4d6c9cd003cab92db0db671298e67e6b4cad"
+    },
+    {
+      "route": "/zh-hans/download/",
+      "status": 200,
+      "sha256": "cb0a8e60815d65819cd90ec36d3096eafa9132050fdec12ed436549e9b81f0d7"
+    },
+    {
+      "route": "/zh-hans/faq/",
+      "status": 200,
+      "sha256": "7d001c30166180cc3187e18ab324a78d873be74a88b8acf31fb09b04069f0810"
+    },
+    {
+      "route": "/zh-hans/",
+      "status": 200,
+      "sha256": "caa49eb9326c1c9a098c22d0d47c6ae04cb671cddd01c580427917fcab591e0d"
+    },
+    {
+      "route": "/zh-hans/missions/",
+      "status": 200,
+      "sha256": "1bd4aea0c4fb1a511ff47db1938d46212ab8f2d89ebd92ad8d7b1aa11a7288a5"
+    },
+    {
+      "route": "/zh-hans/records/",
+      "status": 200,
+      "sha256": "5ebd74bfc1f3acdb170576c7d857ddfeb0a2f08d5a0852fe61fc33500962bba9"
+    },
+    {
+      "route": "/zh-hans/routines/",
+      "status": 200,
+      "sha256": "e0effe4b2d594458bd55f5b7504990f754fb6a4758293de11480d4ec41e30752"
+    },
+    {
+      "route": "/zh-hans/guides/exercise-routine/",
+      "status": 200,
+      "sha256": "4f220f3e3b2f44df0cb8ceed44c307c511bb29e6cb788d897b7c19cc2469f354"
+    },
+    {
+      "route": "/zh-hans/guides/start-a-mission/",
+      "status": 200,
+      "sha256": "5ed1dafdecc2d82f9e48db493ae246df68d9a4727f08ed22ef43fb507f10350a"
+    },
+    {
+      "route": "/zh-hans/guides/video-feed/",
+      "status": 200,
+      "sha256": "abd7dac54d48f91b50844d1a7287860cfb94abf9036cdde524d5940b4bf050e6"
+    },
+    {
+      "route": "/zh-hans/guides/walking-records/",
+      "status": 200,
+      "sha256": "ad582e821417240def362ef1c04656c0871ed49c097f8a8db3320fc6c709770d"
+    },
+    {
+      "route": "/zh-hans/guides/",
+      "status": 200,
+      "sha256": "2dd37c0fbcc30893f908622d10385668f6dd724c4c0f8db89e9821b8b945b6d0"
+    },
+    {
+      "route": "/zh-hant/about/",
+      "status": 200,
+      "sha256": "c3a0380726e10eb3e89d13adf4a5855819dd703d8a14492c855839be92186a8b"
+    },
+    {
+      "route": "/zh-hant/dotimoti/",
+      "status": 200,
+      "sha256": "c504424f4d5d601316acc87ac17756a7ac0cd8cb53d6bad629776e0f22f08f42"
+    },
+    {
+      "route": "/zh-hant/download/",
+      "status": 200,
+      "sha256": "1776e9cb544976b19392f175969776924bcfc69694c2d9a0bf6341e40f1fc255"
+    },
+    {
+      "route": "/zh-hant/faq/",
+      "status": 200,
+      "sha256": "8cf3529a936305d547dcf103446693a48023077f7c8c8661599d81d2b49b45cc"
+    },
+    {
+      "route": "/zh-hant/",
+      "status": 200,
+      "sha256": "80487746dc90893c1dfd035601b7b5763b75e67bbb885268dbdc1b6d8bd2e713"
+    },
+    {
+      "route": "/zh-hant/missions/",
+      "status": 200,
+      "sha256": "283f935cb9490f5f7ac1004d60c3868e82d62e58ba562a5bbf62df855d1f6646"
+    },
+    {
+      "route": "/zh-hant/records/",
+      "status": 200,
+      "sha256": "21090f95bb0e8d0fd208dce40fc3acd98cebdaf4fe0bee9c526c3d3c2271cc4d"
+    },
+    {
+      "route": "/zh-hant/routines/",
+      "status": 200,
+      "sha256": "7c3daae9abcf1bf7f87917ca7c869c467c0a2ccf9014522af5c341619a32be0e"
+    },
+    {
+      "route": "/zh-hant/guides/exercise-routine/",
+      "status": 200,
+      "sha256": "a1e24032e5ec9e976035cee79f72c2db402bfee6060ccb5e1306e2b3c7780f74"
+    },
+    {
+      "route": "/zh-hant/guides/start-a-mission/",
+      "status": 200,
+      "sha256": "1e8438af115f6a169c56e6a506700c8a9a2a668d44049639c9ffeec1df5cd433"
+    },
+    {
+      "route": "/zh-hant/guides/video-feed/",
+      "status": 200,
+      "sha256": "02f91596fc55e2162ae6235893e2131b73a2fcaa42de94eba60b6e3d0516382a"
+    },
+    {
+      "route": "/zh-hant/guides/walking-records/",
+      "status": 200,
+      "sha256": "517312e520e78a3be51d657e3f45fa7d8637ab8b060662a9f5a4ce9445d22d29"
+    },
+    {
+      "route": "/zh-hant/guides/",
+      "status": 200,
+      "sha256": "11831b0beb01ede3ec5791404eed719a8a02b377ba3c3ce38e15c678847aac01"
+    },
+    {
+      "route": "/es/about/",
+      "status": 200,
+      "sha256": "d24fda8b13b981a9ca653f5d4b78ca999b12a18a687ff40301e7671823c4da65"
+    },
+    {
+      "route": "/es/dotimoti/",
+      "status": 200,
+      "sha256": "37c682e604d3439255988f367c165d7c22619eca4a73c45220868832313f37d7"
+    },
+    {
+      "route": "/es/download/",
+      "status": 200,
+      "sha256": "06c4f1d60880d4bd123b58640208b5f9bf23f0250e52e712aa91a48a526e176a"
+    },
+    {
+      "route": "/es/faq/",
+      "status": 200,
+      "sha256": "433a35af17cec17213c6e4da94ef424f0aa621aa3622610778760f2634a8db60"
+    },
+    {
+      "route": "/es/",
+      "status": 200,
+      "sha256": "f29e6444f3a794fac41804fcde9291ffa83bbf61ed742bb7051ce749ceb2f2ad"
+    },
+    {
+      "route": "/es/missions/",
+      "status": 200,
+      "sha256": "6686a55d26f5c2b3c6400029291c3aa7fb2a3f8fa7edba992758b6e2c2776b7f"
+    },
+    {
+      "route": "/es/records/",
+      "status": 200,
+      "sha256": "42f0c5ba108ed41a91265e4cbc942e44529e022d836cea6f8cd2927a48f6e7e6"
+    },
+    {
+      "route": "/es/routines/",
+      "status": 200,
+      "sha256": "424a03089c636161fbfc84c7808770e77d665f8ad07dded16b335322ac45156c"
+    },
+    {
+      "route": "/es/guides/exercise-routine/",
+      "status": 200,
+      "sha256": "736f4200d5e18d6637324309f42e7b5729301405e38f70a83a469bc2f15520e9"
+    },
+    {
+      "route": "/es/guides/start-a-mission/",
+      "status": 200,
+      "sha256": "caab47c7cb96209391fe3a04548285b4929c613ff9783bb27108590e79b3416b"
+    },
+    {
+      "route": "/es/guides/video-feed/",
+      "status": 200,
+      "sha256": "bf5721024c0ac18e9e83ee009ff6fc586baffc2a28dbc0b2f2b5a74367e42fb4"
+    },
+    {
+      "route": "/es/guides/walking-records/",
+      "status": 200,
+      "sha256": "f2e3946d387f8e507cc96c8220d34969939c0677b0d207eacea80a0f037a695b"
+    },
+    {
+      "route": "/es/guides/",
+      "status": 200,
+      "sha256": "57e9f1fe1ea5d277704f05c9ebc57b61a059f303074daf5793d180e43e14c99f"
+    },
+    {
+      "route": "/vi/about/",
+      "status": 200,
+      "sha256": "34a0b540e9a8f890632a38c085b02dc964d033f55c73008618f503dc000017e4"
+    },
+    {
+      "route": "/vi/dotimoti/",
+      "status": 200,
+      "sha256": "d89cba5592cc6927c84003b0d98dfa80d031d1ac6994843d4bc5616f8cd27d53"
+    },
+    {
+      "route": "/vi/download/",
+      "status": 200,
+      "sha256": "9a85945a4f3af4086718bbd82312e49681e6342ed33016a66d92568f95e6fbf5"
+    },
+    {
+      "route": "/vi/faq/",
+      "status": 200,
+      "sha256": "969cdbc670bda34cc4b13aaa6f919fa13f18fa1ee4c1ccdab6da6a8b32d68eb3"
+    },
+    {
+      "route": "/vi/",
+      "status": 200,
+      "sha256": "37cfd8400911ac306834d8ea9954f086ec1de592c46a4e66584b764421555cf2"
+    },
+    {
+      "route": "/vi/missions/",
+      "status": 200,
+      "sha256": "47049ff6f3febb241b0ba81696b3615a42c3d9efe3790c043b87c6ecc9a61d9d"
+    },
+    {
+      "route": "/vi/records/",
+      "status": 200,
+      "sha256": "3f5f219abadaf878fda7033cb7f17dbb39ab61927d29a9eba364451fa3d03acc"
+    },
+    {
+      "route": "/vi/routines/",
+      "status": 200,
+      "sha256": "a080ef7f5ceb69d8af2732bc0d6e0624a06f724da47647422171c608e62e6c98"
+    },
+    {
+      "route": "/vi/guides/exercise-routine/",
+      "status": 200,
+      "sha256": "54bc734814d299fd5e83cd44b60bf33e31d47972294a8a87bf1ab9b14e7a1f1c"
+    },
+    {
+      "route": "/vi/guides/start-a-mission/",
+      "status": 200,
+      "sha256": "06c4966f139fa88857297eb571ef02e725deb1b8a549b1116ab4c3a9fc213222"
+    },
+    {
+      "route": "/vi/guides/video-feed/",
+      "status": 200,
+      "sha256": "f4539f70e56c3c49cb3a322c1d26872ffe4b06976bf7de3345f82f96c00008a9"
+    },
+    {
+      "route": "/vi/guides/walking-records/",
+      "status": 200,
+      "sha256": "cfa2d0f22977a568720f199eebe9d3d471d38a7c583938279092bd617a5e56f0"
+    },
+    {
+      "route": "/vi/guides/",
+      "status": 200,
+      "sha256": "11695a27b46066891d8f672f9f96071653728bea80d5f9a72250ac2618d042aa"
+    }
+  ],
+  "assets": {
+    "analytics.js": "ab8177c77776e4b86818965f2c12f6d42efc6dd7f59ed04d9e9f78e1de6ed953",
+    "styles.css": "2a5d8a62043bd1e9d8f4649767b92d868a320c2ca50933489770407b149c8811"
+  },
+  "untracked404": true,
+  "realCollectionConfirmed": true,
+  "realtimeActiveUsersObserved": 1
+}
