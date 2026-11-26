@@ -174,7 +174,7 @@ await fs.writeFile(
       routes: allPages.map((p) => p.outputRoute),
       languages: languages.map(({code,path})=>({code,path})),
       productBasis: "MotiDoit Preview 366 / 2026-11-01",
-      motiProductBasis: "DotiMoti Next Preview49 / 2026-11-17",
+      motiProductBasis: "MotiDoti Next Preview49 / 2026-11-17",
     },
     null,
     2,

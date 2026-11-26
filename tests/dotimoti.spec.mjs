@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
 import { languages } from '../src/languages.mjs';
 
-test('DotiMoti introduction is discoverable and localized without suggesting a released app', async ({ page }) => {
+test('MotiDoti introduction is discoverable and localized without suggesting a released app', async ({ page }) => {
   test.setTimeout(90000);
   await page.setViewportSize({ width: 320, height: 860 });
   for (const language of languages) {
