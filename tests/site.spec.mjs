@@ -124,6 +124,7 @@ async function fixture() {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), "doti-web-build-"));
   for (const dir of ["content", "src", "scripts", "public"])
     await fs.cp(dir, path.join(root, dir), { recursive: true });
+  await fs.copyFile("analytics.config.json", path.join(root, "analytics.config.json"));
   await fs.symlink(
     path.resolve("node_modules"),
     path.join(root, "node_modules"),

@@ -5,6 +5,10 @@ import { layout, home, article, guideIndex } from "../src/templates.mjs";
 import { languages, translateChrome, languagePicker } from "../src/languages.mjs";
 
 const preview = process.argv.includes("--preview");
+const analyticsConfig = JSON.parse(await fs.readFile("analytics.config.json", "utf8"));
+const measurementId = (process.env.GA_MEASUREMENT_ID || analyticsConfig.measurementId || "").trim();
+if (measurementId && !/^G-[A-Z0-9]{4,20}$/.test(measurementId))
+  throw new Error("GA_MEASUREMENT_ID must be a Google Analytics web measurement ID (G-...).");
 const output = path.resolve("dist");
 const escape = (s) =>
   String(s).replace(
@@ -126,6 +130,9 @@ for (const page of allPages) {
   }
   // The verified app detail link keeps the selected display language.
   html=html.replace('&amp;hl=ko',`&amp;hl=${language.code}`);
+  // Local previews and unconfigured builds never request Google's analytics script.
+  if (!preview && measurementId) html=html.replace('</head>',
+    `<meta name="ga-measurement-id" content="${measurementId}"><script defer src="/analytics.js" data-site-path="${escape(basePath || '/')}"></script></head>`);
   const dest=path.join(output,page.outputRoute,"index.html");
   await fs.mkdir(path.dirname(dest),{recursive:true});
   await fs.writeFile(dest,sitePaths(html));
@@ -163,6 +170,7 @@ await fs.writeFile(
     {
       mode: preview ? "preview" : "production",
       basePath,
+      analyticsEnabled: !preview && Boolean(measurementId),
       routes: allPages.map((p) => p.outputRoute),
       languages: languages.map(({code,path})=>({code,path})),
       productBasis: "DotiDoit Preview 366 / 2026-11-01",

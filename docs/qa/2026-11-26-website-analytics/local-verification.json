@@ -1,0 +1,10 @@
+{
+  "relatedBrowserTestsPassed": 13,
+  "analyticsFlows": 3,
+  "productionRegressionTests": 3,
+  "previewPagesWithoutTracking": 91,
+  "invalidIdFailsBeforeOutputDeletion": true,
+  "productionPagesWithTracking": 91,
+  "measurementId": "G-MLG7D07X8Q",
+  "realGoogleTrafficDuringTests": false
+}

@@ -20,6 +20,16 @@
   overflow-wrap: break-word;
   font-size: 16px;
 }
+.analytics-settings { border: 0; padding: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
+.analytics-notice { position: fixed; z-index: 100; right: 16px; bottom: 16px; left: 16px; max-width: 680px; margin: auto; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); color: var(--ink); box-shadow: 0 8px 32px #18374620; font-size: 14px; line-height: 1.6; max-height: 70vh; overflow: auto; }
+.analytics-notice[hidden] { display: none; }
+.analytics-notice p { margin: 8px 0; }
+.analytics-notice summary { cursor: pointer; color: var(--muted); }
+.analytics-notice a { text-decoration: underline; }
+.analytics-actions { display: flex; gap: 12px; margin-top: 16px; }
+.analytics-actions button { flex: 1; min-height: 44px; padding: 10px; border: 1px solid var(--ink); border-radius: 8px; background: var(--white); color: var(--ink); font: inherit; cursor: pointer; }
+.analytics-actions [data-choice="granted"] { background: var(--ink); color: var(--white); }
+body.analytics-notice-open { padding-bottom: var(--analytics-space, 0px); }
 * {
   box-sizing: border-box;
 }
