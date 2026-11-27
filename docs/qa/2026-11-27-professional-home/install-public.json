@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "language": "ko",
+      "installLinksDirect": true,
+      "ctaLinkCount": 1,
+      "legacyPageMinimal": true
+    },
+    {
+      "language": "en",
+      "installLinksDirect": true,
+      "ctaLinkCount": 1,
+      "legacyPageMinimal": true
+    },
+    {
+      "language": "ja",
+      "installLinksDirect": true,
+      "ctaLinkCount": 1,
+      "legacyPageMinimal": true
+    },
+    {
+      "language": "zh-Hans",
+      "installLinksDirect": true,
+      "ctaLinkCount": 1,
+      "legacyPageMinimal": true
+    },
+    {
+      "language": "zh-Hant",
+      "installLinksDirect": true,
+      "ctaLinkCount": 1,
+      "legacyPageMinimal": true
+    },
+    {
+      "language": "es",
+      "installLinksDirect": true,
+      "ctaLinkCount": 1,
+      "legacyPageMinimal": true
+    },
+    {
+      "language": "vi",
+      "installLinksDirect": true,
+      "ctaLinkCount": 1,
+      "legacyPageMinimal": true
+    }
+  ]
+}

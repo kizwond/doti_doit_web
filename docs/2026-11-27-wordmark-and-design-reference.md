@@ -49,3 +49,5 @@ GitHub Pages [45959389443](https://github.com/kizwond/doti_doit_web/actions/runs
 사용자가 지적한 하단 CTA의 Google Play 배지 아래 ‘앱 설치하기 →’는 중복이므로 제거했다. 헤더·모바일 메뉴·푸터·본문의 설치 링크는 해당 표시 언어의 Google Play 앱 상세로 바로 이동한다. 기존 `/download/` 주소는 예전 링크를 깨뜨리지 않도록 제목·설치 가능 여부 한 문장·배지 하나만 남기고 반복된 기능 설명·목차·다음 단계 버튼을 없앴다. 외국어 홈의 두 번째 Play 배지가 한국어 스토어로 연결되던 기존 언어 처리도 모든 배지에 동일하게 적용했다.
 
 7언어 직접 설치 경로·중복 CTA 없음, 기존 설치 주소, 방문 통계의 설치 클릭, 번호를 뺀 목차 및 GitHub 하위 경로 배포 검사4개를 통과했다.
+
+최종 설치 동선 소스5b0ef4e의 [Pages45960066824](https://github.com/kizwond/doti_doit_web/actions/runs/45960066824)도 성공했다. 공개7언어의 직접 설치 링크와 간소화된 기존 설치 주소를 확인했다. 최종 공개용 빌드는91페이지/3786개 로컬 참조를 통과했다. [설치 동선 공개 검증](qa/2026-11-27-professional-home/install-public.json).
