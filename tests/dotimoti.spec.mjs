@@ -19,7 +19,7 @@ test('MotiDoti introduction is discoverable and localized without suggesting a r
     await expect(page.locator('.prose a[href*="downloads/"]')).toHaveCount(0);
     await expect(page.locator('.download-box')).toHaveCount(0);
     await expect(page.locator('.article-next a')).toHaveAttribute('href', prefix + '/');
-    await expect(page.locator('.desktop-nav a[aria-current="page"]')).toHaveAttribute('href', prefix + '/dotimoti/');
+    await expect(page.locator('.site-footer a[aria-current="page"]')).toHaveAttribute('href', prefix + '/dotimoti/');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     if (language.code !== 'ko') expect(await page.locator('main').innerText()).not.toMatch(/[가-힣]/);
     const toc = page.locator('.article-toc a[href^="#"]').first();

@@ -101,7 +101,7 @@ test("guide links, anchors, store details and missing-page handling", async ({
   page,
 }) => {
   await page.goto("/guides/");
-  await page.getByRole("link", { name: /01 첫 미션 시작하기/ }).click();
+  await page.getByRole("link", { name: /^첫 미션 시작하기/ }).click();
   await expect(page).toHaveURL(/\/guides\/start-a-mission\/$/);
   await page
     .getByRole("navigation", { name: "본문 목차" })
@@ -111,11 +111,12 @@ test("guide links, anchors, store details and missing-page handling", async ({
     page.locator("h2").filter({ hasText: "2. 기준은 필요할 때만" }),
   ).toBeInViewport();
   await page.goto("/download/");
-  const store = page.getByRole("link", { name: /Google Play에서 보기/ });
+  const store = page.getByRole("link", { name: "Google Play에서 앱 설치하기" });
   await expect(store).toHaveAttribute(
     "href",
     /^https:\/\/play.google.com\/store\/apps\/details\?id=com\.doti\.doit/,
   );
+  await expect(store.locator("img")).toBeInViewport();
   expect((await page.goto("/not-a-page/")).status()).toBe(404);
   await page.getByRole("link", { name: /홈으로 가기/ }).click();
   await expect(page).toHaveURL("http://127.0.0.1:4173/");

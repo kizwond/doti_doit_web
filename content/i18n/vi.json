@@ -32,7 +32,7 @@
   "/download/": {
     "title": "Bắt đầu với MotiDoit",
     "description": "Tìm ứng dụng trên Google Play rồi chọn mục tiêu, cách ghi và ngôn ngữ.",
-    "markdown": "# Bắt đầu với MotiDoit\nTìm MotiDoit trên Google Play. Kiểm tra tính năng và thiết bị tương thích với phiên bản cài đặt. Giao diện và tính năng có thể khác theo phiên bản và thiết bị.\n## Chọn một nhiệm vụ\nBắt đầu với hoạt động quen thuộc. Xem tiêu chí, chọn đo ngay hoặc nhập việc đã xong. Với đo liên tục, đọc đồng ý, cấp quyền rồi kiểm tra dữ liệu có được ghi không.\n## Chọn ngôn ngữ\nCài đặt → Ngôn ngữ hỗ trợ tiếng Hàn, Anh, Nhật, Trung giản thể và phồn thể, Tây Ban Nha, Việt; cũng có thể theo ngôn ngữ thiết bị. Lựa chọn được lưu, tên nhiệm vụ và ghi chú của bạn giữ nguyên.\n## Thêm khi cần\nGắn quy trình nếu muốn chuẩn bị thứ tự. Thêm ảnh, bản ghi đã chọn và ghi chú khi muốn lưu câu chuyện. Không cần thiết lập hết ngay ngày đầu.\n[Nhiệm vụ đầu tiên](/guides/start-a-mission/) · [Câu hỏi](/faq/)"
+    "markdown": "# Bắt đầu với MotiDoit\nGiao diện và tính năng có thể khác tùy theo phiên bản ứng dụng và thiết bị.\n## Chọn một nhiệm vụ\nBắt đầu với hoạt động quen thuộc. Xem tiêu chí, chọn đo ngay hoặc nhập việc đã xong. Với đo liên tục, đọc đồng ý, cấp quyền rồi kiểm tra dữ liệu có được ghi không.\n## Chọn ngôn ngữ\nCài đặt → Ngôn ngữ hỗ trợ tiếng Hàn, Anh, Nhật, Trung giản thể và phồn thể, Tây Ban Nha, Việt; cũng có thể theo ngôn ngữ thiết bị. Lựa chọn được lưu, tên nhiệm vụ và ghi chú của bạn giữ nguyên.\n## Thêm khi cần\nGắn quy trình nếu muốn chuẩn bị thứ tự. Thêm ảnh, bản ghi đã chọn và ghi chú khi muốn lưu câu chuyện. Không cần thiết lập hết ngay ngày đầu.\n[Nhiệm vụ đầu tiên](/guides/start-a-mission/) · [Câu hỏi](/faq/)"
   },
   "/guides/": {
     "title": "Hướng dẫn MotiDoit",

@@ -118,7 +118,7 @@ const localizeLinks = (html,language) => html.replace(/href="(\/[^"#]*)(#[^"]*)?
   pages.some(p=>p.route===target) ? `href="${language.path+target}${hash}"` : whole);
 for (const page of allPages) {
   const language=page.language;
-  const content=page.route==="/" ? home() : page.kind==="index" ? guideIndex(allPages.filter(p=>p.language.code===language.code)) : article(page);
+  const content=page.route==="/" ? home(language) : page.kind==="index" ? guideIndex(allPages.filter(p=>p.language.code===language.code)) : article(page);
   let html=layout(page,content,{preview,origin:origin ? origin+language.path : ""});
   html=localizeLinks(translateChrome(html,language),language);
   html=html.replace("https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/", "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/" + (language.code === "ko" ? "" : language.path.slice(1) + "/"));

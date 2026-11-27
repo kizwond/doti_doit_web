@@ -69,12 +69,15 @@ test('opt-in counts one page view and store click; withdrawal stops tracking and
 
 test('all seven languages fit small screens and load no analytics by default',async({browser})=>{
   for(const language of ['ko','en','ja','zh-Hans','zh-Hant','es','vi']) {
-    const context=await browser.newContext({viewport:{width:320,height:740}});
+    const context=await browser.newContext({viewport:{width:320,height:568}});
     const page=await context.newPage();
     const requests=await fixture(page,language);
     await expect(page.locator('#analytics-notice')).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     if(language!=='ko')expect(await page.locator('#analytics-notice').innerText()).not.toMatch(/[가-힣]/);
+    const badge = page.locator('main .play-badge');
+    await expect(badge).toBeInViewport({ ratio: 1 });
+    await badge.click({ trial: true });
     expect(requests).toEqual([]);
     await context.close();
   }
