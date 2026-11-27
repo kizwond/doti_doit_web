@@ -42,7 +42,7 @@ test('new navigation and product section fit small phones, tablets and desktops'
         width: image.getBoundingClientRect().width, height: image.getBoundingClientRect().height,
         ratio: image.naturalWidth / image.naturalHeight, source: image.currentSrc,
       }));
-      expect(logo.width, 'wordmark must not inherit the 55px illustration size').toBeGreaterThan(150);
+      expect(logo.width, 'home introduction wordmark stays compact').toBeCloseTo(124);
       expect(Math.abs(logo.width / logo.height - logo.ratio), 'keep the full logo aspect ratio').toBeLessThan(.02);
       expect(logo.source).toContain('?v=');
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), prefix + '/' + width).toBe(true);
