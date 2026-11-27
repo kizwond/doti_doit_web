@@ -80,7 +80,63 @@
     },
     {
       "file": "styles.css",
-      "sha256": "7d0df8f6dcce1fb9f6c201e0d6d8781fae5066c7134efdba0406dca346f4bd1e"
+      "sha256": "f376748bbeaba3b0922420a3898781cb9950f9ccb45548c1fffa31598ca4c5c2"
+    },
+    {
+      "file": "assets/guide-details/catalog.webp",
+      "sha256": "6d82def456228c7edcef0f3484e7ad9fe76b4bc988008247ec07dfdf1d109c1b"
+    },
+    {
+      "file": "assets/guide-details/criteria.webp",
+      "sha256": "a62a1ad2fe366f69d585de39e6cf64780bcc37d36b0b426fed29cf577dffa95e"
+    },
+    {
+      "file": "assets/guide-details/editor-tools.webp",
+      "sha256": "108f0b5fe416c9c5e105bcb6e3e0c6862e3c7bf98eda21f55c013305442f6e66"
+    },
+    {
+      "file": "assets/guide-details/feed.webp",
+      "sha256": "81a9cae76febf8583048692f14bbec2d5c7048a0f0b033122175d3a091ab485d"
+    },
+    {
+      "file": "assets/guide-details/finish.webp",
+      "sha256": "2c14944c223d9150cd08dcaeba6464426ebd28d39d33f9677a1ca42a76d501bb"
+    },
+    {
+      "file": "assets/guide-details/measurement.webp",
+      "sha256": "947cc89849d7cb8fc12484aed669e9d32bad3d6abd7e8e03821c226ac809f34b"
+    },
+    {
+      "file": "assets/guide-details/pause.webp",
+      "sha256": "32e9567207798cbfd919c2e7183210bdfaa9d0f80b41a21b922e07db0dbfd25a"
+    },
+    {
+      "file": "assets/guide-details/progress.webp",
+      "sha256": "0660db7a9abc2aed5afa3bab11612b8c45207497541ea35f9d04101a7ad8b258"
+    },
+    {
+      "file": "assets/guide-details/record-card-example.svg",
+      "sha256": "5159b965bcbc4ae2fb7194388c3cf89cbef6b440effb975a3166848b51ec218d"
+    },
+    {
+      "file": "assets/guide-details/record.webp",
+      "sha256": "61d8e3a349677c104ab2184599b51e971472bea7695297aaeec2ca16d0b2202e"
+    },
+    {
+      "file": "assets/guide-details/routine-edit.webp",
+      "sha256": "a499031c7a6eabcd717cb6b55e65ced4c5fd7fabc434bc8e49ac923a240e1580"
+    },
+    {
+      "file": "assets/guide-details/routine-run.webp",
+      "sha256": "1e0a809735864f12efa144f073672f7eabaacdeccb57f874d3ce7b3106df0a1f"
+    },
+    {
+      "file": "assets/guide-details/statistics.webp",
+      "sha256": "ee934e94a571a1e9d720e7f23c92e50c94bee4e15bdc6d3ab1507b2eaacf4402"
+    },
+    {
+      "file": "assets/guide-details/video-trim.webp",
+      "sha256": "1bff078c0769111b13de74df7dcda61af32bc0eb4124ced8d036515de2ca8fda"
     }
   ],
   "analyticsRequestsBlocked": true
