@@ -177,6 +177,6 @@ export function guideIndex(page, pages) {
         <div><h2>${e(guide.title)}</h2><p>${e(guide.description)}</p></div>${arrow}
       </a>`;
     }).join("")}</div>
-    <div class="topic-links">${link("/faq/", "자주 묻는 질문")}${link("/download/", "앱 설치하기")}</div>
+    <div class="topic-links">${link("/faq/", "자주 묻는 질문")}</div>
   </section>`;
 }
