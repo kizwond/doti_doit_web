@@ -275,15 +275,14 @@ test("GitHub project path serves navigation, images, CSS and 404 recovery", asyn
         "href",
         "https://kizwond.github.io/doti_doit_web/",
       );
-      expect(
-        await page
-          .locator(".wordmark")
-          .first()
-          .evaluate((el) => getComputedStyle(el).backgroundImage),
-      ).toContain("/doti_doit_web/assets/motidoit-wordmark.png");
-      expect(
-        (await page.request.get(base + "/assets/wordmark.png")).status(),
-      ).toBe(200);
+      const wordmark = page.locator(".site-header .wordmark img");
+      await expect(wordmark).toHaveAttribute("src", "/doti_doit_web/assets/motidoit-wordmark.png");
+      await wordmark.evaluate((image) => image.decode());
+      const ratios = await wordmark.evaluate((image) => {
+        const { width, height } = image.getBoundingClientRect();
+        return { rendered: width / height, original: image.naturalWidth / image.naturalHeight };
+      });
+      expect(ratios.rendered).toBeCloseTo(ratios.original, 2);
       await expectImagesToLoad(page);
       await page.getByLabel("메뉴 열기").click();
       await page

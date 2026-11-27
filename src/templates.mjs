@@ -7,7 +7,7 @@ const e = (s) =>
       ],
   );
 const arrow = '<span aria-hidden="true">↗</span>';
-const brand = '<span class="wordmark" aria-hidden="true"></span>';
+const brand = '<span class="wordmark" aria-hidden="true"><img src="/assets/motidoit-wordmark.png" width="2172" height="724" alt=""></span>';
 const nav = [
   ["/about/", "모티두잇 이야기"],
   ["/missions/", "미션"],
@@ -27,7 +27,7 @@ export function layout(page, content, { preview, origin }) {
         `<a href="${href}" ${page.route === href ? 'aria-current="page"' : ""}>${label}</a>`,
     )
     .join("");
-  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(page.seo_title)}</title><meta name="description" content="${e(page.description)}"><meta name="theme-color" content="#faf9f5">${preview ? '<meta name="robots" content="noindex, nofollow">' : `<link rel="canonical" href="${e(origin + page.route)}">`}<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="모티두잇"><meta property="og:title" content="${e(page.seo_title)}"><meta property="og:description" content="${e(page.description)}">${origin ? `<meta property="og:url" content="${e(origin + page.route)}">` : ""}<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?brand=9b333cca8289"></head>
+  return `<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${e(page.seo_title)}</title><meta name="description" content="${e(page.description)}"><meta name="theme-color" content="#faf9f5">${preview ? '<meta name="robots" content="noindex, nofollow">' : `<link rel="canonical" href="${e(origin + page.route)}">`}<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="모티두잇"><meta property="og:title" content="${e(page.seo_title)}"><meta property="og:description" content="${e(page.description)}">${origin ? `<meta property="og:url" content="${e(origin + page.route)}">` : ""}<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css?brand=f23519f8a43e"></head>
  <body><a class="skip-link" href="#main">본문으로 바로가기</a><header class="site-header"><div class="header-inner"><a class="brand" href="/" aria-label="모티두잇 홈">${brand}</a><nav class="desktop-nav" aria-label="주 메뉴">${navlinks}</nav><a class="header-cta" href="/download/">시작하기 ${arrow}</a><details class="mobile-menu"><summary aria-label="메뉴 열기"><span></span><span></span></summary><nav aria-label="모바일 메뉴">${navlinks}<a href="/faq/">자주 묻는 질문</a></nav></details></div></header>
  <main id="main">${content}</main>
  <footer class="site-footer"><div class="footer-top"><div><a class="brand" href="/" aria-label="모티두잇 홈">${brand}</a><p>내가 정한 일, 내가 쌓아가는 하루.</p></div><nav aria-label="하단 메뉴"><a href="/about/">모티두잇 이야기</a><a href="/guides/">사용 안내</a><a href="/faq/">자주 묻는 질문</a><a href="/dotimoti/">모티도티</a><a href="/download/">시작하기</a><a href="https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/">모티두잇 개인정보처리방침</a><a href="https://kizwond.github.io/dotimoti-legal/dotimoti/privacy/">모티도티 개인정보처리방침</a></nav></div><div class="footer-bottom"><span>© ${new Date().getFullYear()} <span>모티두잇</span></span><span>하고 싶은 일을, 오늘의 실천으로.</span></div></footer></body></html>`;
