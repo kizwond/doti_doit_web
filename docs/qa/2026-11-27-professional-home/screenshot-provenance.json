@@ -1,0 +1,184 @@
+[
+  {
+    "name": "catalog",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/02-official-missions.png",
+    "sourceSha256": "970e8804cedb2cefeb582c90d9396852ebb35a0653be4e1bace867d5649055bf",
+    "crop": {
+      "x": 40,
+      "y": 170,
+      "width": 1000,
+      "height": 940
+    },
+    "output": "catalog.webp",
+    "outputSha256": "6ab6ebf9fecd2666f569f42a07f88f0140487ce812b35f85f1ad02c74f8be195",
+    "bytes": 29532
+  },
+  {
+    "name": "criteria",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/03-criteria.png",
+    "sourceSha256": "85f0950f1ad83e6e76c773ddc72d22325a72dafd1a649e2f98f41e7f8c241070",
+    "crop": {
+      "x": 40,
+      "y": 906,
+      "width": 1000,
+      "height": 480
+    },
+    "output": "criteria.webp",
+    "outputSha256": "0c72243e19181f13187574476fbde7c18246f72b9b50c6c31b7f613366185f46",
+    "bytes": 18172
+  },
+  {
+    "name": "record",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/02-entry.png",
+    "sourceSha256": "9b4dbf12b4bf5fa407ca6a4a2d4ffa9cca28b1d8ffe417f9db186d17af757b24",
+    "crop": {
+      "x": 40,
+      "y": 386,
+      "width": 1000,
+      "height": 668
+    },
+    "output": "record.webp",
+    "outputSha256": "e379955aec5d96f4d6bbd924a52ab66a49fc89fef748e02f2e62ab1fde08b0b0",
+    "bytes": 18636
+  },
+  {
+    "name": "routine-edit",
+    "source": "doti_doit/docs/qa/2026-11-25-routine-and-rejudgment/activity-rows.png",
+    "sourceSha256": "361e69c778bad8ff6607badab5be7e0493d41955dda617d36b7b9db1875f0146",
+    "crop": {
+      "x": 40,
+      "y": 280,
+      "width": 1000,
+      "height": 888
+    },
+    "output": "routine-edit.webp",
+    "outputSha256": "a6ba05a65a3dba64342cca1e226f54bca92cc2ace2d12044e82670d593601f17",
+    "bytes": 22760
+  },
+  {
+    "name": "routine-run",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/04-routine.png",
+    "sourceSha256": "3fa4928243ccf5d810cc6230a7b94f99a48785ba643ade396c750cef0f862a75",
+    "crop": {
+      "x": 180,
+      "y": 1250,
+      "width": 850,
+      "height": 465
+    },
+    "output": "routine-run.webp",
+    "outputSha256": "9124b5a72a0f0813603d14d8591a75ae7a11412d0e1f4c6f37ebd43d04c08bf4",
+    "bytes": 14796
+  },
+  {
+    "name": "statistics",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/05-statistics.png",
+    "sourceSha256": "094ce46cc9a8ec77785508e26272aa9c7e6157c32cdf40f39ea3c90d3823d6b2",
+    "crop": {
+      "x": 40,
+      "y": 500,
+      "width": 1000,
+      "height": 1180
+    },
+    "output": "statistics.webp",
+    "outputSha256": "caa9259632d2ef14669d426c2a264003801b6a78ff5a95032fd3526a7eef1b8c",
+    "bytes": 25502
+  },
+  {
+    "name": "progress",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/05-progress.png",
+    "sourceSha256": "33be07071ae111896c6ff142bd1d62f7287160628508a9e8e44f5f3694e65705",
+    "crop": {
+      "x": 32,
+      "y": 746,
+      "width": 1016,
+      "height": 888
+    },
+    "output": "progress.webp",
+    "outputSha256": "5e945dd017b6b18310f850020c0563a838534ce3efde6431fe873113ba85228b",
+    "bytes": 26980
+  },
+  {
+    "name": "feed",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/06-feed-photo.png",
+    "sourceSha256": "db4edf1095b41635a463928a55ee31bc6f7630f0f611e7213cce77be0b9de9b7",
+    "crop": {
+      "x": 52,
+      "y": 304,
+      "width": 976,
+      "height": 1220
+    },
+    "output": "feed.webp",
+    "outputSha256": "901f1207e80eaf8f8aef2385975cac581ac9901c83cc2d36db383d00936eaf9e",
+    "bytes": 176776
+  },
+  {
+    "name": "measurement",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/02-gps.png",
+    "sourceSha256": "118ae31be15bba31f975d53c92a0ae8be177ac1d1226c2c8fa2a84482b54e7dd",
+    "crop": {
+      "x": 48,
+      "y": 198,
+      "width": 984,
+      "height": 618
+    },
+    "output": "measurement.webp",
+    "outputSha256": "278e84d6c203ea9b80925792d9f9376dce6d6726ff72ec2d4ac77f2a60979b52",
+    "bytes": 13998
+  },
+  {
+    "name": "video-trim",
+    "source": "doti_doit/docs/qa/2026-11-02/feed-video/emulator/video-editor-crop.png",
+    "sourceSha256": "e525e62d3db46dbcd048b36b855d32b3d2ac527192cc75744afbe4e751a5d5ad",
+    "crop": {
+      "x": 38,
+      "y": 1040,
+      "width": 1004,
+      "height": 560
+    },
+    "output": "video-trim.webp",
+    "outputSha256": "b410c24cc701a8a1a822f1da5b9af4cfaff187c4b2eba54512d1a300d9ecd79b",
+    "bytes": 12224
+  },
+  {
+    "name": "editor-tools",
+    "source": "doti_doit/docs/qa/2026-11-25-image-editor/photo-goal-removed.png",
+    "sourceSha256": "f0209c055d2c8564751d36410a7d045022e583116207e110383679cd7d6ca9a4",
+    "crop": {
+      "x": 0,
+      "y": 2148,
+      "width": 1080,
+      "height": 186
+    },
+    "output": "editor-tools.webp",
+    "outputSha256": "63e85d468a20886aec882008724cc0d754febb353ab86f43fb7cf19424f4d07c",
+    "bytes": 6116
+  },
+  {
+    "name": "pause",
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/04-routine.png",
+    "sourceSha256": "3fa4928243ccf5d810cc6230a7b94f99a48785ba643ade396c750cef0f862a75",
+    "crop": {
+      "x": 40,
+      "y": 2180,
+      "width": 1000,
+      "height": 185
+    },
+    "output": "pause.webp",
+    "outputSha256": "10278716ac47430f909c21071a70b0e0c577bf714962ce9327e198d1fab0d744",
+    "bytes": 4348
+  },
+  {
+    "name": "finish",
+    "source": "doti_doit/docs/qa/2026-11-20/confirmed-followups/finish-actions.png",
+    "sourceSha256": "19315923aaf295c41894f382c236e72c623ee8b03a3d05bee76694fc84780c72",
+    "crop": {
+      "x": 40,
+      "y": 1810,
+      "width": 1000,
+      "height": 464
+    },
+    "output": "finish.webp",
+    "outputSha256": "5e81081a6ee323fcb0bf97c04f0d24d7136753afcf67b963d2cf0f9bff99f8c3",
+    "bytes": 13640
+  }
+]

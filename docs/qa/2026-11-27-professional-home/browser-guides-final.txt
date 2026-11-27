@@ -1,0 +1,10 @@
+[WebServer] (node:1194549) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:1194626) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/guide-visuals.spec.mjs:4:1 › guide contents use consistent labels and relevant readable native crops in seven languages (21.3s)
+
+  1 passed (22.4s)

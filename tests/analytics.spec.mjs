@@ -75,7 +75,7 @@ test('all seven languages fit small screens and load no analytics by default',as
     await expect(page.locator('#analytics-notice')).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     if(language!=='ko')expect(await page.locator('#analytics-notice').innerText()).not.toMatch(/[가-힣]/);
-    const badge = page.locator('main .play-badge');
+    const badge = page.locator('.entry-actions .play-badge');
     await expect(badge).toBeInViewport({ ratio: 1 });
     await badge.click({ trial: true });
     expect(requests).toEqual([]);

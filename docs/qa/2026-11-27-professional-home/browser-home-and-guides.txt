@@ -1,0 +1,12 @@
+[WebServer] (node:1193940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:1193965) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/guide-visuals.spec.mjs:4:1 › guide contents use consistent labels and relevant readable native crops in seven languages (22.2s)
+  ✓  2 tests/site.spec.mjs:21:1 › every page works on small phones and has no overflow or missing assets (4.8s)
+  ✓  3 tests/studio-home.spec.mjs:3:1 › studio home fits all languages and screen sizes without clipped content (7.7s)
+
+  3 passed (36.3s)

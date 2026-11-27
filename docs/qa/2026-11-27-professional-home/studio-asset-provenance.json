@@ -1,0 +1,40 @@
+{
+  "createdAt": "2026-11-27",
+  "tool": "image_gen.imagegen",
+  "direction": "Original tactile 3D product imagery, navy/orange with ivory neutrals; reference layout mood without reproducing third-party branding.",
+  "assets": [
+    {
+      "file": "public/assets/studio/hero.webp",
+      "generatedSource": "exec-515a3109-7105-46a7-a75c-eaaac853e626.png",
+      "sha256": "9428b7ffc4c225842bdb65d2be2f20108d283001b4a6ebc3904338f953b5a83d",
+      "bytes": 69446,
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "file": "public/assets/studio/mission.webp",
+      "generatedSource": "exec-5a649e23-f47b-4ccd-ab7f-cf7b2cba4cdc.png",
+      "sha256": "934bf13d9b2dd12d286158c23355f489fc487a9dc3f0b80d7af77578dbb57cfa",
+      "bytes": 42804,
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "file": "public/assets/studio/routine.webp",
+      "generatedSource": "exec-b8442d33-f454-41fc-9dcc-82f17c3d7d31.png",
+      "sha256": "46e77af4a9d981adbbc4992c33f074e065ccdb6db4fcb529c7169a4ac949d2b8",
+      "bytes": 47600,
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "file": "public/assets/studio/record.webp",
+      "generatedSource": "exec-9208f06e-5622-49e0-8d3e-c0f1ec3ec001.png",
+      "sha256": "f9038a2097a232542d0155453cc8aa59d133acc4c7eaf22ed4ed211312cfc82c",
+      "bytes": 58912,
+      "width": 1448,
+      "height": 1086
+    }
+  ],
+  "totalBytes": 218762
+}
