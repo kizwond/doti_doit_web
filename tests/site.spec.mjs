@@ -105,7 +105,7 @@ test("guide links, anchors, store details and missing-page handling", async ({
   await expect(page).toHaveURL(/\/guides\/start-a-mission\/$/);
   await page
     .getByRole("navigation", { name: "본문 목차" })
-    .getByRole("link", { name: "2. 기준은 필요할 때만" })
+    .getByRole("link", { name: "기준은 필요할 때만" })
     .click();
   await expect(
     page.locator("h2").filter({ hasText: "2. 기준은 필요할 때만" }),
@@ -277,7 +277,7 @@ test("GitHub project path serves navigation, images, CSS and 404 recovery", asyn
         "https://kizwond.github.io/doti_doit_web/",
       );
       const wordmark = page.locator(".site-header .wordmark img");
-      await expect(wordmark).toHaveAttribute("src", "/doti_doit_web/assets/motidoit-wordmark.png");
+      await expect(wordmark).toHaveAttribute("src", "/doti_doit_web/assets/motidoit-wordmark.webp");
       await wordmark.evaluate((image) => image.decode());
       const ratios = await wordmark.evaluate((image) => {
         const { width, height } = image.getBoundingClientRect();
@@ -293,7 +293,7 @@ test("GitHub project path serves navigation, images, CSS and 404 recovery", asyn
       await expect(page).toHaveURL(base + "/missions/");
       await page
         .getByRole("navigation", { name: "본문 목차" })
-        .getByRole("link", { name: "3. 직접 입력하거나 측정하기" })
+        .getByRole("link", { name: "직접 입력하거나 측정하기" })
         .click();
       await expect(
         page.locator("h2").filter({ hasText: "3. 직접 입력하거나 측정하기" }),

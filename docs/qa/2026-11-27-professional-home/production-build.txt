@@ -3,4 +3,4 @@
 > node scripts/build.mjs && node scripts/check.mjs
 
 Built 91 pages (production) → dist/
-Checked 91 pages: headings, metadata, 4121 local links/assets/anchors, draft indexing.
+Checked 91 pages: headings, metadata, 3786 local links/assets/anchors, draft indexing.

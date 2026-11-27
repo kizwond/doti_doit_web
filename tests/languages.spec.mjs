@@ -20,7 +20,7 @@ test('all 91 pages keep their language, readable layout and working images at 32
   await expectImagesToLoad(page);
   const base=languages.find(([language])=>language===code)[1];
   if(route===base+'/' || route===base+'/download/'){
-   const install=page.locator('main .play-badge');
+   const install=page.locator(route===base+'/' ? '.entry-actions .play-badge' : 'main .play-badge');
    await expect(install).toHaveAttribute('href',`https://play.google.com/store/apps/details?id=com.doti.doit&hl=${code}`);
    await expect(install.locator('img')).toHaveAttribute('src',`/assets/play-badges/${code}.png`);
    if(route===base+'/'){

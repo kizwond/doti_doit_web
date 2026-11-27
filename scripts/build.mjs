@@ -124,7 +124,9 @@ for (const page of allPages) {
   const language=page.language;
   const content=page.route==="/" ? home(language) : page.kind==="index" ? guideIndex(page, allPages.filter(p=>p.language.code===language.code)) : article(page);
   let html=layout(page,content,{preview,styleVersion,origin:origin ? origin+language.path : ""});
-  html=localizeLinks(translateChrome(html,language),language);
+  html=translateChrome(html,language).replaceAll('href="/download/"',
+    `href="https://play.google.com/store/apps/details?id=com.doti.doit&amp;hl=${language.code}"`);
+  html=localizeLinks(html,language);
   html=html.replace("https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/", "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/" + (language.code === "ko" ? "" : language.path.slice(1) + "/"));
   html=html.replace("https://kizwond.github.io/dotimoti-legal/dotimoti/privacy/", "https://kizwond.github.io/dotimoti-legal/dotimoti/privacy/" + (language.code === "ko" ? "" : language.path.slice(1) + "/"));
   html=html.replace('<details class="mobile-menu">',languagePicker(language,page.route,routes)+'<details class="mobile-menu">');
@@ -133,7 +135,7 @@ for (const page of allPages) {
     html=html.replace('</head>',alternatives+`<link rel="alternate" hreflang="x-default" href="${escape(origin+page.route)}"></head>`);
   }
   // The verified app detail link keeps the selected display language.
-  html=html.replace('&amp;hl=ko',`&amp;hl=${language.code}`);
+  html=html.replaceAll('&amp;hl=ko',`&amp;hl=${language.code}`);
   // Local previews and unconfigured builds never request Google's analytics script.
   if (!preview && measurementId) html=html.replace('</head>',
     `<meta name="ga-measurement-id" content="${measurementId}"><script defer src="/analytics.js" data-site-path="${escape(basePath || '/')}"></script></head>`);

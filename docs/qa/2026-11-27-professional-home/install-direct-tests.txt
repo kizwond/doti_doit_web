@@ -1,0 +1,13 @@
+[WebServer] (node:1198726) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:1198749) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/analytics.spec.mjs:37:1 › opt-in counts one page view and store click; withdrawal stops tracking and clears only site cookies (866ms)
+  ✓  2 tests/install-direct.spec.mjs:3:1 › install actions go directly to Google Play without a repeated landing step (2.4s)
+  ✓  3 tests/site.spec.mjs:100:1 › guide links, anchors, store details and missing-page handling (933ms)
+  ✓  4 tests/site.spec.mjs:239:1 › GitHub project path serves navigation, images, CSS and 404 recovery (3.1s)
+
+  4 passed (9.4s)

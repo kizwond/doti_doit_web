@@ -18,7 +18,7 @@ const nav = [
 const link = (href, text, cls = "text-link") =>
   `<a class="${cls}" href="${href}">${text} ${arrow}</a>`;
 const playBadge = (language) =>
-  `<a class="play-badge" href="https://play.google.com/store/apps/details?id=com.doti.doit&amp;hl=ko"><img src="/assets/play-badges/${language.code}.png" alt="Google Play에서 앱 설치하기" width="646" height="250"></a>`;
+  `<a class="play-badge" href="https://play.google.com/store/apps/details?id=com.doti.doit&amp;hl=${e(language.code)}"><img src="/assets/play-badges/${language.code}.png" alt="Google Play에서 앱 설치하기" width="646" height="250"></a>`;
 const illustration = (name, alt, cls = "") =>
   `<img class="${cls}" src="/assets/${name}.png" alt="${alt}" width="512" height="512" loading="lazy" decoding="async">`;
 export function layout(page, content, { preview, origin, styleVersion }) {
@@ -87,7 +87,7 @@ export function home(language) {
       <div class="faq-list">${questions.map(([question, answer]) => `<details><summary>${question}<span class="chevron" aria-hidden="true">⌄</span></summary><p>${answer}</p></details>`).join("")}</div>
     </div>
   </section>
-  <section class="studio-start wrap" aria-labelledby="studio-start-title"><img class="studio-start-art" src="/assets/studio/mission.webp" width="1448" height="1086" alt="" loading="lazy"><div><p class="studio-eyebrow">나의 목표, 나의 실천</p><h2 id="studio-start-title">오늘의 작은 실천을<br>시작해 보세요.</h2><p>내가 정한 일, 내가 쌓아가는 하루.</p></div><div class="studio-start-action">${playBadge(language)}${link("/download/", "앱 설치하기")}</div></section>
+  <section class="studio-start wrap" aria-labelledby="studio-start-title"><img class="studio-start-art" src="/assets/studio/mission.webp" width="1448" height="1086" alt="" loading="lazy"><div><p class="studio-eyebrow">나의 목표, 나의 실천</p><h2 id="studio-start-title">오늘의 작은 실천을<br>시작해 보세요.</h2><p>내가 정한 일, 내가 쌓아가는 하루.</p></div><div class="studio-start-action">${playBadge(language)}</div></section>
   <section class="wrap entry-related" id="dotimoti" aria-label="모티도티 알아보기">
     <div class="moti-symbol"><img src="/assets/motidoti-wordmark.svg?v=7f0955a49b74" width="169" height="43" alt="MotiDoti" class="moti-wordmark"></div>
     <div class="studio-related-copy"><h2>함께 실천하고, 서로 응원해요.</h2><p class="moti-status">새로운 모티도티를 준비하고 있어요.</p></div>
@@ -132,26 +132,23 @@ function breadcrumbs(parent, current) {
 
 export function article(page) {
   const isDownload = page.route === "/download/";
+  // Keep the old address usable, without repeating the feature guides or another install step.
+  if(isDownload)return `<section class="download-direct wrap"><header class="article-heading"><div><h1>앱 설치하기</h1><p>Android 기기의 설치 가능 여부는 Google Play에서 확인할 수 있어요.</p></div></header>${playBadge(page.language)}</section>`;
   const image = pageImages[page.route];
   const heading = page.heading || `<h1>${e(page.title)}</h1>`;
   const [href, label] = nextPages[page.route] ?? allGuides;
   const toc = page.toc
     .map(({ id, title }) => `<li><a href="#${e(id)}">${e(title.replace(/^\s*\d+[.)、．:：]\s*/u, ""))}</a></li>`)
     .join("");
-  const installCard = `<section class="download-box" aria-labelledby="install-title">
-    <div><h2 id="install-title">앱 설치하기</h2><p>Android 기기의 설치 가능 여부는 Google Play에서 확인할 수 있어요.</p></div>
-    ${playBadge(page.language)}
-  </section>`;
   return `
-  <div class="article-shell wrap${isDownload ? " install-page" : ""}">
+  <div class="article-shell wrap">
     ${breadcrumbs(page.kind === "guides", page.title)}
     <header class="article-heading${image ? " with-illustration" : ""}">
       <div>${heading}<p>${e(page.description)}</p></div>
       ${image ? illustration(image, "", "article-illustration") : ""}
     </header>
-    ${isDownload ? installCard : ""}
-    <div class="article-grid${isDownload || !toc ? " single-column" : ""}">
-      ${isDownload || !toc ? "" : `<aside class="article-toc">
+    <div class="article-grid${!toc ? " single-column" : ""}">
+      ${!toc ? "" : `<aside class="article-toc">
         <nav aria-label="본문 목차"><p>이 페이지에서</p><ul>${toc}</ul></nav>
       </aside>`}
       <article class="prose${page.route==="/faq/"?" prose-faq":""}">${withGuideVisuals(page)}</article>
