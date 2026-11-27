@@ -7,3 +7,7 @@
 - 관련 브라우저2개 검사에서7개 언어 소개/탐색과320~1440px18개 조합, 로고 너비·비율·이미지 로딩을 확인했다. 공개 빌드91페이지/4086개 링크·자산 검사 통과. 문구·방침·통계 동의/기존 Analytics ID는 변경하지 않았다.
 
 최종 공개 응답/실제 화면과 Actions 결과는 `docs/qa/2026-11-27-logo-surfaces`에 기록한다.
+
+## 공개 배포 완료
+
+소스`0e52fbc`를main에 푸시했고 [홈페이지 Actions](https://github.com/kizwond/doti_doit_web/actions/runs/45925553822)가 성공했다. 공개7언어 홈을320/1440px에서 다시 확인했다. 로고169×38.78px·원본 비율·투명 여백·새 캐시 키·SVG SHA256 일치를 확인했으며 Analytics 요청을 차단한 QA였다. [실제 공개 영역](https://kizwond.github.io/doti_doit_web/#dotimoti). 관련 소스·검증·인계는 푸시했다.
