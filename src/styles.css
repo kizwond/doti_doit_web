@@ -642,3 +642,9 @@ h1,h2,h3{font-weight:550;letter-spacing:-.055em}h1{line-height:1.08}h2{font-size
 @media(prefers-reduced-motion:reduce){.entry-feature{transition:none}}
 
 .header-inner>.brand{margin-right:auto}.feature-ui-preview{align-items:center}
+
+/* Keep native controls away from the edges without restoring decorative frames. */
+.ui-pop-panel{padding:14px}.feature-ui-preview{padding-inline:12px}
+.guide-detail-editor-example .guide-detail-stage{display:grid;gap:18px}
+.guide-detail-editor-example .editor-toolbar{width:100%;height:auto}
+@media(max-width:720px){.ui-pop-panel{padding:10px}.feature-ui-preview{padding-inline:10px}}

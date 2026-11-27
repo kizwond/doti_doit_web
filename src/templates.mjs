@@ -63,7 +63,7 @@ export function home(language) {
       <figure class="entry-example">
         <div class="ui-pop-scene">
           <div class="ui-pop-panel ui-pop-main"><img class="studio-hero-visual" src="/assets/home-record.webp" width="800" height="1159" alt="실제 앱 화면 · 한국어 예시" fetchpriority="high"></div>
-          <div class="ui-pop-panel ui-pop-routine" aria-hidden="true"><img src="/assets/guide-details/routine-run.webp" width="800" height="438" alt=""></div>
+          <div class="ui-pop-panel ui-pop-routine" aria-hidden="true"><img src="/assets/guide-details/routine-run.webp" width="800" height="485" alt=""></div>
         </div>
         <figcaption>실제 앱 화면 · 한국어 예시</figcaption>
       </figure>
@@ -74,7 +74,7 @@ export function home(language) {
     <div class="entry-feature-grid">${features.map(([href, image, title, description], i) => `
       <a class="entry-feature" href="${href}">
         <div class="studio-feature-copy"><h3>${title}</h3><p>${description}</p></div>
-        <div class="feature-ui-preview" aria-hidden="true"><img src="/assets/guide-details/${image}.webp" width="800" height="${({criteria:384,'routine-edit':710,progress:699})[image]}" alt="" loading="lazy" decoding="async"></div>
+        <div class="feature-ui-preview" aria-hidden="true"><img src="/assets/guide-details/${image}.webp" width="800" height="${({criteria:431,'routine-edit':721,progress:710})[image]}" alt="" loading="lazy" decoding="async"></div>
         <span class="studio-feature-arrow" aria-hidden="true">→</span>
       </a>`).join("")}
     </div>

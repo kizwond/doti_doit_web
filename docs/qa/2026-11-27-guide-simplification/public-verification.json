@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "route": "home",
+      "width": 390,
+      "status": 200,
+      "allImagesLoaded": true,
+      "noOverflow": true,
+      "layoutVerified": true
+    },
+    {
+      "route": "home",
+      "width": 1440,
+      "status": 200,
+      "allImagesLoaded": true,
+      "noOverflow": true,
+      "layoutVerified": true
+    },
+    {
+      "route": "missions/",
+      "width": 390,
+      "status": 200,
+      "allImagesLoaded": true,
+      "noOverflow": true,
+      "layoutVerified": true
+    },
+    {
+      "route": "missions/",
+      "width": 1440,
+      "status": 200,
+      "allImagesLoaded": true,
+      "noOverflow": true,
+      "layoutVerified": true
+    },
+    {
+      "route": "routines/",
+      "width": 390,
+      "status": 200,
+      "allImagesLoaded": true,
+      "noOverflow": true,
+      "layoutVerified": true
+    },
+    {
+      "route": "routines/",
+      "width": 1440,
+      "status": 200,
+      "allImagesLoaded": true,
+      "noOverflow": true,
+      "layoutVerified": true
+    },
+    {
+      "route": "records/",
+      "width": 390,
+      "status": 200,
+      "allImagesLoaded": true,
+      "noOverflow": true,
+      "layoutVerified": true
+    },
+    {
+      "route": "records/",
+      "width": 1440,
+      "status": 200,
+      "allImagesLoaded": true,
+      "noOverflow": true,
+      "layoutVerified": true
+    }
+  ],
+  "assets": [
+    {
+      "file": "assets/home-record.webp",
+      "sha256": "bbb8de7c997d0f67db087180c8e289a8167b671dae5173e17bebd885afca80dd"
+    },
+    {
+      "file": "assets/motidoit-app-icon.webp",
+      "sha256": "30e44e26537bd0f743f54fe097f7f056e4ccbd7a2da9dbd67e2978b8ec33eda9"
+    },
+    {
+      "file": "favicon.png",
+      "sha256": "b162006d25043fd3b05f9d39c710542cac10a6a63b79df19d4a684a6543c2ef8"
+    },
+    {
+      "file": "styles.css",
+      "sha256": "7d0df8f6dcce1fb9f6c201e0d6d8781fae5066c7134efdba0406dca346f4bd1e"
+    }
+  ],
+  "analyticsRequestsBlocked": true
+}

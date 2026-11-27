@@ -1,0 +1,347 @@
+{
+  "checks": [
+    {
+      "language": "ko",
+      "route": "/missions/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ko",
+      "route": "/routines/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ko",
+      "route": "/records/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ko",
+      "route": "/guides/start-a-mission/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ko",
+      "route": "/guides/walking-records/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ko",
+      "route": "/guides/exercise-routine/",
+      "figures": 5,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ko",
+      "route": "/guides/video-feed/",
+      "figures": 1,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "en",
+      "route": "/missions/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "en",
+      "route": "/routines/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "en",
+      "route": "/records/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "en",
+      "route": "/guides/start-a-mission/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "en",
+      "route": "/guides/walking-records/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "en",
+      "route": "/guides/exercise-routine/",
+      "figures": 5,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "en",
+      "route": "/guides/video-feed/",
+      "figures": 1,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ja",
+      "route": "/missions/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ja",
+      "route": "/routines/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ja",
+      "route": "/records/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ja",
+      "route": "/guides/start-a-mission/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ja",
+      "route": "/guides/walking-records/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ja",
+      "route": "/guides/exercise-routine/",
+      "figures": 5,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "ja",
+      "route": "/guides/video-feed/",
+      "figures": 1,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hans",
+      "route": "/missions/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hans",
+      "route": "/routines/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hans",
+      "route": "/records/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hans",
+      "route": "/guides/start-a-mission/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hans",
+      "route": "/guides/walking-records/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hans",
+      "route": "/guides/exercise-routine/",
+      "figures": 5,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hans",
+      "route": "/guides/video-feed/",
+      "figures": 1,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hant",
+      "route": "/missions/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hant",
+      "route": "/routines/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hant",
+      "route": "/records/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hant",
+      "route": "/guides/start-a-mission/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hant",
+      "route": "/guides/walking-records/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hant",
+      "route": "/guides/exercise-routine/",
+      "figures": 5,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "zh-Hant",
+      "route": "/guides/video-feed/",
+      "figures": 1,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "es",
+      "route": "/missions/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "es",
+      "route": "/routines/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "es",
+      "route": "/records/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "es",
+      "route": "/guides/start-a-mission/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "es",
+      "route": "/guides/walking-records/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "es",
+      "route": "/guides/exercise-routine/",
+      "figures": 5,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "es",
+      "route": "/guides/video-feed/",
+      "figures": 1,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "vi",
+      "route": "/missions/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "vi",
+      "route": "/routines/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "vi",
+      "route": "/records/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "vi",
+      "route": "/guides/start-a-mission/",
+      "figures": 4,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "vi",
+      "route": "/guides/walking-records/",
+      "figures": 3,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "vi",
+      "route": "/guides/exercise-routine/",
+      "figures": 5,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    },
+    {
+      "language": "vi",
+      "route": "/guides/video-feed/",
+      "figures": 1,
+      "noOverflow": true,
+      "contentsWithoutNumbers": true
+    }
+  ]
+}

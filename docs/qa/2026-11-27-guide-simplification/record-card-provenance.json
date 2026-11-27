@@ -1,0 +1,13 @@
+{
+  "source": "../doti_doit/app/src/main/res/drawable-nodpi/doti_record_hea_exercise_3x_week.webp",
+  "sourceSha256": "717d6f9fd144051f496fc922f565c7b85dd9f81d0b409f3c80e5f3e11235a506",
+  "output": "public/assets/guide-details/record-card-example.svg",
+  "outputSha256": "5159b965bcbc4ae2fb7194388c3cf89cbef6b440effb975a3166848b51ec218d",
+  "kind": "website styling example; original app background with example text and values; not an app screenshot",
+  "example": {
+    "mission": "하루 30분 근력 운동하기",
+    "minutes": 30,
+    "date": "2026-11-27"
+  },
+  "appSourceModified": false
+}

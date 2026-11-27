@@ -20,7 +20,7 @@ items=[
 manifest=[]
 for name,src,rect in items:
  p=repo/src;x,y,w,h=rect;target=out/(name+'.webp')
- subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(p),'-vf',f'crop={w}:{h}:{x}:{y},scale=800:-1','-c:v','libwebp','-quality','90','-threads','1',str(target)],check=True)
- manifest.append(dict(name=name,source='doti_doit/'+src,sourceSha256=hashlib.sha256(p.read_bytes()).hexdigest(),crop=dict(x=x,y=y,width=w,height=h),output=target.name,outputSha256=hashlib.sha256(target.read_bytes()).hexdigest(),bytes=target.stat().st_size))
+ subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(p),'-vf',f'crop={w}:{h}:{x}:{y},pad=iw+128:ih+128:64:64:color=white,scale=800:-1','-c:v','libwebp','-quality','90','-threads','1',str(target)],check=True)
+ manifest.append(dict(name=name,source='doti_doit/'+src,sourceSha256=hashlib.sha256(p.read_bytes()).hexdigest(),crop=dict(x=x,y=y,width=w,height=h),padding=dict(left=64,right=64,top=64,bottom=64,color='white'),output=target.name,outputSha256=hashlib.sha256(target.read_bytes()).hexdigest(),bytes=target.stat().st_size))
 pathlib.Path('docs/qa/2026-11-27-professional-home/screenshot-provenance.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
-print('Cropped',len(manifest),'native screenshots, total',sum(m['bytes']for m in manifest),'bytes; no text or UI pixels changed.')
+print('Cropped with 64px breathing room on every edge:',len(manifest),'native screenshots, total',sum(m['bytes']for m in manifest),'bytes; no text or UI pixels changed.')
