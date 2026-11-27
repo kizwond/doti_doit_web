@@ -1,0 +1,26 @@
+[
+  {
+    "source": "doti_doit/docs/store-assets/2026-11-26-motidoit-release/captures/05-progress.png",
+    "sourceSha256": "33be07071ae111896c6ff142bd1d62f7287160628508a9e8e44f5f3694e65705",
+    "output": "assets/home-record.webp",
+    "outputSha256": "bbb8de7c997d0f67db087180c8e289a8167b671dae5173e17bebd885afca80dd",
+    "processing": "crop x32 y180 width1016 height1472; resize to800x1159",
+    "uiTextOrNumbersRedrawn": false
+  },
+  {
+    "source": "doti_doit/app/src/main/res/drawable-nodpi/doti_doit_launcher_icon_source_v2.png",
+    "sourceSha256": "1eca51efa78ec0bebb46989156bf9e6c773d861d3c3a5da7e93b2786dd2ea949",
+    "output": "assets/motidoit-app-icon.webp",
+    "outputSha256": "30e44e26537bd0f743f54fe097f7f056e4ccbd7a2da9dbd67e2978b8ec33eda9",
+    "processing": "whole launcher source resized to192x192, WebP95",
+    "uiTextOrNumbersRedrawn": false
+  },
+  {
+    "source": "doti_doit/app/src/main/res/drawable-nodpi/doti_doit_launcher_icon_source_v2.png",
+    "sourceSha256": "1eca51efa78ec0bebb46989156bf9e6c773d861d3c3a5da7e93b2786dd2ea949",
+    "output": "favicon.png",
+    "outputSha256": "b162006d25043fd3b05f9d39c710542cac10a6a63b79df19d4a684a6543c2ef8",
+    "processing": "whole launcher source resized to96x96, PNG",
+    "uiTextOrNumbersRedrawn": false
+  }
+]

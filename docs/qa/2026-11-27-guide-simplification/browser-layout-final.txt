@@ -1,0 +1,11 @@
+[WebServer] (node:1206520) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:1206543) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/dotimoti.spec.mjs:32:1 › new navigation and product section fit small phones, tablets and desktops (2.7s)
+  ✓  2 tests/studio-home.spec.mjs:3:1 › studio home fits all languages and screen sizes without clipped content (5.5s)
+
+  2 passed (9.1s)

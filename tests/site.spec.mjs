@@ -108,7 +108,7 @@ test("guide links, anchors, store details and missing-page handling", async ({
     .getByRole("link", { name: "기준은 필요할 때만" })
     .click();
   await expect(
-    page.locator("h2").filter({ hasText: "2. 기준은 필요할 때만" }),
+    page.locator("h2").filter({ hasText: "기준은 필요할 때만" }),
   ).toBeInViewport();
   await page.goto("/download/");
   const store = page.getByRole("link", { name: "Google Play에서 앱 설치하기" });
@@ -296,7 +296,7 @@ test("GitHub project path serves navigation, images, CSS and 404 recovery", asyn
         .getByRole("link", { name: "직접 입력하거나 측정하기" })
         .click();
       await expect(
-        page.locator("h2").filter({ hasText: "3. 직접 입력하거나 측정하기" }),
+        page.locator("h2").filter({ hasText: "직접 입력하거나 측정하기" }),
       ).toBeInViewport();
       const missing = await page.goto(base + "/missing-page/");
       expect(missing.status()).toBe(404);

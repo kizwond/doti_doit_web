@@ -9,8 +9,19 @@ test('guide contents use consistent labels and relevant readable native crops in
   for(const a of await links.all()){
    expect(await a.innerText()).not.toMatch(/^\s*\d+[.)、．:：]/u);
    const id=decodeURIComponent((await a.getAttribute('href')).slice(1));expect(await page.evaluate(id=>!!document.getElementById(id),id)).toBe(true);
+   expect(await page.locator(`[id="${id}"]`).innerText()).toBe(await a.innerText());
   }
-  const figures=page.locator('.guide-detail');expect(await figures.count()).toBeGreaterThanOrEqual(2);
+  const plain=await page.evaluate(()=>{
+   const style=e=>{const s=getComputedStyle(e);return{background:s.backgroundColor,border:s.borderTopWidth,shadow:s.boxShadow};};
+   return{toc:[...document.querySelectorAll('.article-toc,.article-toc nav')].map(style),
+    wrappers:[...document.querySelectorAll('.guide-detail-stage,.guide-detail img')].map(style),
+    sections:[...document.querySelectorAll('.prose>.guide-section')].map((e,i)=>({i,top:getComputedStyle(e).borderTopWidth,bottom:getComputedStyle(e).borderBottomWidth})),
+    headingLines:[...document.querySelectorAll('.prose h2')].map(e=>getComputedStyle(e).borderTopWidth),next:style(document.querySelector('.article-next'))};
+  });
+  for(const x of [...plain.toc,...plain.wrappers]){expect(x.background).toBe('rgba(0, 0, 0, 0)');expect(x.border).toBe('0px');expect(x.shadow).toBe('none');}
+  for(const x of plain.sections){expect(x.top).toBe(x.i===0?'0px':'1px');expect(x.bottom).toBe('0px');}
+  for(const x of plain.headingLines)expect(x).toBe('0px');expect(plain.next.border).toBe('0px');
+  const figures=page.locator('.guide-detail');expect(await figures.count()).toBeGreaterThanOrEqual(route==='/guides/video-feed/'?1:2);
   for(const img of await figures.locator('img').all()){
    await img.scrollIntoViewIfNeeded();await img.evaluate(e=>e.decode());
    const r=await img.boundingBox();expect(r.width).toBeGreaterThanOrEqual(230);expect(r.x).toBeGreaterThanOrEqual(0);expect(r.x+r.width).toBeLessThanOrEqual(320);

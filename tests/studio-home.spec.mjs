@@ -7,10 +7,10 @@ test('studio home fits all languages and screen sizes without clipped content',a
   await page.setViewportSize({width,height:900});await page.goto('/'+lang);
   const geometry=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,
    boxes:[...document.querySelectorAll('.entry-intro,.entry-feature,.studio-start-action,.header-inner')].map(e=>{const r=e.getBoundingClientRect();return {name:e.className,left:r.left,right:r.right};}),
-   text:[...document.querySelectorAll('.studio-feature-copy')].map(e=>{const r=e.getBoundingClientRect(),p=e.closest('.entry-feature').getBoundingClientRect();return {left:r.left-p.left,right:p.right-r.right,bottom:p.bottom-r.bottom};})}));
+   text:[...document.querySelectorAll('.studio-feature-copy')].map(e=>{const r=e.getBoundingClientRect(),p=e.closest('.entry-feature').getBoundingClientRect();return {left:r.left-p.left,right:p.right-r.right,bottom:p.bottom-r.bottom,imageGap:e.closest('.entry-feature').querySelector('.feature-ui-preview img').getBoundingClientRect().top-r.bottom};})}));
   expect(geometry.overflow,lang+width).toBe(false);
   for(const r of geometry.boxes){expect(r.left,lang+width+' '+r.name).toBeGreaterThanOrEqual(-1);expect(r.right,lang+width+' '+r.name).toBeLessThanOrEqual(width+1);}
-  for(const r of geometry.text){expect(r.left).toBeGreaterThanOrEqual(0);expect(r.right).toBeGreaterThanOrEqual(0);expect(r.bottom).toBeGreaterThanOrEqual(0);}
+  for(const r of geometry.text){expect(r.left).toBeGreaterThanOrEqual(0);expect(r.right).toBeGreaterThanOrEqual(0);expect(r.bottom).toBeGreaterThanOrEqual(0);expect(r.imageGap).toBeGreaterThanOrEqual(12);}
   await expect(page.locator('h1')).toHaveCount(1);if(lang)expect(await page.locator('main').innerText()).not.toMatch(/[가-힣]/);
   checks.push({lang:lang||'ko',width,overflow:false,interactiveBoxesInsideViewport:true,featureCopyNotClipped:true});
  }
