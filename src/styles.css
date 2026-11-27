@@ -1785,7 +1785,8 @@ html:not([lang="ko"]) .hero h1 { white-space:normal; }
 .status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); flex: 0 0 6px; }
 .moti-visual { min-width: 0; }
 .moti-symbol { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; color: #28536b; font-size: 22px; font-weight: 750; letter-spacing: -.04em; }
-.moti-symbol img { width: 55px; height: 55px; object-fit: contain; }
+.moti-symbol > img:not(.moti-wordmark) { width: 55px; height: 55px; object-fit: contain; }
+.moti-symbol .moti-wordmark { width: 169px; height: auto; max-width: calc(100% - 67px); flex: 0 1 169px; object-fit: contain; }
 .moti-note { background: #fff; border: 1px solid #d5e1e8; border-radius: 18px; padding: 32px; box-shadow: 0 12px 32px #18374607; }
 .moti-note h3 { font-size: 28px; line-height: 1.5; margin-top: 12px; }
 .moti-sample { display: flex; align-items: center; gap: 16px; margin-top: 26px; padding: 18px 0; border-block: 1px solid #e5ecf0; }

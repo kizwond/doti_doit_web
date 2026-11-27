@@ -38,6 +38,13 @@ test('new navigation and product section fit small phones, tablets and desktops'
       await page.goto(prefix + '/');
       await page.locator('#dotimoti').scrollIntoViewIfNeeded();
       await expect.poll(() => page.locator('#dotimoti img').evaluateAll(images => images.every(i => i.complete && i.naturalWidth > 0))).toBe(true);
+      const logo = await page.locator('.moti-wordmark').evaluate(image => ({
+        width: image.getBoundingClientRect().width, height: image.getBoundingClientRect().height,
+        ratio: image.naturalWidth / image.naturalHeight, source: image.currentSrc,
+      }));
+      expect(logo.width, 'wordmark must not inherit the 55px illustration size').toBeGreaterThan(150);
+      expect(Math.abs(logo.width / logo.height - logo.ratio), 'keep the full logo aspect ratio').toBeLessThan(.02);
+      expect(logo.source).toContain('?v=');
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), prefix + '/' + width).toBe(true);
       expect(await page.locator('.header-inner').evaluate(el => el.scrollWidth <= el.clientWidth), 'header ' + prefix + '/' + width).toBe(true);
       if (!prefix && [390, 1440].includes(width)) await page.locator('#dotimoti').screenshot({ path: `test-results/dotimoti/home-section-${width}.png` });
