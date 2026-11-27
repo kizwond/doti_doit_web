@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "route": "",
+      "width": 1440,
+      "status": 200,
+      "noOverflow": true,
+      "allImagesLoaded": true
+    },
+    {
+      "route": "",
+      "width": 390,
+      "status": 200,
+      "noOverflow": true,
+      "allImagesLoaded": true
+    },
+    {
+      "route": "missions/",
+      "width": 1440,
+      "status": 200,
+      "noOverflow": true,
+      "allImagesLoaded": true
+    },
+    {
+      "route": "routines/",
+      "width": 390,
+      "status": 200,
+      "noOverflow": true,
+      "allImagesLoaded": true
+    },
+    {
+      "route": "records/",
+      "width": 390,
+      "status": 200,
+      "noOverflow": true,
+      "allImagesLoaded": true
+    },
+    {
+      "route": "guides/video-feed/",
+      "width": 390,
+      "status": 200,
+      "noOverflow": true,
+      "allImagesLoaded": true
+    }
+  ],
+  "assetChecks": [
+    {
+      "file": "assets/studio/hero.webp",
+      "sha256": "9428b7ffc4c225842bdb65d2be2f20108d283001b4a6ebc3904338f953b5a83d"
+    },
+    {
+      "file": "assets/guide-details/criteria.webp",
+      "sha256": "0c72243e19181f13187574476fbde7c18246f72b9b50c6c31b7f613366185f46"
+    },
+    {
+      "file": "assets/motidoti-wordmark.svg",
+      "sha256": "7f0955a49b746b6ba68b83e17b16103b0cf720118d589e53d74ba7515bc2ccc8"
+    }
+  ],
+  "analyticsRequestsBlocked": true
+}

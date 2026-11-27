@@ -39,3 +39,7 @@
 [이전 데스크톱](qa/2026-11-27-professional-home/before-desktop.png) · [개편 데스크톱](qa/2026-11-27-professional-home/after-desktop.png) · [개편 모바일](qa/2026-11-27-professional-home/after-mobile.png) · [미션 안내](qa/2026-11-27-professional-home/missions-desktop.png) · [루틴 모바일](qa/2026-11-27-professional-home/routines-mobile.png) · [캡처 검증](qa/2026-11-27-professional-home/verification.json) · [입체 이미지 출처](qa/2026-11-27-professional-home/studio-asset-provenance.json).
 
 배포 후 공개 URL·GitHub Pages 작업·로고 에셋 확인 결과를 별도 증거로 추가한다.
+
+## 공개 배포 확인
+
+GitHub Pages [45959389443](https://github.com/kizwond/doti_doit_web/actions/runs/45959389443)가379f2ee 소스로 성공했다. [공개 홈페이지](https://kizwond.github.io/doti_doit_web/)의 홈·미션·루틴·기록·동영상 안내6조합과 에셋 전체GET/해시를 확인했다. 모티도티 소개7언어×2너비와 담당자 화면2너비의 투명 여백·동일 SVG 원본도16조합 통과했다. 실제 문의 열람/로그인은 하지 않았다. CSS 콘텐츠 해시도 URL에 반영해 이후 디자인 변경 시 이전 스타일 캐시가 남지 않게 했다.
