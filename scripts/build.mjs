@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { Marked } from "marked";
@@ -32,7 +33,9 @@ const markdownPage = (source) => {
       },
       html({text}){return escape(text);}
     }});
-    return {body:marked.parse(source),toc};
+    const html = marked.parse(source);
+    const heading = html.match(/^<h1 [^>]*>.*?<\/h1>\n/)?.[0] ?? "";
+    return { body: html.slice(heading.length), heading, toc };
 };
 for (const dir of ["pages", "guides"]) {
   for (const file of (await fs.readdir(`content/${dir}`))
@@ -111,15 +114,16 @@ for (const language of languages) {
 await fs.rm(output, { recursive: true, force: true });
 await fs.mkdir(output, { recursive: true });
 await fs.cp("public", output, { recursive: true });
-for (const file of ["styles.css"])
-  await fs.copyFile(`src/${file}`, `${output}/${file}`);
+const styles = await fs.readFile("src/styles.css");
+const styleVersion = createHash("sha256").update(styles).digest("hex").slice(0, 12);
+await fs.writeFile(`${output}/styles.css`, styles);
 const routes = new Set(allPages.map(p=>p.outputRoute));
 const localizeLinks = (html,language) => html.replace(/href="(\/[^"#]*)(#[^"]*)?"/g,(whole,target,hash="")=>
   pages.some(p=>p.route===target) ? `href="${language.path+target}${hash}"` : whole);
 for (const page of allPages) {
   const language=page.language;
-  const content=page.route==="/" ? home(language) : page.kind==="index" ? guideIndex(allPages.filter(p=>p.language.code===language.code)) : article(page);
-  let html=layout(page,content,{preview,origin:origin ? origin+language.path : ""});
+  const content=page.route==="/" ? home(language) : page.kind==="index" ? guideIndex(page, allPages.filter(p=>p.language.code===language.code)) : article(page);
+  let html=layout(page,content,{preview,styleVersion,origin:origin ? origin+language.path : ""});
   html=localizeLinks(translateChrome(html,language),language);
   html=html.replace("https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/", "https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/" + (language.code === "ko" ? "" : language.path.slice(1) + "/"));
   html=html.replace("https://kizwond.github.io/dotimoti-legal/dotimoti/privacy/", "https://kizwond.github.io/dotimoti-legal/dotimoti/privacy/" + (language.code === "ko" ? "" : language.path.slice(1) + "/"));
@@ -149,7 +153,7 @@ await fs.writeFile(
     layout(
       notFound,
       '<section class="section narrow not-found"><span class="eyebrow">404</span><h1>길을 조금 벗어났네요.</h1><p>홈이나 사용 안내에서 다시 시작해보세요.</p><a class="button" href="/">홈으로 가기 <span aria-hidden="true">↗</span></a></section>',
-      { preview: true, origin: "" },
+      { preview: true, origin: "", styleVersion },
     ),
   ),
 );
